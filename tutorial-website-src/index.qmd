@@ -1,0 +1,20 @@
+---
+number-sections: false
+---
+
+# Overview {.unnumbered}
+
+Welcome to **Beyond the Chatbox: LLM Coding Agents for Research** (September 2026).
+
+This workshop provides a practical introduction to using large language models (LLMs) and agentic workflows in scientific research, computational reproducibility, and data analysis.
+
+## Workshop Information
+
+- **Date:** September 2026
+- **Topic:** LLM Coding and Research Agents
+- **Target Audience:** Researchers, data analysts, and computational scientists
+- **Instructor:** [Egor Kotov](https://www.ekotov.pro) (TU Dortmund University, Universitat Pompeu Fabra, Max Planck Institute for Demographic Research)
+
+## Structure
+
+Materials, tutorials, and hands-on exercises will be posted here as the workshop approaches.

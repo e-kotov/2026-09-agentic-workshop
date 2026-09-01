@@ -1,0 +1,132 @@
+project:
+  type: book
+  brand: _brand.yml
+  resources:
+    - slides/
+  post-render:
+    - scripts/copy-pdf.sh
+
+number-sections: true
+number-depth: 3
+
+csl: apa.csl
+
+book:
+  title: "Beyond the Chatbox"
+  description: "Beyond the Chatbox: LLM Coding Agents for Research"
+  repo-url: https://github.com/e-kotov/2026-09-agentic-workshop
+  repo-actions: [edit, issue]
+  
+  navbar:
+    background: "#83B818"
+    search: false
+  
+  sidebar:
+    id: "main"
+    style: "docked"
+    search: true
+    collapse-level: 2
+
+  chapters:
+    - index.qmd
+
+  page-footer:
+    border: true
+    left: "© 2026 Egor Kotov"
+    center:
+      - text: "CC-BY-SA 4.0"
+        href: https://creativecommons.org/licenses/by-sa/4.0/
+        target: _blank
+    right: 
+      - icon: github
+        href: https://github.com/e-kotov/2026-09-agentic-workshop
+        target: _blank
+
+  page-navigation: true
+  reader-mode: true
+
+  search:
+    location: sidebar
+    type: textbox
+
+format:
+  html:
+    lightbox:
+      match: auto
+      effect: fade
+      desc-position: top
+    callout-appearance: simple
+    theme:
+      light: [cosmo, styles.css]
+      dark: [cosmo, styles.css]
+    mainfont: "Roboto, Arial, Helvetica, sans-serif"
+    page-layout: article
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+    number-sections: true
+    grid:
+      body-width: 950px
+      margin-width: 300px
+      sidebar-width: 300px
+    code-fold: show
+    code-summary: "Show the code"
+    code-tools: false
+    code-link: true
+    code-copy: true
+    back-to-top: true
+    title-block-banner: false
+    link-external-icon: true
+    link-external-newwindow: true
+    code-overflow: wrap
+    mermaid:
+      theme: neutral
+    include-in-header:
+      - text: |
+          <meta name="DC.Type" content="WebPage">
+          <script src="scripts/details-fold.js" defer></script>
+          <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+          <script src="scripts/typed-init.js" defer></script>
+      - file: scripts/analytics.html
+  typst:
+    filters:
+      - scripts/trigger-fix.lua
+
+execute:
+  freeze: false
+
+citation:
+  type: webpage
+  title: "Beyond the Chatbox: LLM Coding Agents for Research"
+  url: https://github.com/e-kotov/2026-09-agentic-workshop
+  issued: 2026
+google-scholar: true
+
+authors:
+  - name: Egor Kotov
+    url: https://www.ekotov.pro/
+    orcid: 0000-0001-6690-5345
+    affiliations:
+      - ref: tu-dortmund
+      - ref: upf
+      - ref: mpidr
+
+affiliations:
+  - id: tu-dortmund
+    name: TU Dortmund University
+    city: Dortmund
+    country: Germany
+    url: https://www.tu-dortmund.de/en/
+  - id: upf
+    name: Universitat Pompeu Fabra
+    city: Barcelona
+    country: Spain
+    url: https://www.upf.edu/en/web/politiques/home
+  - id: mpidr
+    name: Max Planck Institute for Demographic Research
+    city: Rostock
+    country: Germany
+    url: https://www.demogr.mpg.de/en
+
+editor:
+  render-on-save: true

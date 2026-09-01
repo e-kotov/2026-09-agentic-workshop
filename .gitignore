@@ -1,0 +1,33 @@
+# Quarto
+.quarto/
+_site/
+docs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Workspace
+workspace/project/*
+!workspace/project/.gitkeep
+
+/.luarc.json
+.antigravitycli/
+private/
+archive/
+conductor/

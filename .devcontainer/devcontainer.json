@@ -1,0 +1,34 @@
+{
+	"name": "LLM Agents Workshop 2026",
+	"image": "ghcr.io/e-kotov/2026-09-agentic-workshop:devcontainer",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
+	"remoteUser": "vscode",
+	"postCreateCommand": "rm -rf .git",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"r.rterm.linux": "/home/vscode/.cargo/bin/arf",
+				"r.rterm.option": [],
+				"r.bracketedPaste": true,
+				"terminal.integrated.defaultProfile.linux": "fish",
+				"r.sessionWatcher": true,
+				"r.plot.useHttpgd": true
+			},
+			"extensions": [
+				"AbdulkaderSafi.file-explorer",
+				"sst-dev.opencode",
+				"chrisdias.vscode-opennewinstance",
+				"FedaykinDev.openchamber",
+				"ms-vscode.live-server",
+				"ritwickdey.LiveServer",
+				"posit.air-vscode",
+				"posit.shiny",
+				"quarto.quarto",
+				"reditorsupport.r",
+				"reditorsupport.r-syntax",
+				"mathematic.vscode-pdf"
+			]
+		}
+	}
+}

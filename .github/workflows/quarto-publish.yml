@@ -1,0 +1,45 @@
+name: Publish Quarto Website
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'tutorial-website-src/**'
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Checkout slides branch
+        uses: actions/checkout@v4
+        with:
+          ref: slides
+          path: tutorial-website-src/slides
+        continue-on-error: true
+
+      - name: Prepare slides for Quarto
+        run: |
+          rm -rf tutorial-website-src/slides/.git
+          sed -i '/\/slides\//d' tutorial-website-src/.gitignore
+        continue-on-error: true
+
+      - name: Render
+        run: quarto render tutorial-website-src --to html
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: false
+          path: tutorial-website-src
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

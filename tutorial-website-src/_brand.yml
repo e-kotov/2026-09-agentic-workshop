@@ -1,0 +1,47 @@
+meta:
+  name: "LLM Coding Agents for Research Workshop 2026"
+
+color:
+  palette:
+    # TU Dortmund Corporate Brand Colors
+    tud-green: "#83B818"            # Pantone 368 C / RAL 6018 (Hausfarbe)
+    tud-green-web: "#639A00"        # Gedecktes Grün (Webanwendungen)
+    tud-orange: "#D98207"           # Akzentfarbe Orange (Print/Corporate)
+    tud-orange-web: "#CA7406"       # Akzentfarbe Gedecktes Orange (Webanwendungen)
+    tud-black: "#000000"
+    
+    # Obsidian Editorial Palette
+    obsidian-bg: "#0f1111"
+    paper-fg: "#f0f2f2"
+    obsidian-surface: "#161919"
+    obsidian-border: "#2a2d2d"
+    workshop-light: "#F8F9FA"
+
+    # Semantic mappings
+    green: tud-green
+    orange: tud-orange
+    light: workshop-light
+
+  primary: tud-green
+  secondary: tud-orange
+  success: tud-green-web
+  danger: "#8E203B"
+  warning: tud-orange-web
+  background:
+    light: "#ffffff"
+    dark: obsidian-bg
+  foreground:
+    light: "#343a40"
+    dark: paper-fg
+
+typography:
+  fonts:
+    - family: "Roboto"
+      source: google
+      weight: [300, 400, 500, 700]
+  base: 
+    family: "Roboto, Arial, Helvetica, sans-serif"
+    size: 1.15rem
+  headings:
+    family: "Roboto, Arial, Helvetica, sans-serif"
+    weight: 700
