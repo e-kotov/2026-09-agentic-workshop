@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the scaffolding and materials for the workshop **"Beyond the Chatbox: LLM Coding Agents for Research"** (SOEP / DIW Berlin, September 2026), organized by [Egor Kotov](https://www.ekotov.pro) ([TU Dortmund University](https://www.tu-dortmund.de/en/), [Universitat Pompeu Fabra](https://www.upf.edu/en/web/politiques/home), [Max Planck Institute for Demographic Research](https://www.demogr.mpg.de/en/)).
+This repository contains the materials for the workshop **"Beyond the Chatbox: LLM Coding Agents for Research"** (SOEP / DIW Berlin, September 2026), organized by [Egor Kotov](https://www.ekotov.pro) ([TU Dortmund University](https://www.tu-dortmund.de/en/), [Universitat Pompeu Fabra](https://www.upf.edu/en/web/politiques/home), [Max Planck Institute for Demographic Research](https://www.demogr.mpg.de/en/)).
 
 ## Repository Structure
 
