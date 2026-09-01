@@ -154,13 +154,7 @@ RUN echo 'if (interactive() && (Sys.getenv("TERM_PROGRAM") == "vscode" || Sys.ge
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-# NVIDIA NIM (OpenAI-compatible) configuration for nca
-ENV NCA_PROVIDER_OPENAI_BASE_URL="https://integrate.api.nvidia.com/v1"
-ENV NCA_PROVIDER_OPENAI_MODEL="minimaxai/minimax-m2.7"
 ENV NVM_DIR="/home/$USERNAME/.nvm"
-
-# Add an alias to the user's bashrc for nca-nvidia
-RUN echo "alias nca-nvidia='NCA_PROVIDER=openai OPENAI_BASE_URL=\${NCA_PROVIDER_OPENAI_BASE_URL} NCA_MODEL=\${NCA_PROVIDER_OPENAI_MODEL} nca'" >> /home/$USERNAME/.bashrc
 
 # Ensure all tools are in the PATH for the user session
 ENV PATH="/home/$USERNAME/.local/bin:/home/$USERNAME/miniforge3/bin:/home/$USERNAME/.pixi/bin:/home/$USERNAME/.cargo/bin:$NVM_DIR/versions/node/default/bin:${PATH}"
@@ -184,7 +178,6 @@ RUN mkdir -p /home/$USERNAME/.config/fish && \
     nvm cache clear && \
     npm install -g \
         opencode-ai \
-        @google/gemini-cli \
         @mariozechner/pi-coding-agent \
         @openai/codex \
         codeburn && \
@@ -194,16 +187,12 @@ RUN mkdir -p /home/$USERNAME/.config/fish && \
     export PATH="/home/$USERNAME/.local/bin:$PATH" && \
     # Install Claude CLI
     curl -fsSL https://claude.ai/install.sh | CI=1 bash && \
-    # Install NCA CLI
-    (curl -fsSL https://nca-cli.com/install | bash || echo "NCA CLI not available for this architecture, skipping.") && \
     # Install pixi (defaults to ~/.pixi/bin)
     curl -fsSL https://pixi.sh/install.sh | bash && \
     # Install Antigravity CLI
     curl -fsSL https://antigravity.google/cli/install.sh | bash && \
     # Install arf console to user's home directory
     curl --proto '=https' --tlsv1.2 -LsSf https://github.com/eitsupi/arf/releases/latest/download/arf-console-installer.sh | CARGO_HOME=/home/$USERNAME/.cargo sh && \
-    # Install aider
-    uv tool install aider-chat --python python3 && \
     # Cleanup user caches and unnecessary files
     rm -rf /home/$USERNAME/.cache/uv /home/$USERNAME/.cache/pip /home/$USERNAME/.npm/_cacache $NVM_DIR/.cache $NVM_DIR/src $NVM_DIR/test
 

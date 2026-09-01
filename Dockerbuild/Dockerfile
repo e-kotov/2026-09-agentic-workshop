@@ -130,7 +130,6 @@ ARG CACHE_BUSTER=1
 # 2. Global CLI tools installation (Root)
 RUN curl -LsSf https://astral.sh/uv/install.sh | UV_INSTALL_DIR=/home/${NB_USER}/.local/bin sh && \
     curl -fsSL https://claude.ai/install.sh | CI=1 bash && \
-    curl -fsSL https://nca-cli.com/install | bash || echo "NCA CLI not available for this architecture, skipping." && \
     curl --proto '=https' --tlsv1.2 -LsSf https://github.com/eitsupi/arf/releases/latest/download/arf-console-installer.sh | sh && \
     rm -rf /home/${NB_USER}/.cache/uv
 
@@ -158,11 +157,8 @@ RUN mkdir -p /home/${NB_USER}/.config/fish && \
     nvm install 24 && \
     nvm alias default 24 && \
     ln -s $(nvm which 24 | sed 's/\/bin\/node//') $NVM_DIR/versions/node/default && \
-    npm install -g opencode-ai @google/gemini-cli @mariozechner/pi-coding-agent @openai/codex codeburn && \
+    npm install -g opencode-ai @mariozechner/pi-coding-agent @openai/codex codeburn && \
     npm cache clean --force && \
-    # Install aider
-    python3 -m pip install --user aider-install && \
-    aider-install --yes && \
     # Install Antigravity CLI
     curl -fsSL https://antigravity.google/cli/install.sh | bash && \
     # Extension management
@@ -190,12 +186,5 @@ RUN mkdir -p /home/${NB_USER}/.config/fish && \
            /home/${NB_USER}/.cache/pip \
            /home/${NB_USER}/.npm \
            $NVM_DIR/.cache
-
-# NVIDIA NIM (OpenAI-compatible) configuration for nca
-ENV NCA_PROVIDER_OPENAI_BASE_URL="https://integrate.api.nvidia.com/v1"
-ENV NCA_PROVIDER_OPENAI_MODEL="minimaxai/minimax-m2.7"
-
-# Add an alias to the user's bashrc
-RUN echo "alias nca-nvidia='NCA_PROVIDER=openai OPENAI_BASE_URL=\${NCA_PROVIDER_OPENAI_BASE_URL} NCA_MODEL=\${NCA_PROVIDER_OPENAI_MODEL} nca'" >> /home/${NB_USER}/.bashrc
 
 RUN code-server --extensions-dir ${CODE_EXTENSIONSDIR} --list-extensions
