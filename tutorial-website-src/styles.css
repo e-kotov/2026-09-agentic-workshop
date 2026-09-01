@@ -1100,9 +1100,9 @@ body.quarto-dark .toggle-slider,
 .demo-replay-button:hover,
 .demo-replay-button:focus-visible {
   opacity: 1 !important;
-  color: #0f766e !important;
-  background: rgba(240, 253, 250, 0.94) !important;
-  border-color: rgba(20, 184, 166, 0.28) !important;
+  color: #639A00 !important;
+  background: rgba(131, 184, 24, 0.08) !important;
+  border-color: rgba(217, 130, 7, 0.35) !important;
   transform: translateY(-1px);
 }
 
@@ -1117,9 +1117,9 @@ body.quarto-dark .demo-replay-button:hover,
 body.quarto-dark .demo-replay-button:focus-visible,
 .agent-demo.terminal-mode .demo-replay-button:hover,
 .agent-demo.terminal-mode .demo-replay-button:focus-visible {
-  color: #5eead4 !important;
-  background: rgba(20, 184, 166, 0.12) !important;
-  border-color: rgba(94, 234, 212, 0.24) !important;
+  color: #D98207 !important;
+  background: rgba(217, 130, 7, 0.14) !important;
+  border-color: rgba(217, 130, 7, 0.35) !important;
 }
 
 .agent-demo .chatbox-body {
@@ -1155,10 +1155,10 @@ body.quarto-dark .agent-demo .message-text.title {
 }
 
 .agent-demo .capybara-avatar {
-  color: #2f7d73;
+  color: #639A00;
   background:
     radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.85), transparent 28%),
-    linear-gradient(135deg, #d5f3e8, #96d8cd);
+    linear-gradient(135deg, #e8f5cc, #fed7aa);
 }
 
 .capybara-icon {
@@ -1202,10 +1202,10 @@ body.quarto-dark .agent-demo .message-text.title {
 
 .agent-demo.morph-prep {
   transform: translateY(-2px);
-  border-color: rgba(20, 184, 166, 0.2);
+  border-color: rgba(131, 184, 24, 0.25);
   box-shadow:
     0 28px 62px -38px rgba(15, 23, 42, 0.62),
-    0 0 0 1px rgba(20, 184, 166, 0.06) inset;
+    0 0 0 1px rgba(131, 184, 24, 0.08) inset;
 }
 
 .agent-demo.morph-prep .chatbox-body {
@@ -1234,10 +1234,10 @@ body.quarto-dark .agent-demo .message-text.title {
 
 .agent-demo.cube-prep {
   transform: translateY(-2px) scale(0.998);
-  border-color: rgba(20, 184, 166, 0.18);
+  border-color: rgba(131, 184, 24, 0.2);
   box-shadow:
     0 30px 68px -44px rgba(15, 23, 42, 0.66),
-    0 0 0 1px rgba(20, 184, 166, 0.07) inset;
+    0 0 0 1px rgba(131, 184, 24, 0.08) inset;
 }
 
 .agent-demo.cube-prep .chatbox-body {
@@ -1247,10 +1247,10 @@ body.quarto-dark .agent-demo .message-text.title {
 
 .agent-demo.cube-rotating {
   transform: translateY(-2px) scale(0.998);
-  border-color: rgba(20, 184, 166, 0.22);
+  border-color: rgba(217, 130, 7, 0.25);
   box-shadow:
     0 34px 74px -44px rgba(15, 23, 42, 0.72),
-    0 0 0 1px rgba(20, 184, 166, 0.08) inset;
+    0 0 0 1px rgba(217, 130, 7, 0.1) inset;
 }
 
 .agent-demo.cube-rotating .chatbox-header {
@@ -1340,7 +1340,7 @@ body.quarto-dark .cube-face-front {
 .cube-face-back {
   padding: 0.95rem 1rem 1.1rem;
   background:
-    radial-gradient(circle at 12% 0%, rgba(20, 184, 166, 0.12), transparent 34%),
+    radial-gradient(circle at 12% 0%, rgba(131, 184, 24, 0.14), transparent 34%),
     #0a1014;
   transform: rotateX(-90deg) translateZ(var(--cube-half-depth));
   filter: saturate(0.94);
@@ -1443,11 +1443,11 @@ body.quarto-dark .title-lift-ghost {
 .agent-demo.chatbox-container.terminal-mode {
   border-radius: 12px;
   background: #0a1014 !important;
-  border-color: rgba(125, 211, 252, 0.22) !important;
+  border-color: rgba(217, 130, 7, 0.28) !important;
   transform: translateY(0) scale(1);
   box-shadow:
     0 28px 65px -42px rgba(15, 23, 42, 0.8),
-    0 0 0 1px rgba(34, 211, 238, 0.08) inset !important;
+    0 0 0 1px rgba(131, 184, 24, 0.1) inset !important;
   transition:
     transform 560ms cubic-bezier(0.16, 1, 0.3, 1),
     background 560ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -1484,7 +1484,7 @@ body.quarto-dark .title-lift-ghost {
 }
 
 .agent-demo .terminal-subtitle {
-  color: #7dd3fc;
+  color: #D98207;
   font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0;
@@ -1496,7 +1496,7 @@ body.quarto-dark .title-lift-ghost {
   scroll-behavior: smooth;
   overscroll-behavior: contain;
   background:
-    radial-gradient(circle at 12% 0%, rgba(20, 184, 166, 0.12), transparent 34%),
+    radial-gradient(circle at 12% 0%, rgba(131, 184, 24, 0.14), transparent 34%),
     #0a1014 !important;
 }
 
@@ -1512,7 +1512,7 @@ body.quarto-dark .title-lift-ghost {
   gap: 0.38rem;
   margin-bottom: 0.45rem;
   padding: 0.18rem 0.48rem;
-  border: 1px solid rgba(125, 211, 252, 0.16);
+  border: 1px solid rgba(217, 130, 7, 0.25);
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.56);
 }
@@ -1546,7 +1546,7 @@ body.quarto-dark .title-lift-ghost {
   align-items: center;
   min-width: 3.7rem;
   margin-right: 0.45rem;
-  color: #7dd3fc;
+  color: #D98207;
   font-weight: 800;
 }
 
@@ -1556,8 +1556,8 @@ body.quarto-dark .title-lift-ghost {
   height: 0.45rem;
   margin-right: 0.38rem;
   border-radius: 999px;
-  background: #2dd4bf;
-  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+  background: #D98207;
+  box-shadow: 0 0 0 3px rgba(217, 130, 7, 0.2);
 }
 
 .agent-demo .term-cmd {
@@ -1575,8 +1575,8 @@ body.quarto-dark .title-lift-ghost {
   margin-right: 0.45rem;
   padding: 0.05rem 0.42rem;
   border-radius: 999px;
-  background: rgba(45, 212, 191, 0.12);
-  color: #5eead4;
+  background: rgba(131, 184, 24, 0.15);
+  color: #83B818;
   font-weight: 800;
 }
 
@@ -1633,21 +1633,21 @@ body.quarto-dark .title-lift-ghost {
 }
 
 .plot-area {
-  fill: rgba(45, 212, 191, 0.13);
+  fill: rgba(131, 184, 24, 0.16);
 }
 
 .plot-line {
   fill: none;
-  stroke: #5eead4;
+  stroke: #83B818;
   stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
-  filter: drop-shadow(0 5px 10px rgba(45, 212, 191, 0.25));
+  filter: drop-shadow(0 5px 10px rgba(131, 184, 24, 0.3));
 }
 
 .plot-points circle {
   fill: #0a1014;
-  stroke: #67e8f9;
+  stroke: #D98207;
   stroke-width: 2.4;
 }
 
@@ -1657,10 +1657,10 @@ body.quarto-dark .title-lift-ghost {
 }
 
 .agent-demo.terminal-complete {
-  border-color: rgba(94, 234, 212, 0.3) !important;
+  border-color: rgba(131, 184, 24, 0.35) !important;
   box-shadow:
     0 28px 65px -42px rgba(15, 23, 42, 0.9),
-    0 0 0 1px rgba(94, 234, 212, 0.18) inset !important;
+    0 0 0 1px rgba(217, 130, 7, 0.18) inset !important;
 }
 
 @media (max-width: 640px) {

@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="message-content">
             <span class="message-sender">You</span>
-            <p class="message-text">What are we doing in Bologna this June?</p>
+            <p class="message-text">What are we doing in this workshop?</p>
           </div>
         </div>
         <div class="chatbox-message assistant">
