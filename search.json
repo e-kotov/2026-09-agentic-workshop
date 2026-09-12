@@ -1,0 +1,32 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Beyond the Chatbox",
+    "section": "",
+    "text": "Overview\nWelcome to Beyond the Chatbox: LLM Coding Agents for Research (September 2026).\nThis workshop provides a practical introduction to using large language models (LLMs) and agentic workflows in scientific research, computational reproducibility, and data analysis.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#workshop-information",
+    "href": "index.html#workshop-information",
+    "title": "Beyond the Chatbox",
+    "section": "Workshop Information",
+    "text": "Workshop Information\n\nDate: September 2026\nTopic: LLM Coding and Research Agents\nTarget Audience: Researchers, data analysts, and computational scientists\nInstructor: Egor Kotov (TU Dortmund University, Universitat Pompeu Fabra, Max Planck Institute for Demographic Research)",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#structure",
+    "href": "index.html#structure",
+    "title": "Beyond the Chatbox",
+    "section": "Structure",
+    "text": "Structure\nMaterials, tutorials, and hands-on exercises will be posted here as the workshop approaches.",
+    "crumbs": [
+      "Overview"
+    ]
+  }
+]
