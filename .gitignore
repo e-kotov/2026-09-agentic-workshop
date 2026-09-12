@@ -31,3 +31,4 @@ workspace/project/*
 private/
 archive/
 conductor/
+/AGENTS.md
