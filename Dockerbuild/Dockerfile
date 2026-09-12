@@ -39,7 +39,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglu1-mesa-dev \
     libgsl-dev \
     libharfbuzz-dev \
-    libhdf4-alt-dev \
     libhdf5-dev \
     libicu-dev \
     libjpeg-dev \
@@ -79,7 +78,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     nmon \
     openssh-client \
     p7zip-full \
-    p7zip-rar \
     poppler-data \
     protobuf-compiler \
     python3-pip \
