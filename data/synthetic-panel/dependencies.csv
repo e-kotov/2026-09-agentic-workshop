@@ -1,0 +1,6 @@
+component,version,role
+R,4.6.1,canonical fixture build
+fabricatr,1.0.2,hierarchical household-person scaffold
+simstudy,0.9.2,correlated longitudinal shocks and item missingness
+digest,0.6.39,SHA-256 release checksums
+

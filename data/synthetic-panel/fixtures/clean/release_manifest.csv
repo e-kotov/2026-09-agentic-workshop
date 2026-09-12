@@ -1,0 +1,7 @@
+"release_id","defect_profile","generator_version","seed","generated_utc","r_version","fabricatr_version","simstudy_version","table_name","file_name","row_count","sha256","validation_status","intended_target_total"
+"synthetic-panel-0.1.0","clean","0.1.0",20260912,"2026-09-12T00:00:00Z","4.6.1","1.0.2","0.9.2","person_static","person_static.csv",155,"518f9220146b5e6afddd80cbdd61f57b3522a6f06e54533cc3c0e77cb581596b","pass",""
+"synthetic-panel-0.1.0","clean","0.1.0",20260912,"2026-09-12T00:00:00Z","4.6.1","1.0.2","0.9.2","household_wave","household_wave.csv",264,"3c5eec09c11c4f13391f2366366938082e3b31bd6f473296cdce64a292a5243a","pass","5000 households per wave"
+"synthetic-panel-0.1.0","clean","0.1.0",20260912,"2026-09-12T00:00:00Z","4.6.1","1.0.2","0.9.2","person_wave","person_wave.csv",513,"f907c45c0dc2add565565187910f66c6d54e387eae34009811ffd90b088600d3","pass","10000 persons per wave"
+"synthetic-panel-0.1.0","clean","0.1.0",20260912,"2026-09-12T00:00:00Z","4.6.1","1.0.2","0.9.2","questionnaire","questionnaire.csv",16,"48bf1693afa4eeb11c0053fe275a95c022434d9006d98b3cbd97e098a067c8e4","pass",""
+"synthetic-panel-0.1.0","clean","0.1.0",20260912,"2026-09-12T00:00:00Z","4.6.1","1.0.2","0.9.2","response","response.csv",2052,"67e45b4388808e0b014c84d55a30eb042f23180c131ad765146d56c5da8408af","pass",""
+"synthetic-panel-0.1.0","clean","0.1.0",20260912,"2026-09-12T00:00:00Z","4.6.1","1.0.2","0.9.2","schema","schema.csv",50,"7cc4c3cf407494ce80806b71ebcc7e6669fb978d187fedc5590befd5965dd393","pass",""

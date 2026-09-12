@@ -1,0 +1,21 @@
+check_id,table,severity,description,defect_profile
+required_files,release,error,All required release files are present,
+unique_household_wave,household_wave,error,"(hid, wave) is unique",
+unique_person_wave,person_wave,error,"(pid, wave) is unique",duplicate_person_wave
+unique_person_static,person_static,error,pid is unique,
+unique_questionnaire,questionnaire,error,"(wave, item_id) is unique",duplicate_questionnaire_item
+unique_response,response,error,"(pid, wave, item_id) is unique",
+foreign_keys,person_wave,error,Every person-wave references a person and household-wave,orphan_household
+household_size,household_wave,error,Reported household size equals linked distinct persons,orphan_household
+age_and_window,person_wave,error,Age agrees with birth year and observations lie in declared entry/exit windows,
+move_mechanics,person_wave,error,Move flags and household changes agree,
+positive_weights,person_wave,error,Cross-sectional person and household weights are finite and strictly positive,zero_person_weight
+weight_targets,person_wave,error,Cross-sectional weights sum to the invented person and household targets in every wave,
+longitudinal_weight,person_wave,error,Longitudinal weights occur only for the complete baseline cohort and are positive,
+income_consistency,person_wave,error,Raw/final income missingness codes and imputation flags are mechanically consistent,inconsistent_imputation_flag
+response_links,response,error,Every response references one person-wave and declared questionnaire item,
+questionnaire_rules,response,error,Allowed codes ranges eligibility and skip statuses agree with questionnaire metadata,
+schema_coverage,schema,error,The dictionary covers every column in the five analytical tables,
+no_prohibited_fields,release,error,No names addresses emails free text or source identifiers are present,
+manifest_counts,release_manifest,error,Manifest row counts match release files,
+manifest_checksums,release_manifest,error,Manifest SHA-256 checksums match release files,stale_manifest_checksum
