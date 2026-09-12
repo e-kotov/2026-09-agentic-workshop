@@ -1,0 +1,9 @@
+---
+title: "Memory and agentic loops"
+---
+
+Project memory makes decisions and handoffs discoverable; it should reduce repeated context, not become an unmaintained second database. A useful minimal structure has goals/current state, a work log, decision records, a handoff, and `analysis/` containing `data/`, clean code, tests, and outputs.
+
+Design loops with a bounded plan–act–check–revise cycle, an explicit stop condition, and a human review point. Score any memory system for usefulness, maintenance burden, duplication, stale state, context bloat, and inappropriate automation.
+
+The ecosystem contains hundreds of memory and automation systems. Conductor-for-all is one comparison, not a prescribed system. Full automation of research decisions is often premature: logs should make human responsibility clearer, not obscure it. The minimal control-project template in Lab 4 remains unpublished until an agent privacy/structure audit and Emil’s manual review are complete.

@@ -1,0 +1,17 @@
+---
+title: "Models and agent harnesses"
+---
+
+The **model** generates text and tool-call proposals. The **harness** (OpenCode, Codex, Claude Code, Antigravity, and others) adds tool definitions, instruction loading, permissions, context management, and a user interface. A provider route can change the model without changing the harness.
+
+System instructions arrive in layers: provider/model policy, harness instructions, global and project files, conversation history, and the current request. They are combined with different precedence and visibility rules. An agent cannot reliably reveal hidden provider instructions; it can report what it can observe and infer.
+
+| Layer | Typical owner | Good evidence |
+|---|---|---|
+| Model/provider | provider | published policy and model documentation |
+| Harness | agent software | version, help, and configuration docs |
+| Project instructions | repository | the actual `AGENTS.md`, `CLAUDE.md`, or rules |
+| User task | researcher | the prompt and accepted scope |
+| Tools/results | environment | command output, diffs, and tests |
+
+Do not use product names as if they were interchangeable capabilities. Skills, hooks, plugins, sandboxing, and approval controls are product-specific.

@@ -1,0 +1,14 @@
+---
+title: "Agent comparison"
+---
+
+**Checked 2026-09-12.** Product interfaces and policies change; verify the installed version and linked official docs before teaching.
+
+| Harness | Instructions and precedence | Skills/hooks | Approval and isolation |
+|---|---|---|---|
+| OpenCode | `AGENTS.md` from project upward; `CLAUDE.md` fallback; global config and `instructions` can add files/URLs | `.opencode/skills`, compatibility `.claude`/`.agents`; plugins include `tool.execute.before/after` | `opencode --auto` is the TUI mode; `opencode run --auto "<prompt>"` is non-interactive; `allow/ask/deny` is UX, not a sandbox |
+| Antigravity | global `GEMINI.md`; `.agents/rules/` workspace rules with activation modes; no documented automatic `AGENTS.md` import | `.agents/skills`; plugins/hooks have product-specific APIs; no workshop R skill assumed | `--dangerously-skip-permissions` approves calls; `--sandbox` is separate; Deny > Ask > Allow |
+| Codex | root→cwd `AGENTS.override.md`/`AGENTS.md`; nearer files later; global files also apply | `.agents/skills`; hooks can add context, deny, or rewrite supported inputs | `--ask-for-approval never` differs from `--sandbox danger-full-access`; combined bypass removes both |
+| Claude Code | `CLAUDE.md` imported here from `AGENTS.md`; files layer root→cwd; managed policy can dominate | nested `.claude/skills`; `PreToolUse` hooks can deny/modify | `--dangerously-skip-permissions` changes permission mode, not OS isolation; sandbox is separate |
+
+“Auto approval,” “approval bypass,” and “sandbox removal” are not interchangeable. A permission hook can deny or transform a tool request, but a container/VM is the environment boundary. Ask each harness what it loaded and verify actual files, diffs, and command evidence.

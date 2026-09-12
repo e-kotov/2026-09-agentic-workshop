@@ -1,0 +1,4 @@
+rule clean:
+    input: "pipeline/input/records.csv"
+    output: "pipeline/out/manifest.csv"
+    shell: "mkdir -p pipeline/out && python -c \"import csv; p='pipeline/input/records.csv'; rows=list(csv.DictReader(open(p))); seen=set(); out=[]; [out.append(r) for r in rows if (r['household_id'],r['person_id'],r['wave']) not in seen and not seen.add((r['household_id'],r['person_id'],r['wave']))]; w=csv.DictWriter(open('{output}','w'), fieldnames=rows[0].keys()); w.writeheader(); w.writerows(out)\""

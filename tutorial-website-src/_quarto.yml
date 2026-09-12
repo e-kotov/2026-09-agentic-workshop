@@ -15,6 +15,7 @@ book:
   title: "Beyond the Chatbox"
   description: "Beyond the Chatbox: LLM Coding Agents for Research"
   repo-url: https://github.com/e-kotov/2026-09-agentic-workshop
+  repo-subdir: tutorial-website-src
   repo-actions: [edit, issue]
   
   navbar:
@@ -29,6 +30,50 @@ book:
 
   chapters:
     - index.qmd
+    - part: Start here
+      chapters:
+        - start/codespace.qmd
+        - start/vscode.qmd
+        - start/choose-agent.qmd
+        - start/opencode-login.qmd
+        - start/other-agents.qmd
+        - start/permissions.qmd
+    - part: Understand agents
+      chapters:
+        - understand-agents/chat-to-agent.qmd
+        - understand-agents/models-and-harnesses.qmd
+        - understand-agents/context-instructions-cost.qmd
+        - understand-agents/writing-tasks.qmd
+    - part: Take responsibility
+      chapters:
+        - responsibility/ownership.qmd
+    - part: Engineer the workflow
+      chapters:
+        - engineer-workflow/git-recovery.qmd
+        - engineer-workflow/tests-verification.qmd
+        - engineer-workflow/build-systems.qmd
+    - part: Control the agent
+      chapters:
+        - control-agent/data-protection.qmd
+        - control-agent/permissions-isolation.qmd
+        - control-agent/prompt-injection.qmd
+    - part: Build durable workflows
+      chapters:
+        - durable-workflows/rules-instructions.qmd
+        - durable-workflows/skills-tools.qmd
+        - durable-workflows/memory-loops.qmd
+    - part: Labs
+      chapters:
+        - labs/lab-01.qmd
+        - labs/lab-02.qmd
+        - labs/lab-03.qmd
+        - labs/lab-04.qmd
+    - part: Continue learning
+      chapters:
+        - reference/agent-comparison.qmd
+        - reference/data-and-privacy.qmd
+        - reference/glossary.qmd
+        - reference/further-reading.qmd
 
   page-footer:
     border: true
@@ -84,9 +129,6 @@ format:
     include-in-header:
       - text: |
           <meta name="DC.Type" content="WebPage">
-          <script src="scripts/details-fold.js" defer></script>
-          <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-          <script src="scripts/typed-init.js" defer></script>
       - file: scripts/analytics.html
   typst:
     filters:

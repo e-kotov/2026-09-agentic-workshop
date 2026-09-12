@@ -1,0 +1,9 @@
+---
+title: "Data and privacy"
+---
+
+The workshop's default is small, source-free synthetic data. It is shaped like survey/panel data for teaching joins, metadata, flags, weights, missingness, and release checks; it is not SOEP, does not reproduce SOEP weights, and must not be interpreted as substantive evidence.
+
+“Public” is not the same as “approved for an external AI service.” Confirm institutional policy, contractual restrictions, provider retention/training settings, and account controls before sending any data. For this workshop, never send restricted rows, unpublished results, personal or participant data, or credentials.
+
+See the [OpenCode Zen terms](https://opencode.ai/docs/zen/), [general OpenAI data controls](https://help.openai.com/en/articles/5722486-how-do-i-opt-out-of-my-content-being-used-to-improve-model-performance), and separate [Codex security/data guidance](https://developers.openai.com/codex/security/). For Google/Antigravity, consult its current [permissions](https://antigravity.google/docs/cli/permissions/) and [CLI usage](https://antigravity.google/docs/cli/using/) pages; telemetry controls are not a confidentiality guarantee. These policies change; recheck before publication.

@@ -1,0 +1,29 @@
+---
+title: "OpenCode login and model routes"
+---
+
+OpenCode can use an OpenCode Zen route or a provider route such as OpenRouter, depending on what is currently available to your account and the workshop image. This page was checked 2026-09-12; menus and free allowances change, so follow the live [provider guide](https://opencode.ai/docs/providers/) if labels differ.
+
+## Written connection route
+
+1. From the selected lab directory, run `opencode`.
+2. For Zen, sign in at `opencode.ai/auth`, add billing details if the current flow requests them, and copy the generated API key. Do not paste it into a file or shell history.
+3. In the TUI, run `/connect`, choose **OpenCode Zen**, and paste the key. Run `/models` and select a currently available model. For OpenRouter or NVIDIA, obtain that provider's key through its official flow, then run `/connect`, search for the provider, paste the key only in the documented prompt, and run `/models`.
+4. Send a harmless orientation prompt and confirm the working directory before any edits. Never put a key in a shell command, README, issue, or commit.
+
+Donor walkthroughs: [Zen route](../media/videos/opencode-zen-api.mp4), [OpenRouter route](../media/videos/opencode-openrouter-api.mp4), and [NVIDIA route](../media/videos/opencode-nvidia-api.mp4). Treat these as interface demonstrations; the written route above is sufficient without video.
+
+## Safe connection checklist
+
+1. Create or use a secondary account if institutional policy recommends it.
+2. Authenticate only through the provider's documented flow. Do not paste tokens into a README, chat, shell history, or Git commit.
+3. Before the first prompt, confirm that the working directory contains only the workshop repository and fake data.
+4. Start with ordinary approval prompts. Later, the lab explains when the disposable Codespace makes auto mode convenient.
+
+OpenCode Zen currently describes zero-retention/no-training defaults with named exceptions. Read its live retention table rather than relying on a blanket “free tier” rule. OpenRouter routes inherit the relevant provider/account terms. Keep the [OpenCode Zen policy](https://opencode.ai/docs/zen/) open while setting up.
+
+::: {.callout-warning}
+Prompts and entered data may be retained or used for model improvement depending on provider and account settings. Never enter restricted SOEP rows, unpublished findings, personal information, participant material, or credentials. “Public” does not automatically mean approved for an external AI service.
+:::
+
+If authentication fails, stop and ask the facilitator. Do not put a secret in an issue, diagnostic upload, or command line to make the demo proceed.

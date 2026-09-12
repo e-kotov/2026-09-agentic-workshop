@@ -4,7 +4,7 @@
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
 	"workspaceFolder": "/workspace",
 	"remoteUser": "vscode",
-	"postCreateCommand": "rm -rf .git",
+	"postCreateCommand": "echo 'Participant Git history is intentionally preserved for Labs 2–4.'",
 	"customizations": {
 		"vscode": {
 			"settings": {

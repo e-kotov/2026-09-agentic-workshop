@@ -1,0 +1,28 @@
+---
+title: "From chat to agent"
+---
+
+A chat usually returns text. An agent can inspect a workspace, choose tools, make an edit, run a command, observe the result, and continue. The model still proposes actions; the harness supplies the loop and enforces (or fails to enforce) boundaries.
+
+## The loop
+
+```{mermaid}
+flowchart LR
+  A[Goal and constraints] --> B[Model proposes plan]
+  B --> C[Harness selects a tool]
+  C --> D[Approval or policy check]
+  D --> E[Read, edit, or run]
+  E --> F[Observed result]
+  F --> B
+  F --> G[Human reviews artefact]
+```
+
+An answer can sound plausible without changing a file or running a check. Treat every claim about a workspace as a hypothesis until you inspect the file, diff, command output, or test yourself.
+
+CLI agents make the loop and filesystem explicit in a terminal; GUI agents add visual context, buttons, and approval surfaces. The underlying model/tool distinction remains, but navigation, defaults, permissions, and available extensions differ by product. Compare observed behaviour rather than assuming a GUI is safer or a CLI is more autonomous.
+
+::: {.callout-tip}
+### Try it now (5 minutes)
+
+Ask an agent: “List the files you would inspect for this task; do not read or edit anything.” Then ask it to name which statements are observations and which are guesses.
+:::

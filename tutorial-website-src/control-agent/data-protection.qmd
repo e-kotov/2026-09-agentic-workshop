@@ -1,0 +1,13 @@
+---
+title: "Data protection and threat model"
+---
+
+An agent sends prompts and selected context to a model route. Threats include accidental provider disclosure, untrusted instructions in files, overly broad reads, credentials in shell output, and incorrect generated artefacts. Begin with a data inventory and a decision about what may cross the boundary.
+
+Use the supplied source-free synthetic panel for provider-facing work. Public availability alone does not establish institutional approval for external processing. Restricted SOEP rows, unpublished work, personal data, and credentials are out of scope.
+
+OpenCode Zen describes zero-retention/no-training defaults with named exceptions; OpenRouter routes and other products have their own terms. OpenAI personal ChatGPT data controls are separate from the Codex setting for training on full environments: review both the [general data controls](https://help.openai.com/en/articles/5722486-how-do-i-opt-out-of-my-content-being-used-to-improve-model-performance) and the [Codex security/data guidance](https://developers.openai.com/codex/security/). Google/Antigravity settings should be read cautiously as telemetry controls, not a confidentiality guarantee; see its [permissions documentation](https://antigravity.google/docs/cli/permissions/). Recheck these links before publication.
+
+::: {.callout-warning}
+Never “anonymise later.” Minimise before the first prompt, keep fake fixtures separate, and stop if a tool proposes an external upload or reads beyond the allowed folder.
+:::

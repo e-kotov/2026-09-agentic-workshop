@@ -1,0 +1,5 @@
+household_id,person_id,wave,value
+h01,p01,1,10
+h01,p02,1,11
+h01,p01,1,10
+h02,p03,1,8

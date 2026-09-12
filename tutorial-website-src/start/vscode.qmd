@@ -1,0 +1,30 @@
+---
+title: "Navigate VS Code"
+---
+
+VS Code is the cockpit around the agent. You do not need to memorise every command: learn how to locate the README, inspect a diff, and open a terminal in the correct folder.
+
+![Annotated VS Code interface.](../media/vscode-main-annotated.png)
+
+## A reliable loop
+
+1. In **Explorer**, open `exercises/lab-01-first-contact/README.md` and keep it visible.
+2. Use **Open Editors** to return to files the agent changed.
+3. Open **Terminal → New Terminal**. Run `pwd` before a command that changes files.
+4. Use the Source Control view to inspect changed files and diffs. Do not accept a large diff without reading it.
+
+Right-click a folder and choose **Open in Integrated Terminal** when a task must be scoped to that folder. Use **File → Open Folder** to make a lab its own VS Code workspace when helpful.
+
+![Opening a folder as a VS Code project.](../media/vscode-open-folder.png)
+
+::: {.callout-note}
+The donor recordings show opening a folder, opening a terminal in a folder, and browsing the global file explorer: [open a project](../media/videos/vscode-open-folder-as-project-new-window.mp4), [open a terminal](../media/videos/vscode-open-folder-in-terminal.mp4), and [browse files](../media/videos/vscode-file-explorer.mp4). Interface details can change; use the visible menus in your Codespace.
+:::
+
+::: {.callout-tip}
+### Tiny orientation experiment (3 minutes)
+
+In a terminal, run `pwd`, `find . -maxdepth 2 -type f | sort | head`. Ask your agent to explain what it can infer from that output, then compare its answer with the Explorer. This is observation only; do not give it permission to edit yet.
+:::
+
+Common commands are `pwd` (where am I?), `ls` (what is here?), `cd folder` (move), and `git diff` (what changed?). Never use a broad destructive command copied from an agent without checking its target.

@@ -137,6 +137,7 @@ RUN install2.r --error --skipmissing --skipinstalled -n "$NCPUS" \
     httpgd \
     jsonlite \
     rlang \
+    targets \
     devtools \
     rmarkdown \
     BiocManager \
@@ -167,6 +168,7 @@ RUN mkdir -p /home/$USERNAME/.config/fish && \
     curl -fsSL -o /tmp/miniforge.sh https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh && \
     bash /tmp/miniforge.sh -b -p /home/$USERNAME/miniforge3 && \
     rm /tmp/miniforge.sh && \
+    /home/$USERNAME/miniforge3/bin/conda install --yes --channel conda-forge snakemake && \
     /home/$USERNAME/miniforge3/bin/conda init bash && \
     /home/$USERNAME/miniforge3/bin/conda clean -afy && \
     # Install nvm and node

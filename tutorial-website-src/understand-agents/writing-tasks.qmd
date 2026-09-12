@@ -1,0 +1,22 @@
+---
+title: "Writing tasks for agents"
+---
+
+Agents expose incomplete intent. A useful task brief states the goal, scope, constraints, expected artefact, definition of done, and verification request.
+
+```text
+Goal: produce a small, reviewable artefact for [staff-like purpose].
+Scope: inspect/change only [paths]; use fake/source-free data.
+Constraints: preserve inputs; do not add credentials or network uploads.
+Artefact: [file/report/check] with a short provenance note.
+Done when: [objective condition].
+Verify: run [focused command] and show the relevant diff/output.
+```
+
+Start with a vague request when teaching assumptions, then revise it into a bounded brief. Ask the agent to list assumptions before acting and to stop when the scope is unclear. A longer prompt is not automatically a better prompt: precision and evidence matter more than ceremony.
+
+::: {.callout-tip}
+### Try it now (5 minutes)
+
+Rewrite “clean this analysis” into a brief with one allowed folder, one output, and one check. Compare the first plan with the revised plan. Which assumption changed the proposed tool call?
+:::

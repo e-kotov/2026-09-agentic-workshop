@@ -1,0 +1,14 @@
+---
+title: "Glossary"
+---
+
+- **Agent:** a model connected to a harness loop and tools.
+- **Harness:** software that supplies tools, instructions, permissions, context handling, and interface.
+- **Context:** instructions, history, tool results, and selected content sent to a model.
+- **Skill:** scoped reusable guidance for a recurring task.
+- **Hook:** code run at a harness event; it may transform data but is not an OS boundary.
+- **Sandbox/container:** an environment boundary that limits filesystem/process impact.
+- **Prompt injection:** untrusted content attempting to act as an instruction.
+- **Data contract:** executable expectations about schema, values, keys, and invariants.
+- **Provenance:** records of inputs, transformations, versions, and outputs.
+- **Memory:** maintained project records that help a later session resume.

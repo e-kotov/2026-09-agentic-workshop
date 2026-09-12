@@ -1,0 +1,1 @@
+tool output: email=not-real@example.invalid token=FAKE_TOKEN_1234

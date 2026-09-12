@@ -1,0 +1,33 @@
+---
+title: "Open the Codespace"
+---
+
+GitHub Codespaces gives every participant the same disposable Linux development environment. Startup can take several minutes, so launch it before the first lab.
+
+## Launch
+
+1. Open the [workshop repository](https://github.com/e-kotov/2026-09-agentic-workshop).
+2. Select **Code → Codespaces → Create codespace**. Keep the default branch and machine unless the facilitator says otherwise.
+3. Wait for the VS Code browser window to finish installing extensions and the project setup. Open a terminal and run `pwd` and `ls` to confirm you are in the repository.
+
+![The Code menu for starting a Codespace.](../media/github-start-codespace.png)
+
+{{< video ../media/videos/start-codespace.mp4 title="Codespace startup (donor recording)" >}}
+
+::: {.callout-note}
+## Healthy environment
+
+You should see the repository in the Explorer, a working terminal, R and Python available, and the `exercises/` folders. If setup is still running, wait for the notification before starting an agent.
+:::
+
+## Pause and recover
+
+Codespaces pause after inactivity. Resume it from [your Codespaces list](https://github.com/codespaces). If a build fails, copy the visible error into a safe note and ask the facilitator; do not repeatedly rebuild or add unreviewed credentials. Stop the Codespace when finished and delete it later if you no longer need its storage.
+
+![Stopping a Codespace from the GitHub list.](../media/github-stop-devcontainer-codespace.png)
+
+The [GitHub Codespaces billing documentation](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) is the authoritative source for current quotas and pricing; quotas can change.
+
+::: {.callout-warning}
+The Codespace isolates workshop files from your laptop, but it is not a confidentiality guarantee. Agent prompts still leave the environment for the selected provider. Use only fake/source-free data with provider-facing agents.
+:::

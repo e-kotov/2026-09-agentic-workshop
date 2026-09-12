@@ -1,0 +1,9 @@
+---
+title: "Tests and verification"
+---
+
+Move trust from prose to executable evidence. A focused test or data contract should fail for the known defect, pass after repair, and be understandable to a reviewer. Also inspect final tables, figures, manifests, warnings, and uncertainty; green code is not a valid interpretation by itself.
+
+Useful checks include uniqueness and referential integrity, allowed values and missingness rules, expected row counts, reproducible seeds, file hashes, and a small smoke run. Ask the agent to show the command and output, then run it yourself when the result matters.
+
+Optional project instructions can encourage an epistemic distinction between observation and inference, but this workshop does not impose a mandatory final-status vocabulary. Evaluate whether such instructions improve behaviour or merely add boilerplate.

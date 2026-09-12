@@ -1,2 +1,4 @@
 #!/bin/bash
-rm -rf .git
+# Keep the mounted repository's Git history: Labs 2–4 use diffs and recovery.
+set -e
+echo "Participant Git history preserved."

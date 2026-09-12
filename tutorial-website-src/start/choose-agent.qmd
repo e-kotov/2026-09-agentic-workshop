@@ -1,0 +1,28 @@
+---
+title: "Choose an agent"
+---
+
+OpenCode is the supported teaching path because its terminal workflow makes reads, edits, commands, and approvals visible. It is a representative agent experience, not a universal standard.
+
+## Start OpenCode
+
+From the repository root, change into the selected lab before launching so its project instructions and skills are discoverable:
+
+```bash
+cd exercises/lab-01-first-contact
+opencode
+```
+
+Begin with a read-only orientation prompt. Ask which instruction files and skills were loaded, then verify the files on disk. For subsequent safe work in the disposable Codespace, use `opencode --auto` for the TUI (auto-approves permissions that are not explicitly denied; dangerous) only after observing ordinary approvals. The non-interactive form is `opencode run --auto "<quoted prompt>"`. Current launch and configuration details belong to the [OpenCode documentation](https://opencode.ai/docs/).
+
+Other agents can be useful comparisons:
+
+- **Antigravity:** a Google agent/workbench with its own project rules and sandbox settings; see its current official documentation.
+- **Codex:** an OpenAI coding agent with account-specific data controls and a distinct approval/sandbox model; see the [Codex guide](https://developers.openai.com/codex/).
+- **Claude Code:** a terminal agent using `CLAUDE.md` and its own permission model; see the [Claude Code documentation](https://code.claude.com/docs/).
+
+These products differ in instruction precedence, hooks/plugins, skills, permissions, model routes, and automatic modes. A file named `AGENTS.md` is not evidence that every harness will discover it in the same way.
+
+::: {.callout-warning}
+Do not import retired command-line setup from older workshop copies. Antigravity is a distinct product. Never connect a real account or real research data just to compare interfaces.
+:::

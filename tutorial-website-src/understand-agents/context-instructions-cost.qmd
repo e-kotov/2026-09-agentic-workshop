@@ -1,0 +1,17 @@
+---
+title: "Context, instructions, and cost"
+---
+
+The context window is the model's working set: instructions, conversation, tool results, and selected file content. Large context is not free context. Unfocused reads increase latency and cost and can hide the relevant detail.
+
+Prefer targeted search, small summaries, schema inspection, and reproducible scripts over pasting whole datasets or codebases. Compaction can preserve a conversation while losing detail, so keep important decisions in a human-readable project log.
+
+## Try it now: observable context (3–8 minutes)
+
+Ask your agent what project instructions and tools it can observe. Mark each answer as **observed**, **documented**, or **inferred**. Then inspect the actual files and help output. Do not ask it to reveal provider-hidden prompts or upload a private project.
+
+When choosing a model or effort level, balance task complexity, output quality, context length, latency, and route cost. Advanced participants can audit unnecessary reads, repeated tool calls, context fullness where visible, and whether decomposition would reduce them.
+
+::: {.callout-note}
+Token estimates and quotas differ by product and route. Read the current provider dashboard and harness documentation rather than relying on a fixed number in teaching material.
+:::

@@ -1,0 +1,13 @@
+---
+title: "Prompt injection"
+---
+
+Prompt injection is untrusted text that tries to become an instruction: a note in a codebook, a README, a CSV cell, or command output may tell an agent to reveal files or ignore its task. Treat file contents as data unless the human explicitly promotes them to instructions.
+
+Lab 3 contains a harmless fake-codebook injection and a mechanical post-tool redaction demonstration. Its lab-local OpenCode plugin uses the documented `tool.execute.after` hook to rewrite the returned tool output before it enters the session context, while leaving source files unchanged. A standalone comparison demonstrates encoding/splitting bypasses. It is a teaching filter, not access control.
+
+::: {.callout-note}
+The OpenAI privacy-filter issue #13 is an instructor exhibit only. We do not install its full model or use it as a production boundary.
+:::
+
+When an injection appears: stop, preserve evidence, isolate the fixture, deny surprising actions, and inspect the diff and command history. Do not test a bypass with real secrets.

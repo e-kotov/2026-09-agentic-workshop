@@ -1,0 +1,15 @@
+---
+title: "Further reading"
+---
+
+- [OpenCode documentation](https://opencode.ai/docs/) and [Zen route information](https://opencode.ai/docs/zen/)
+- [GitHub Codespaces documentation](https://docs.github.com/en/codespaces)
+- [OpenAI Codex documentation](https://developers.openai.com/codex/)
+- [Claude Code documentation](https://code.claude.com/docs/)
+- [targets book](https://books.ropensci.org/targets/) and [Snakemake documentation](https://snakemake.readthedocs.io/)
+- [Git documentation](https://git-scm.com/doc)
+- [OpenAI privacy-filter issue #13](https://github.com/openai/privacy-filter/issues/13) — instructor exhibit about false negatives, not a workshop dependency.
+- The minimal research-control template in Lab 4 is intentionally unpublished pending privacy/structure audit and Emil's manual review; compare it with richer systems only after that review.
+- Publishable brain-repository notes and guest references will be added here after instructor approval; private planning material is not reproduced.
+
+The lab folders contain the runnable workshop route. Explore additional agent memory and workflow systems only after you can state their threat model, maintenance cost, and evidence of benefit for your own safe project.

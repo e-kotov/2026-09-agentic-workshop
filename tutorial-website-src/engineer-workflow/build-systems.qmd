@@ -1,0 +1,16 @@
+---
+title: "Build systems and reproducibility"
+---
+
+A workflow system records dependencies so an upstream change rebuilds the right downstream artefacts. It is a safety net against undocumented execution order, not a substitute for reviewing research decisions.
+
+- In R, [`targets`](https://books.ropensci.org/targets/) describes objects and dependencies and rebuilds only what is stale.
+- In Python or cross-language work, [Snakemake](https://snakemake.readthedocs.io/) expresses rules, inputs, outputs, and environments.
+
+Make the environment and inputs explicit with a lockfile or manifest, fixed seeds where appropriate, and a release manifest containing provenance and checksums. Alternatives such as Make, Drake, renv, uv, or CI can be appropriate; select one that the team can maintain.
+
+::: {.callout-tip}
+### Try it now (8 minutes)
+
+Sketch three nodes—input, cleaned table, report—and ask an agent to identify which change should invalidate which node. Compare its graph with the files and checks in Lab 2.
+:::

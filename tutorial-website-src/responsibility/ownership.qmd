@@ -1,0 +1,11 @@
+---
+title: "Ownership and responsibility"
+---
+
+::: {.callout-note}
+This page is reserved for Dominique’s responsibility/ownership session. The guest’s argument, slides, and selected references will be added after their review. This placeholder intentionally does not invent or pre-empt that contribution.
+:::
+
+Regardless of tool, the researcher remains responsible for the question, data authority, interpretation, and decision to publish. Keep a human-readable record of what the agent changed, what was checked, and what remains uncertain. The safety and evidence practices on the lab and reference pages apply before, during, and after the guest session.
+
+**Instructor review TODO:** add Dominique-approved links or slides and check that the framing does not reproduce private programme material.

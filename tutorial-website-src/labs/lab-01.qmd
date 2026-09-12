@@ -1,0 +1,4 @@
+---
+title: ""
+---
+{{< include ../../exercises/lab-01-first-contact/README.md >}}

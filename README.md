@@ -7,9 +7,12 @@ This repository contains the materials for the workshop **"Beyond the Chatbox: L
 ## Repository Structure
 
 - `tutorial-website-src/`: Quarto source code for the workshop website.
-- `userspace/`: Dedicated sandbox for workshop exercises.
-  - `examples/`: Guided examples and reference materials.
-  - `projects/`: Placeholder for participant hands-on projects.
+- `exercises/`: canonical README-driven participant labs, including safe fixtures and checks.
+  - `lab-01-first-contact/`: agent loop, context, prompts, tools, and skills.
+  - `lab-02-engineering/`: tests, Git recovery, manifests, and workflow sketches.
+  - `lab-03-security/`: fake-data threat model, injection, permissions, and redaction.
+  - `lab-04-skills-memory/`: skill placement, bounded loops, and project handoffs.
+- `userspace/`: optional disposable sandbox for participant experiments.
 - `data/`: Shared workshop datasets.
 - `.devcontainer/`: Configuration for VS Code Dev Containers and GitHub Codespaces.
 - `Dockerbuild/`: Docker configurations for pre-built container environments.
