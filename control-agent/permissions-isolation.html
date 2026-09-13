@@ -650,6 +650,24 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>An agent denied a native file read may still reach the same file through an allowed shell command. Permission configuration is not an OS sandbox.</p>
 <p>Lab 3 uses fake files in a disposable folder. You will compare normal approvals with auto mode, command-pattern blocks with equivalent scripts, and an optional separately launched process. Native child sessions may inherit derived restrictions. They are not a security escape.</p>
+<div class="callout callout-style-simple callout-note callout-titled" title="Reduce accidental reads—this is not isolation">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reduce accidental reads—this is not isolation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>OpenCode’s <code>grep</code> and <code>glob</code> tools use ripgrep and normally respect project <a href="https://opencode.ai/docs/tools/#ignore-patterns"><code>.gitignore</code> patterns</a>. Use that existing layer to keep generated output, caches, and other irrelevant files out of broad searches. OpenCode’s <code>.ignore</code> example does the reverse: it explicitly <strong>re-includes</strong> paths that <code>.gitignore</code> would otherwise hide.</p>
+<p>This is a search and context-hygiene aid, not a confidentiality control. A direct <code>read</code> call, an allowed shell command, another tool, or a changed configuration may still reach a named file. Different harnesses use different ignore rules, so verify the current product documentation rather than copying a filename from another tool.</p>
+<p>For stronger OpenCode gating, configure path-specific <a href="https://opencode.ai/docs/permissions/"><code>read</code>, <code>edit</code>, and <code>external_directory</code> permissions</a>, and restrict shell authority too. Even those permissions are harness checks, not an OS boundary. Keep secrets and restricted data outside the agent’s environment; use the Codespace/container, provider policy, and institutional controls as the real boundary.</p>
+</div>
+</div>
+</div>
 <section id="read-next" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="read-next"><span class="header-section-number">16.1</span> Read next</h2>
 <ul>

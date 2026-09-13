@@ -642,14 +642,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The exercises use OpenCode. You may compare another agent if it is already available. This page was checked 2026-09-12, so verify commands in the current vendor documentation.</p>
+<p>The exercises use OpenCode. You may compare another agent if it is already available. This page was checked 2026-09-14, so verify commands in the current vendor documentation.</p>
 <section id="optional-comparisons" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="optional-comparisons"><span class="header-section-number">5.1</span> Optional comparisons</h2>
-<p><strong>Antigravity.</strong> Check its project rules, sandbox, and telemetry settings in the <a href="https://antigravity.google/">official documentation</a>. Turning off telemetry does not make research data safe to share.</p>
+<details>
+<summary>
+<strong>Antigravity readiness</strong>
+</summary>
+<ol type="1">
+<li>Open a terminal in the lab directory and run <code>agy</code>. The Codespace already includes the CLI.</li>
+<li>If prompted, open the printed authorization URL in your browser, sign in, and return the one-time code to the terminal. This is Antigravity’s documented remote sign-in flow.</li>
+<li>Run <code>/model</code> and choose an available model. Ask <code>What directory are you working in? Do not change files.</code></li>
+<li>Before edits, inspect <code>/permissions</code>, the loaded project rules, sandbox setting, and telemetry setting in the <a href="https://antigravity.google/docs/cli/install/">official Antigravity documentation</a>. Turning off telemetry does not make research data safe to share.</li>
+</ol>
 <p>The <a href="../media/videos/agy-setup.mp4">Antigravity setup recording</a> may show older screens.</p>
-<p><strong>Codex.</strong> Use the <a href="https://developers.openai.com/codex/">Codex setup and sandboxing guides</a>. Check the account’s current data controls before using anything beyond toy data.</p>
-<p><strong>Claude Code.</strong> Use <a href="https://code.claude.com/docs/en/memory">Claude’s installation and memory documentation</a>. Claude reads <code>CLAUDE.md</code> according to its own precedence rules. This file does not create an operating-system security boundary.</p>
-<p>Launch an installed agent from the lab directory with <code>agy</code> (Antigravity), <code>codex</code> (Codex), or <code>claude</code> (Claude Code). Authenticate only through its documented flow.</p>
+</details>
+<details>
+<summary>
+<strong>Codex readiness</strong>
+</summary>
+<ol type="1">
+<li>In the lab directory, run <code>codex login --device-auth</code> and complete the one-time browser flow. This is the documented option for a remote or headless environment such as Codespaces.</li>
+<li>Run <code>codex login status</code>; it should report an active sign-in method without displaying a credential.</li>
+<li>Run <code>codex</code>, check the model, approval policy, and sandbox shown by the interface, then ask <code>What directory are you working in? Do not change files.</code></li>
+</ol>
+<p>Use the <a href="https://developers.openai.com/codex/auth/">official Codex authentication guide</a> and <a href="https://developers.openai.com/codex/security/">security guide</a>. Check the account’s current data controls before using anything beyond toy data.</p>
+</details>
+<details>
+<summary>
+<strong>Claude Code readiness</strong>
+</summary>
+<ol type="1">
+<li>In the lab directory, run <code>claude auth login</code> and follow the documented browser flow. Claude Code requires an eligible Claude plan, Console account, or supported cloud provider.</li>
+<li>Run <code>claude auth status</code>. If startup or configuration fails, run <code>claude doctor</code> from the shell.</li>
+<li>Run <code>claude</code>, inspect <code>/status</code>, and ask <code>What directory are you working in? Do not change files.</code></li>
+</ol>
+<p>Use <a href="https://code.claude.com/docs/en/quickstart">Claude Code’s current quickstart</a> and <a href="https://code.claude.com/docs/en/team">authentication documentation</a>. Claude reads <code>CLAUDE.md</code> according to its own precedence rules; that file does not create an operating-system security boundary.</p>
+</details>
 </section>
 <section id="read-next" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="read-next"><span class="header-section-number">5.2</span> Read next</h2>

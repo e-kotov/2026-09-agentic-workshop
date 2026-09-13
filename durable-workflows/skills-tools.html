@@ -589,7 +589,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link active" data-scroll-target="#read-next"><span class="header-section-number">19.1</span> Read next</a></li>
+  <li><a href="#what-a-skill-contains" id="toc-what-a-skill-contains" class="nav-link active" data-scroll-target="#what-a-skill-contains"><span class="header-section-number">19.1</span> What a skill contains</a></li>
+  <li><a href="#test-a-skill-on-a-fresh-case" id="toc-test-a-skill-on-a-fresh-case" class="nav-link" data-scroll-target="#test-a-skill-on-a-fresh-case"><span class="header-section-number">19.2</span> Test a skill on a fresh case</a></li>
+  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next"><span class="header-section-number">19.3</span> Read next</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/durable-workflows/skills-tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -644,8 +646,25 @@ ul.task-list li input[type="checkbox"] {
 <p>A tool can read a file, run a shell command, or perform another action. A skill is reusable guidance for a specific task. If the result should always follow fixed rules, use a script or test.</p>
 <p>Each exercise includes a repository-scoped R binary-package skill. It documents the Linux/P3M installation path and its limits. It does not permit arbitrary package installation or real data. Read its trigger and scope in <code>.agents/skills/r-binary-packages/SKILL.md</code> before using it.</p>
 <p>Create a skill only after a safe task repeats. Try a one-off prompt first, save only stable guidance, and test the skill on a new case. Harnesses discover skills in different directories. The Claude copy is a synchronised file, not a symlink.</p>
-<section id="read-next" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="read-next"><span class="header-section-number">19.1</span> Read next</h2>
+<section id="what-a-skill-contains" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="what-a-skill-contains"><span class="header-section-number">19.1</span> What a skill contains</h2>
+<p>A portable skill is a directory whose <code>SKILL.md</code> starts with YAML metadata. For OpenCode, <code>name</code> and <code>description</code> are required; the description tells the agent when the skill is relevant. The Markdown body supplies the procedure, boundaries, and checks. Optional <code>scripts/</code>, <code>references/</code>, or templates can sit beside it, but their contents are not loaded automatically. Let the skill point to only the supporting file needed for the current task.</p>
+<p>Put shared project skills in <code>.agents/skills/&lt;name&gt;/SKILL.md</code>. OpenCode searches this compatible project location, <code>.opencode/skills/</code>, and corresponding global directories under your home folder. Project scope is the safer default: use a global skill only for stable guidance that truly applies across projects. OpenCode walks from the current directory towards the Git worktree, so start it inside the project that owns the skill. See the current <a href="https://opencode.ai/docs/skills/">OpenCode skill discovery contract</a>.</p>
+<p>At first, the model sees each permitted skill’s name and description—not every full body. It loads the chosen body on demand with the <code>skill</code> tool. Ask explicitly when testing: <code>Use the r-binary-packages skill for this diagnosis.</code> Then confirm that the session shows a skill-tool call before judging the answer. Natural-language triggers are useful, but they are model choices rather than deterministic routing.</p>
+<p>After creating, moving, or renaming a skill, start a fresh OpenCode session for the discovery test. The documentation defines startup/path discovery but does not promise that an already-running session will rescan every changed skill reliably.</p>
+</section>
+<section id="test-a-skill-on-a-fresh-case" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="test-a-skill-on-a-fresh-case"><span class="header-section-number">19.2</span> Test a skill on a fresh case</h2>
+<ol type="1">
+<li>Check that the directory name, frontmatter <code>name</code>, and lowercase hyphenated identifier agree, and that the description names a specific trigger.</li>
+<li>Start OpenCode inside the intended project scope and ask it to list the skill before loading it.</li>
+<li>Invoke it explicitly on a harmless case; observe the skill-tool call, files read, and commands run.</li>
+<li>Run an independent deterministic check on the result. Also try one nearby task that should <strong>not</strong> trigger the skill.</li>
+<li>Revise or remove guidance that is ambiguous, stale, duplicated elsewhere, or grants more scope than the task needs.</li>
+</ol>
+</section>
+<section id="read-next" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="read-next"><span class="header-section-number">19.3</span> Read next</h2>
 <ul>
 <li><a href="https://opencode.ai/docs/skills">OpenCode agent skills</a> — The live discovery and loading contract for the skill mechanism participants inspect in the lab.</li>
 <li><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Writing effective tools for agents — with agents</a> — Treats a tool as a designed contract whose boundaries, descriptions, and outputs shape agent behaviour.</li>
