@@ -150,7 +150,7 @@ ENV PATH="/home/${NB_USER}/.local/bin:/home/${NB_USER}/.nvm/versions/node/defaul
 USER ${NB_USER}
 WORKDIR /home/${NB_USER}
 
-RUN mkdir -p /home/${NB_USER}/.config/fish && \
+RUN mkdir -p /home/${NB_USER}/.config/fish "$NVM_DIR" && \
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash && \
     . $NVM_DIR/nvm.sh && \
     nvm install 24 && \
@@ -172,8 +172,8 @@ RUN mkdir -p /home/${NB_USER}/.config/fish && \
     git clone --depth 1 https://github.com/e-kotov/opencode-cache-hit.git /tmp/opencode-cache-hit && \
     /tmp/opencode-cache-hit/install.sh --dest "$CONFIG_HOME/opencode" --placement auto && \
     # Extension management
-    code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension saoudrizwan.claude-dev || true && \
-    code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension cline.cline || true && \
+    (code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension saoudrizwan.claude-dev || true) && \
+    (code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension cline.cline || true) && \
     for ext in \
         AbdulkaderSafi.file-explorer \
         sst-dev.opencode \
