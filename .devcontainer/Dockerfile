@@ -204,10 +204,13 @@ RUN mkdir -p /home/$USERNAME/.config/fish && \
         > /home/$USERNAME/.config/herdr/config.toml && \
     git clone --depth 1 https://github.com/e-kotov/opencode-cache-hit.git /tmp/opencode-cache-hit && \
     /tmp/opencode-cache-hit/install.sh --placement auto && \
+    # Install the pinned experimental OpenCode context dashboard
+    git clone --depth 1 --branch v0.1.0-alpha.1 https://github.com/e-kotov/opencode-context-dashboard.git /tmp/opencode-context-dashboard && \
+    /tmp/opencode-context-dashboard/install.sh --mode compact --placement sidebar && \
     # Install arf console to user's home directory
     curl --proto '=https' --tlsv1.2 -LsSf https://github.com/eitsupi/arf/releases/latest/download/arf-console-installer.sh | CARGO_HOME=/home/$USERNAME/.cargo sh && \
     # Cleanup user caches and unnecessary files
-    rm -rf /tmp/opencode-cache-hit /home/$USERNAME/.cache/uv /home/$USERNAME/.cache/pip /home/$USERNAME/.npm/_cacache $NVM_DIR/.cache $NVM_DIR/src $NVM_DIR/test
+    rm -rf /tmp/opencode-cache-hit /tmp/opencode-context-dashboard /home/$USERNAME/.cache/uv /home/$USERNAME/.cache/pip /home/$USERNAME/.npm/_cacache $NVM_DIR/.cache $NVM_DIR/src $NVM_DIR/test
 
 # Set the default workspace directory
 WORKDIR /workspace

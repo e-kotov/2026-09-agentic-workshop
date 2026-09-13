@@ -1,7 +1,8 @@
-name: Build and Push Docker Image (Binder)
+name: Build and Push Docker Image (Binder, archived)
 
-on:
-  workflow_dispatch: # Allows manual triggering from the GitHub Actions UI
+# Archived on 2026-09-13. Binder is no longer a supported participant path;
+# retain this definition and Dockerbuild/ as implementation history only.
+on: []
 
 env:
   REGISTRY: ghcr.io

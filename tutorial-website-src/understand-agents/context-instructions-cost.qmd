@@ -8,7 +8,11 @@ Search for what you need. Inspect schemas before data. Use reproducible scripts 
 
 ## Inspect what is using context
 
-Current products expose different views. Claude Code's [`/context`](https://code.claude.com/docs/en/context-window) and Antigravity's [`/context`](https://antigravity.google/docs/cli-reference?app=cli) show a context-usage breakdown. Codex shows totals and context use in its footer, but has no native composition breakdown; [issue #27898](https://github.com/openai/codex/issues/27898) requests one. We have not selected an exact OpenCode equivalent for this workshop.
+Current products expose different views. Claude Code's [`/context`](https://code.claude.com/docs/en/context-window) and Antigravity's [`/context`](https://antigravity.google/docs/cli-reference?app=cli) show a context-usage breakdown. Codex shows totals and context use in its footer, but has no native composition breakdown; [issue #27898](https://github.com/openai/codex/issues/27898) requests one.
+
+::: {.callout-warning title="Experimental OpenCode dashboard"}
+The workshop image includes the alpha [opencode-context-dashboard](https://github.com/e-kotov/opencode-context-dashboard) plugin in compact sidebar mode. It reads OpenCode's local TUI state and estimates how context is divided among tools, assistant text, user text, and reasoning without making another model request. Its categorisation heuristics and provider compatibility are still under active testing; treat the display as a diagnostic estimate, not an accounting record. Use `/context-mode` to change or hide it and `/context-placement` to change where it appears.
+:::
 
 ## Provider cache is not session history
 

@@ -12,11 +12,19 @@ herdr plugin list | grep -Fq 'cache-hit'
 grep -Fq "\$cache" "$CONFIG_HOME/herdr/config.toml"
 
 test -f "$CONFIG_HOME/opencode/plugins/cache-hit-tui.tsx"
+test -f "$CONFIG_HOME/opencode/plugins/context-dashboard-tui.tsx"
+test -f "$CONFIG_HOME/opencode/lib/context-dashboard-logic.mjs"
+grep -Fq 'from "../lib/context-dashboard-logic.mjs"' \
+  "$CONFIG_HOME/opencode/plugins/context-dashboard-tui.tsx"
 jq -e '
+  any(.plugin[]; (if type == "array" then .[0] else . end) == "./plugins/cache-hit-tui.tsx") and
   any(
     .plugin[];
-    (if type == "array" then .[0] else . end) == "./plugins/cache-hit-tui.tsx"
+    type == "array" and
+    .[0] == "./plugins/context-dashboard-tui.tsx" and
+    .[1].mode == "compact" and
+    .[1].placement == "sidebar"
   )
 ' "$CONFIG_HOME/opencode/tui.json" >/dev/null
 
-printf 'Participant image cache-observability assertions passed for %s.\n' "$(uname -m)"
+printf 'Participant image context-observability assertions passed for %s.\n' "$(uname -m)"
