@@ -11,6 +11,20 @@ CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 herdr plugin list | grep -Fq 'cache-hit'
 grep -Fq "\$cache" "$CONFIG_HOME/herdr/config.toml"
 
+test -f "$CONFIG_HOME/opencode/opencode.json"
+jq -e '
+  .provider.workshop.npm == "@ai-sdk/openai-compatible" and
+  .provider.workshop.options.baseURL == "https://diw-workshop-proxy.ekotov.workers.dev/v1" and
+  .provider.workshop.options.apiKey == "{env:WORKSHOP_API_KEY}" and
+  (.provider.workshop.models | keys | sort) == [
+    "meta/muse-spark-1.2-contributor",
+    "meta/muse-spark-1.3-contributor",
+    "zai/glm-5.3-flash"
+  ]
+' "$CONFIG_HOME/opencode/opencode.json" >/dev/null
+test -z "${WORKSHOP_API_KEY:-}"
+test ! -e "$HOME/.local/share/opencode/auth.json"
+
 test -f "$CONFIG_HOME/opencode/plugins/cache-hit-tui.tsx"
 test -f "$CONFIG_HOME/opencode/plugins/context-dashboard-tui.tsx"
 test -f "$CONFIG_HOME/opencode/lib/context-dashboard-logic.mjs"
@@ -27,4 +41,4 @@ jq -e '
   )
 ' "$CONFIG_HOME/opencode/tui.json" >/dev/null
 
-printf 'Participant image context-observability assertions passed for %s.\n' "$(uname -m)"
+printf 'Participant image OpenCode configuration assertions passed for %s.\n' "$(uname -m)"

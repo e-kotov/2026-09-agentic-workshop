@@ -158,6 +158,10 @@ WORKDIR /home/$USERNAME
 
 ENV NVM_DIR="/home/$USERNAME/.nvm"
 
+# Pre-configure the credential-free workshop fallback provider. Participants
+# supply WORKSHOP_API_KEY at runtime; no key or OpenCode session is baked in.
+COPY --chown=$USERNAME:$USERNAME .devcontainer/opencode.json /home/$USERNAME/.config/opencode/opencode.json
+
 # Ensure all tools are in the PATH for the user session
 ENV PATH="/home/$USERNAME/.local/bin:/home/$USERNAME/miniforge3/bin:/home/$USERNAME/.pixi/bin:/home/$USERNAME/.cargo/bin:$NVM_DIR/versions/node/default/bin:${PATH}"
 

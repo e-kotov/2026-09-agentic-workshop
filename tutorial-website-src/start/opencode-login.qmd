@@ -16,6 +16,16 @@ You can also watch the [Zen](../media/videos/opencode-zen-api.mp4), [OpenRouter]
 
 Before the first prompt, check that the working directory contains only the workshop repository and fake data. Start with ordinary approval prompts. The labs introduce auto mode later.
 
+::: {.callout-tip title="Workshop fallback if free credits run out"}
+The Codespace already knows the workshop fallback provider and models. Get the temporary key from the facilitator through the announced secure channel, then set it in your current terminal:
+
+```bash
+export WORKSHOP_API_KEY="sk-diw-..."
+```
+
+Start OpenCode, run `/models`, and choose a model under **Workshop fallback**. You do not need to edit an OpenCode JSON file. The export lasts only for that terminal session; never paste the real key into chat, a README, or a commit.
+:::
+
 OpenCode Zen describes zero-retention/no-training defaults with named exceptions. Check its live [retention table](https://opencode.ai/docs/zen/). OpenRouter routes follow the terms of the selected provider and account.
 
 ::: {.callout-warning}
