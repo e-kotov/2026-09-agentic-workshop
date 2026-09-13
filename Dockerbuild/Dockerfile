@@ -161,15 +161,16 @@ RUN mkdir -p /home/${NB_USER}/.config/fish && \
     # Install Antigravity CLI
     curl -fsSL https://antigravity.google/cli/install.sh | bash && \
     # Install the optional cache-observability displays without accounts or session data
+    CONFIG_HOME="${XDG_CONFIG_HOME:-/home/${NB_USER}/.config}" && \
     curl -fsSL https://herdr.dev/install.sh | sh && \
     herdr plugin install e-kotov/herdr-cache-hit --yes && \
-    mkdir -p /home/${NB_USER}/.config/herdr && \
+    mkdir -p "$CONFIG_HOME/herdr" && \
     printf '%s\n' \
         '[ui.sidebar.agents]' \
         'rows = [["state_icon", "agent"], ["$cache"], ["workspace", "tab"]]' \
-        > /home/${NB_USER}/.config/herdr/config.toml && \
+        > "$CONFIG_HOME/herdr/config.toml" && \
     git clone --depth 1 https://github.com/e-kotov/opencode-cache-hit.git /tmp/opencode-cache-hit && \
-    /tmp/opencode-cache-hit/install.sh --placement auto && \
+    /tmp/opencode-cache-hit/install.sh --dest "$CONFIG_HOME/opencode" --placement auto && \
     # Extension management
     code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension saoudrizwan.claude-dev || true && \
     code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension cline.cline || true && \
