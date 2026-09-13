@@ -2,7 +2,7 @@
 title: "Writing tasks for agents"
 ---
 
-Agents expose incomplete intent. A useful task brief states the goal, scope, constraints, expected artefact, definition of done, and verification request.
+Tell the agent what to do, where it may work, and how you will check the result.
 
 ```text
 Goal: produce a small, reviewable artefact for [staff-like purpose].
@@ -13,10 +13,10 @@ Done when: [objective condition].
 Verify: run [focused command] and show the relevant diff/output.
 ```
 
-Start with a vague request when teaching assumptions, then revise it into a bounded brief. Ask the agent to list assumptions before acting and to stop when the scope is unclear. A longer prompt is not automatically a better prompt: precision and evidence matter more than ceremony.
+To reveal hidden assumptions, start with a vague request and then rewrite it as a bounded brief. Ask the agent to state assumptions before acting and stop if the scope is unclear. Precision matters more than prompt length.
 
 ::: {.callout-tip}
 ### Try it now (5 minutes)
 
-Rewrite “clean this analysis” into a brief with one allowed folder, one output, and one check. Compare the first plan with the revised plan. Which assumption changed the proposed tool call?
+Rewrite "clean this analysis" with one allowed folder, one output, and one check. Compare the plans. Which assumption changed the proposed tool call?
 :::

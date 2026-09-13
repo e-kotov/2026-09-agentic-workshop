@@ -2,7 +2,7 @@
 title: "Agent comparison"
 ---
 
-**Checked 2026-09-12.** Product interfaces and policies change; verify the installed version and linked official docs before teaching.
+Checked 2026-09-12. Product interfaces and policies change. Verify the installed version and official documentation before teaching.
 
 | Harness | Instructions and precedence | Skills/hooks | Approval and isolation |
 |---|---|---|---|
@@ -11,4 +11,4 @@ title: "Agent comparison"
 | Codex | root→cwd `AGENTS.override.md`/`AGENTS.md`; nearer files later; global files also apply | `.agents/skills`; hooks can add context, deny, or rewrite supported inputs | `--ask-for-approval never` differs from `--sandbox danger-full-access`; combined bypass removes both |
 | Claude Code | `CLAUDE.md` imported here from `AGENTS.md`; files layer root→cwd; managed policy can dominate | nested `.claude/skills`; `PreToolUse` hooks can deny/modify | `--dangerously-skip-permissions` changes permission mode, not OS isolation; sandbox is separate |
 
-“Auto approval,” “approval bypass,” and “sandbox removal” are not interchangeable. A permission hook can deny or transform a tool request, but a container/VM is the environment boundary. Ask each harness what it loaded and verify actual files, diffs, and command evidence.
+"Auto approval," "approval bypass," and "sandbox removal" mean different things. A permission hook can deny or transform a tool request. A container or VM provides the environment boundary. Ask each harness what it loaded, then verify the files, diffs, and command evidence.

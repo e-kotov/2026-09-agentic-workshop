@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libicu-dev \
     libjpeg-dev \
     libjq-dev \
+    jq \
     lfm \
     libleptonica-dev \
     libmagick++-dev \
@@ -159,6 +160,16 @@ RUN mkdir -p /home/${NB_USER}/.config/fish && \
     npm cache clean --force && \
     # Install Antigravity CLI
     curl -fsSL https://antigravity.google/cli/install.sh | bash && \
+    # Install the optional cache-observability displays without accounts or session data
+    curl -fsSL https://herdr.dev/install.sh | sh && \
+    herdr plugin install e-kotov/herdr-cache-hit --yes && \
+    mkdir -p /home/${NB_USER}/.config/herdr && \
+    printf '%s\n' \
+        '[ui.sidebar.agents]' \
+        'rows = [["state_icon", "agent"], ["$cache"], ["workspace", "tab"]]' \
+        > /home/${NB_USER}/.config/herdr/config.toml && \
+    git clone --depth 1 https://github.com/e-kotov/opencode-cache-hit.git /tmp/opencode-cache-hit && \
+    /tmp/opencode-cache-hit/install.sh --placement auto && \
     # Extension management
     code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension saoudrizwan.claude-dev || true && \
     code-server --extensions-dir ${CODE_EXTENSIONSDIR} --uninstall-extension cline.cline || true && \
@@ -178,7 +189,8 @@ RUN mkdir -p /home/${NB_USER}/.config/fish && \
       code-server --extensions-dir ${CODE_EXTENSIONSDIR} --install-extension $ext --force || echo "Failed to install $ext on code-server"; \
     done && \
     # Final cleanup
-    rm -rf ${CODE_USERDATADIR}/CachedExtensionVSIXs \
+    rm -rf /tmp/opencode-cache-hit \
+           ${CODE_USERDATADIR}/CachedExtensionVSIXs \
            ${CODE_USERDATADIR}/CachedExtensions \
            ${CODE_EXTENSIONSDIR}/.obsolete \
            /home/${NB_USER}/.cache/pip \

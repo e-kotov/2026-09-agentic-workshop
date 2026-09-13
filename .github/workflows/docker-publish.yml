@@ -22,14 +22,14 @@ jobs:
 
       - name: Set image name to lowercase
         run: |
-          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"
 
       - name: Fetch Latest Antigravity Version
         id: agy
         run: |
           # Use the manifest to get the current latest version
-          VERSION=$(curl -s https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/manifests/linux_amd64.json | grep -oP '"version":\s*"\K[^"]+')
-          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          VERSION=$(curl -fsSL https://antigravity-cli-auto-updater-974169037036.us-central1.run.app/manifests/linux_amd64.json | grep -oP '"version":\s*"\K[^"]+')
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Set up QEMU
         if: matrix.platform == 'linux/arm64'
@@ -50,7 +50,7 @@ jobs:
         run: |
           PLATFORM="${{ matrix.platform }}"
           SUFFIX="${PLATFORM#linux/}"
-          echo "suffix=${SUFFIX}" >> $GITHUB_OUTPUT
+          echo "suffix=${SUFFIX}" >> "$GITHUB_OUTPUT"
 
       - name: Extract metadata (labels) for Docker
         id: meta
@@ -71,6 +71,14 @@ jobs:
           outputs: type=image,name=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }},push-by-digest=true,name-canonical=true,push=true
           cache-from: type=gha,scope=binder-${{ steps.suffix.outputs.suffix }}
           cache-to: type=gha,mode=max,scope=binder-${{ steps.suffix.outputs.suffix }}
+
+      - name: Assert participant tools and cache displays
+        run: |
+          IMAGE_REF="${REGISTRY}/${IMAGE_NAME}@${{ steps.build.outputs.digest }}"
+          docker pull --platform '${{ matrix.platform }}' "$IMAGE_REF"
+          docker run --rm --interactive \
+            --platform '${{ matrix.platform }}' \
+            "$IMAGE_REF" bash -s < scripts/assert-participant-image.sh
 
       - name: Export digest
         run: |
@@ -94,7 +102,7 @@ jobs:
     steps:
       - name: Set image name to lowercase
         run: |
-          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+          echo "IMAGE_NAME=${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"
 
       - name: Download digests
         uses: actions/download-artifact@v4
@@ -115,7 +123,11 @@ jobs:
 
       - name: Create and push multi-arch manifest
         run: |
+          sources=()
+          for digest in *; do
+            sources+=("${REGISTRY}/${IMAGE_NAME}@sha256:${digest}")
+          done
           docker buildx imagetools create \
-            -t ${{ env.REGISTRY }}/${IMAGE_NAME}:latest \
-            $(printf "${{ env.REGISTRY }}/${IMAGE_NAME}@sha256:%s " *)
+            -t "${REGISTRY}/${IMAGE_NAME}:latest" \
+            "${sources[@]}"
         working-directory: /tmp/digests

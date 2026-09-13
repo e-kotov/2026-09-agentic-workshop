@@ -2,8 +2,10 @@
 title: "Memory and agentic loops"
 ---
 
-Project memory makes decisions and handoffs discoverable; it should reduce repeated context, not become an unmaintained second database. A useful minimal structure has goals/current state, a work log, decision records, a handoff, and `analysis/` containing `data/`, clean code, tests, and outputs.
+Use project memory to record decisions and handoffs. Keep it small enough to maintain. A useful structure has the goals and current state, a work log, decision records, a handoff, and an `analysis/` folder with `data/`, clean code, tests, and outputs.
 
-Design loops with a bounded plan–act–check–revise cycle, an explicit stop condition, and a human review point. Score any memory system for usefulness, maintenance burden, duplication, stale state, context bloat, and inappropriate automation.
+Bound every agentic loop: plan, act, check, revise, then stop. Add an explicit stop condition and a human review point. Before adopting a memory system, check its usefulness, maintenance cost, duplication, stale state, context bloat, and inappropriate automation.
 
-The ecosystem contains hundreds of memory and automation systems. Conductor-for-all is one comparison, not a prescribed system. Full automation of research decisions is often premature: logs should make human responsibility clearer, not obscure it. The minimal control-project template in Lab 4 remains unpublished until an agent privacy/structure audit and Emil’s manual review are complete.
+Use a handoff to cross a real task boundary: continue while the current task and context remain coherent, then start fresh when the handoff can replace irrelevant session history. A warm provider cache can make continuation cheaper, but it should not override clarity or recoverability.
+
+Conductor-for-all is one comparison, not the prescribed system. Do not automate research decisions before you can review them. Logs should clarify human responsibility. The minimal control-project template in Lab 4 remains unpublished until it passes an agent privacy and structure audit and Emil's manual review.

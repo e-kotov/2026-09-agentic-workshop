@@ -2,10 +2,17 @@
 title: "Permissions, sandboxes, and isolation"
 ---
 
-An approval prompt is a decision gate; a rule is an instruction or policy; a hook can transform an event; a container or VM is an environment boundary. They solve different problems. An agent denied a native file-read may still reach the same benign file through an allowed shell command, so permission configuration is not an OS sandbox.
+Do not confuse approval settings with isolation:
 
-Lab 3 demonstrates this distinction only with fake files in a disposable folder. It compares normal approvals with auto mode, command-pattern blocks with equivalent scripts, and an optional separately launched process. Native child sessions may inherit derived restrictions; do not describe them as a security escape.
+- An approval prompt is a decision gate.
+- A rule is an instruction or policy.
+- A hook can transform an event.
+- A container or VM is an environment boundary.
+
+An agent denied a native file read may still reach the same file through an allowed shell command. Permission configuration is not an OS sandbox.
+
+Lab 3 uses fake files in a disposable folder. You will compare normal approvals with auto mode, command-pattern blocks with equivalent scripts, and an optional separately launched process. Native child sessions may inherit derived restrictions. They are not a security escape.
 
 ::: {.callout-important}
-Containers limit impact on the host but do not protect data sent to the model provider. Rules and ignore files can be bypassed. Stronger controls combine least privilege, environment isolation, deterministic checks, human review, and recovery.
+Containers limit impact on the host. They do not protect data sent to the model provider. Rules and ignore files can be bypassed. Combine least privilege, environment isolation, deterministic checks, human review, and recovery.
 :::

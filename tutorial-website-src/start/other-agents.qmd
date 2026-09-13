@@ -2,18 +2,22 @@
 title: "Other agents"
 ---
 
-The exercises are written for OpenCode, but the same questions transfer to other harnesses. This page was checked 2026-09-12. Use the current vendor documentation for installation and account requirements; do not assume flags or configuration paths match.
+The exercises use OpenCode. You may compare another agent if it is already available. This page was checked 2026-09-12, so verify commands in the current vendor documentation.
 
 ## Optional comparisons
 
-**Antigravity.** Check its verified project-rules mechanism and sandbox/telemetry settings in the [official documentation](https://antigravity.google/). A telemetry toggle is not a confidentiality guarantee.
+**Antigravity.** Check its project rules, sandbox, and telemetry settings in the [official documentation](https://antigravity.google/). Turning off telemetry does not make research data safe to share.
 
-The retained [Antigravity setup recording](../media/videos/agy-setup.mp4) is a donor aid, not a promise that current screens or account flows are unchanged.
+The [Antigravity setup recording](../media/videos/agy-setup.mp4) may show older screens.
 
-**Codex.** Consult the [Codex setup and sandboxing guides](https://developers.openai.com/codex/). Personal-account behaviour follows the account's current data controls; review the official opt-out/data-control page before using any non-toy material.
+**Codex.** Use the [Codex setup and sandboxing guides](https://developers.openai.com/codex/). Check the account's current data controls before using anything beyond toy data.
 
-**Claude Code.** Use [Claude's installation and memory documentation](https://code.claude.com/docs/en/memory). Claude discovers `CLAUDE.md` according to its own precedence rules and does not thereby gain a stronger OS boundary.
+**Claude Code.** Use [Claude's installation and memory documentation](https://code.claude.com/docs/en/memory). Claude reads `CLAUDE.md` according to its own precedence rules. This file does not create an operating-system security boundary.
 
-If an optional agent is installed in the image, launch it from the selected lab directory: `agy` (Antigravity), `codex` (Codex), or `claude` (Claude Code). Authenticate only through its documented browser/command flow. For comparison-only flags, verify current help first: Antigravity's `--dangerously-skip-permissions` approves all tool calls and is distinct from its `--sandbox`; Codex's `--ask-for-approval never` is distinct from `--sandbox danger-full-access`; Claude's `--dangerously-skip-permissions` is a permission mode, not a sandbox. Do not use these bypass modes on a host or with real data.
+Launch an installed agent from the lab directory with `agy` (Antigravity), `codex` (Codex), or `claude` (Claude Code). Authenticate only through its documented flow.
 
-In every product, verify the actual working directory, instructions loaded, permissions, and files changed. If an alternative cannot run in the Codespace, observe its documentation or UI only and continue the lab with OpenCode.
+::: {.callout-warning}
+Approval bypass and sandbox settings are separate controls. Antigravity's `--dangerously-skip-permissions` approves all tool calls and differs from `--sandbox`. Codex's `--ask-for-approval never` differs from `--sandbox danger-full-access`. Claude's `--dangerously-skip-permissions` is a permission mode, not a sandbox. Verify current help, and never use these bypass modes on your laptop or with real data.
+:::
+
+For every agent, check the working directory, loaded instructions, permissions, and changed files. If it does not run in the Codespace, inspect its documentation or interface and continue with OpenCode.

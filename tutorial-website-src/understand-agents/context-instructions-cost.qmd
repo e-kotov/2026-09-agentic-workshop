@@ -2,16 +2,43 @@
 title: "Context, instructions, and cost"
 ---
 
-The context window is the model's working set: instructions, conversation, tool results, and selected file content. Large context is not free context. Unfocused reads increase latency and cost and can hide the relevant detail.
+The **context window** is everything sent to the model for the next turn. It can include your prompt; system, harness, and project instructions; loaded skills; tool schemas; earlier messages; and tool results or selected file content. All of these use space. Unfocused reads cost time and money and can bury the useful detail.
 
-Prefer targeted search, small summaries, schema inspection, and reproducible scripts over pasting whole datasets or codebases. Compaction can preserve a conversation while losing detail, so keep important decisions in a human-readable project log.
+Search for what you need. Inspect schemas before data. Use reproducible scripts instead of pasting whole datasets or codebases. Keep decisions in a project log because **compaction** (shortening earlier context) can lose details.
+
+## Inspect what is using context
+
+Current products expose different views. Claude Code's [`/context`](https://code.claude.com/docs/en/context-window) and Antigravity's [`/context`](https://antigravity.google/docs/cli-reference?app=cli) show a context-usage breakdown. Codex shows totals and context use in its footer, but has no native composition breakdown; [issue #27898](https://github.com/openai/codex/issues/27898) requests one. We have not selected an exact OpenCode equivalent for this workshop.
+
+## Provider cache is not session history
+
+A provider may reuse an unchanged prefix of a request instead of processing it from scratch. A **hot** or **warm prompt cache** means that prefix is still reusable; a **cold cache** means it is not. This is provider-side request processing. It is separate from conversation or session history saved locally by a harness so that you can reopen a chat.
+
+Continue a session while the task and its relevant context remain coherent. Start fresh after a clear task boundary, when irrelevant history dominates, or when a reliable handoff records what matters. Continuing may retain a cached prefix, but it also resends more context. Restarting sends less context, but the first request may be cold. Cache state is only one consideration: correctness, clarity, and recoverability come first.
+
+::: {#fig-cache-observability layout-ncol=1}
+
+![Codex running inside Herdr before cache metadata is exposed in the sidebar. The main pane shows a completed coding task. Codex's built-in footer along the bottom reports the model, readiness, 66 percent context used, remaining quotas, and cumulative input and output tokens. The selected Codex row in the left Herdr sidebar shows the agent and workspace but no cache row.](../media/codex-context-native-footer.png){#fig-codex-native-footer .lightbox group="cache-observability" fig-alt="Codex running inside Herdr before cache metadata is exposed in the sidebar. The main pane shows a completed coding task. Codex's built-in footer along the bottom reports the model, readiness, 66 percent context used, remaining quotas, and cumulative input and output tokens. The selected Codex row in the left Herdr sidebar shows the agent and workspace but no cache row."}
+
+![The same Codex session after the Herdr sidebar cache row is revealed. Codex's native footer is unchanged at the bottom. Under the selected Codex agent in the left sidebar, the Herdr cache plugin adds a snowflake and the labels cold, 99 percent, and 173.8 thousand cached tokens.](../media/codex-context-herdr-cache.png){#fig-codex-herdr-cache .lightbox group="cache-observability" fig-alt="The same Codex session after the Herdr sidebar cache row is revealed. Codex's native footer is unchanged at the bottom. Under the selected Codex agent in the left sidebar, the Herdr cache plugin adds a snowflake and the labels cold, 99 percent, and 173.8 thousand cached tokens."}
+
+The same session with two observability layers: Codex's native footer reports built-in context, quota, and token fields; the optional Herdr sidebar adds provider cache observation.
+:::
+
+## Status lines and optional cache displays
+
+[Claude Code](https://code.claude.com/docs/en/statusline) and [Antigravity](https://www.antigravity.google/docs/cli/statusline/) can run custom status-line scripts. You can ask the harness to create one, but inspect both the script and the settings change before enabling it.
+
+Codex supports an ordered built-in [`tui.status_line`](https://developers.openai.com/codex/config-reference/). It does not currently offer the cache-hit item requested in [issue #43615](https://github.com/openai/codex/issues/43615). For an optional cache view across several harnesses, run Codex inside [Herdr](https://github.com/herdrdev/herdr) with [herdr-cache-hit](https://github.com/e-kotov/herdr-cache-hit); see its [live showcase](https://www.ekotov.pro/herdr-cache-hit/).
+
+For OpenAI models in OpenCode, either use Codex inside Herdr or authenticate a ChatGPT Plus/Pro account in OpenCode as described in the [OpenAI provider instructions](https://opencode.ai/docs/providers/#openai), then use [opencode-cache-hit](https://github.com/e-kotov/opencode-cache-hit). [opencode-visual-cache](https://github.com/Hotakus/opencode-visual-cache) is another optional cache display, not a claimed `/context`-style composition view. The workshop image preinstalls the Herdr and OpenCode cache displays; they remain unobtrusive until a supported authenticated provider reports cache metadata.
 
 ## Try it now: observable context (3–8 minutes)
 
-Ask your agent what project instructions and tools it can observe. Mark each answer as **observed**, **documented**, or **inferred**. Then inspect the actual files and help output. Do not ask it to reveal provider-hidden prompts or upload a private project.
+Ask the agent which project instructions and tools it can observe. Mark each answer as **observed**, **documented**, or **inferred**, then check the files and help output. Do not ask it to reveal hidden provider prompts or upload a private project.
 
-When choosing a model or effort level, balance task complexity, output quality, context length, latency, and route cost. Advanced participants can audit unnecessary reads, repeated tool calls, context fullness where visible, and whether decomposition would reduce them.
+Choose the model and effort level for the task. Consider quality, context length, speed, and cost. You can also check for unnecessary reads, repeated tool calls, and tasks that would be cheaper to split.
 
 ::: {.callout-note}
-Token estimates and quotas differ by product and route. Read the current provider dashboard and harness documentation rather than relying on a fixed number in teaching material.
+Token estimates and quotas differ by product and route. Check the current provider dashboard and harness documentation.
 :::

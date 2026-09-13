@@ -1,15 +1,15 @@
 # Lab 2 — Engineering for research
 
-**Time:** about 60 minutes. Use only this disposable Codespace and the fake fixture in `fixture/`.
+Allow about 60 minutes. Use this disposable Codespace and the fake fixture in `fixture/`.
 
 <details><summary>Quick start, safety, and reset</summary>
 
-Run `cd exercises/lab-02-engineering`; inspect `git status --short` before touching files. Never add credentials or restricted/unpublished data. The fixture contains an intentional defect. Keep it isolated, inspect every diff, and reset only this lab with `git restore --source=HEAD -- fixture project` if the facilitator confirms that no participant work is there.
+Run `cd exercises/lab-02-engineering`, then `git status --short`. Never add credentials or restricted or unpublished data. The fixture is deliberately broken. Inspect every diff. Only run `git restore --source=HEAD -- fixture project` after the facilitator confirms that it will not erase participant work.
 </details>
 
 ## What you learn
 
-Use tests and data contracts as evidence, recover an intentional failure with Git, and express dependencies with a small `targets` or Snakemake-style pipeline. Engineering controls are safety nets, not ceremony or proof of a valid research interpretation.
+Use tests and data contracts (executable rules for the data) as evidence. Recover a deliberate failure with Git and inspect a small `targets` or Snakemake workflow. Passing checks support a result; they do not prove its interpretation.
 
 ## Core route
 
@@ -17,12 +17,12 @@ Use tests and data contracts as evidence, recover an intentional failure with Gi
 2. Ask it to run `Rscript project/build_output.R` to generate a repaired `project/output.csv`, then run `Rscript checks/check_fixture.R`. The check proves both that the input is bad and that the generated output satisfies the contract.
 3. Deliberately introduce a harmless one-line value break in `project/output.csv`. Inspect `git diff`, run the check to see it fail, then recover with Git history and rerun the check.
 4. Add one engineering control to the cumulative Lab 1 project at `../lab-01-first-contact/project/`: an explicit setup note, a test, or an output manifest. Review the diff and evidence.
-5. Inspect `pipeline/README.md`. Choose the tiny R `targets` path or Python Snakemake alternative, run it only if the dependency is already available, and ask the agent to explain which upstream change invalidates which output. Do not run a long pipeline.
+5. Inspect `pipeline/README.md`. Choose the small R `targets` route or the Python Snakemake route. Ask which upstream change invalidates each output. Do not run a long pipeline.
 6. Review the final table/output, warnings, manifest, and check command—not only code style.
 
 ## Staff-like task options
 
-Choose one safe framing: validate questionnaire metadata and skip rules; detect duplicate/orphan household-person keys; repair a flag inconsistency; or regenerate a release artefact and manifest after an upstream change. Keep the exact task bounded to fake files.
+Choose one fake-data task: validate questionnaire metadata and skip rules, detect duplicate or orphan household-person keys, repair a flag inconsistency, or rebuild a release artefact and manifest.
 
 ## Medium and advanced routes
 
@@ -45,15 +45,11 @@ Medium prompt: “Diagnose first, then add one focused contract for the duplicat
 
 Copy `task/epistemic-instructions.md` into the disposable project instructions for one short run. Ask the agent to label observations and inferences, then remove the file and repeat the orientation prompt. Record whether the instruction improved evidence or merely added boilerplate; labels are not a substitute for checks.
 
-## Exact data-task design TODO (bounded)
-
-**TODO (later data-task design session):** map one approved staff-like option to the canonical synthetic panel and one named defect fixture. Add exact input paths, schema/invariants, expected output, and a deterministic check after the generator owner and instructor approve them. Until then, use only the tiny local fixture; do not infer SOEP semantics or weights.
-
 ## Cumulative project state
 
 Before Lab 2, `../lab-01-first-contact/project/` contains the safe metadata input and provenance note. After this lab it should additionally contain a focused check, a setup/manifest note, and a Git checkpoint documenting the repaired artefact. Keep Lab 2's intentionally bad fixture and recovery evidence local to this lab.
 
-## Artefact, check, reflection
+## Finish
 
 - **Expected artefact:** repaired output, focused test/data contract, Git recovery evidence, and a short manifest/setup note.
 - **Objective check:** `Rscript checks/check_fixture.R` passes after the defect is repaired.

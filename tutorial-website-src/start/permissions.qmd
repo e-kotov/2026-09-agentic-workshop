@@ -2,16 +2,16 @@
 title: "Permissions and auto mode"
 ---
 
-Begin with ordinary prompts so you can see when the harness asks to read, edit, or execute. Read the proposed path and command before approving it. This makes approval fatigue visible.
+Start with ordinary approval prompts. Before you approve, read the path and command. Notice how quickly repeated prompts become routine.
 
-After that observation, launch the next safe task from its lab directory with `opencode --auto` for the TUI. This auto-approves permissions that are not explicitly denied; an explicit `deny` remains. For a non-interactive prompt, use `opencode run --auto "<quoted prompt>"`. Check the [current OpenCode permissions documentation](https://opencode.ai/docs/permissions/) before teaching a changed flag.
+For the next safe task, launch `opencode --auto` from the lab directory. This auto-approves permissions that are not explicitly denied. An explicit `deny` still applies. For a non-interactive prompt, use `opencode run --auto "<quoted prompt>"`. If a flag has changed, check the [OpenCode permissions documentation](https://opencode.ai/docs/permissions/).
 
-For a visual comparison, see the retained donor recordings for [OpenCode's GUI](../media/videos/opencode-gui.mp4) and [agent mode switching](../media/videos/agent-mode-switch-tab.mp4). The recordings are illustrative; current controls and names must be checked in the installed product.
+The recordings show [OpenCode's GUI](../media/videos/opencode-gui.mp4) and [agent mode switching](../media/videos/agent-mode-switch-tab.mp4). Controls and names may have changed.
 
 ::: {.callout-important}
-Auto approval is convenience, not security. It does not stop a model from misunderstanding a task, following instructions in an untrusted file, sending prompt content to a provider, or finding an equivalent command path. Containers reduce host impact; they do not make sensitive data safe to disclose.
+Auto approval is not security. The model can misunderstand a task, follow instructions in an untrusted file, send prompt content to a provider, or find another command path. A container limits access to your laptop. It does not make sensitive data safe to share.
 :::
 
-Other agents use different names for approval bypass, auto mode, or sandbox removal. Do not transfer a flag between products. In Labs 2 and 3 you will compare an instruction, a permission prompt, a hook, and an actual environment boundary.
+Other agents name these controls differently. Never copy a permission or sandbox flag from one product to another. Labs 2 and 3 compare instructions, permission prompts, hooks, and environment boundaries.
 
-If a command or file access is surprising: deny it, record the path and reason, inspect `git diff`, and reset the disposable task folder using its README instructions. Never “test” a bypass against your laptop, credentials, or real research data.
+If a command or file access surprises you, deny it. Note the path and reason, inspect `git diff`, then reset the disposable task folder using its README. Never test a bypass on your laptop, credentials, or real research data.

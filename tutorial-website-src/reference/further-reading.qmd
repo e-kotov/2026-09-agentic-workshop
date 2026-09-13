@@ -6,10 +6,12 @@ title: "Further reading"
 - [GitHub Codespaces documentation](https://docs.github.com/en/codespaces)
 - [OpenAI Codex documentation](https://developers.openai.com/codex/)
 - [Claude Code documentation](https://code.claude.com/docs/)
+- [Herdr](https://github.com/herdrdev/herdr), the optional [herdr-cache-hit plugin](https://github.com/e-kotov/herdr-cache-hit), and its [live showcase](https://www.ekotov.pro/herdr-cache-hit/)
+- [opencode-cache-hit](https://github.com/e-kotov/opencode-cache-hit) and the optional [opencode-visual-cache](https://github.com/Hotakus/opencode-visual-cache)
 - [targets book](https://books.ropensci.org/targets/) and [Snakemake documentation](https://snakemake.readthedocs.io/)
 - [Git documentation](https://git-scm.com/doc)
-- [OpenAI privacy-filter issue #13](https://github.com/openai/privacy-filter/issues/13) — instructor exhibit about false negatives, not a workshop dependency.
+- [OpenAI privacy-filter issue #13](https://github.com/openai/privacy-filter/issues/13), an instructor exhibit about false negatives, not a workshop dependency
 - The minimal research-control template in Lab 4 is intentionally unpublished pending privacy/structure audit and Emil's manual review; compare it with richer systems only after that review.
 - Publishable brain-repository notes and guest references will be added here after instructor approval; private planning material is not reproduced.
 
-The lab folders contain the runnable workshop route. Explore additional agent memory and workflow systems only after you can state their threat model, maintenance cost, and evidence of benefit for your own safe project.
+The lab folders contain the runnable workshop. Explore other memory and workflow systems only when you can state their threat model, maintenance cost, and evidence of benefit for your safe project.

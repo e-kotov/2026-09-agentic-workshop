@@ -2,7 +2,7 @@
 title: "Git and recoverable change"
 ---
 
-Git turns an agent's edits into inspectable history. Before accepting work, read `git diff`; after a meaningful checkpoint, create a commit with a descriptive message. A commit is not proof of correctness, but it makes recovery and review possible.
+Git makes an agent's edits inspectable and recoverable. Read `git diff` before accepting work. Commit useful checkpoints with a clear message. A commit does not prove the work is correct.
 
 ```bash
 git status --short
@@ -10,8 +10,8 @@ git diff -- path/to/file
 git log --oneline --max-count=5
 ```
 
-Lab 2 deliberately breaks a disposable project and recovers it. Keep intentional failures isolated, record the starting commit, and never experiment against a production checkout. If a change is unwanted, stop the agent, inspect the diff, and use the smallest recoverable operation agreed by the team.
+Lab 2 breaks and repairs a disposable project. Keep deliberate failures isolated, record the starting commit, and never experiment in a production checkout. If you do not want a change, stop the agent, inspect the diff, and use the smallest recovery operation your team accepts.
 
 ::: {.callout-warning}
-Do not commit credentials, restricted data, or provider configuration. Review staged paths and `.gitignore`; ignore files are a convenience, not a security boundary.
+Do not commit credentials, restricted data, or provider configuration. Review staged paths and `.gitignore`. An ignored file is not securely protected.
 :::

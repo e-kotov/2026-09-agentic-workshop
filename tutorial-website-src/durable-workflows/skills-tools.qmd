@@ -2,8 +2,8 @@
 title: "Skills and deterministic tools"
 ---
 
-A tool is an executable capability such as reading a file or running a shell command. A skill is scoped guidance that helps an agent use a capability reliably for a recurring task. A script or test is often preferable when the desired behaviour is deterministic.
+A tool can read a file, run a shell command, or perform another action. A skill is reusable guidance for a specific task. If the result should always follow fixed rules, use a script or test.
 
-Each exercise ships a repository-scoped R binary-package skill. It documents the Linux/P3M installation path and its limits; it is not a license to install arbitrary packages or use real data. Inspect its trigger and scope in `.agents/skills/r-binary-packages/SKILL.md` before asking an agent to use it.
+Each exercise includes a repository-scoped R binary-package skill. It documents the Linux/P3M installation path and its limits. It does not permit arbitrary package installation or real data. Read its trigger and scope in `.agents/skills/r-binary-packages/SKILL.md` before using it.
 
-Skill creation is optional. First identify a safe repeated task, try a one-off prompt, then promote only the stable knowledge. Run a new case and revise the skill from observed behaviour. Different harnesses discover skills in different directories; the Claude copy is intentionally real and synchronized rather than a symlink.
+Create a skill only after a safe task repeats. Try a one-off prompt first, save only stable guidance, and test the skill on a new case. Harnesses discover skills in different directories. The Claude copy is a synchronised file, not a symlink.

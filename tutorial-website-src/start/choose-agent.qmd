@@ -2,27 +2,29 @@
 title: "Choose an agent"
 ---
 
-OpenCode is the supported teaching path because its terminal workflow makes reads, edits, commands, and approvals visible. It is a representative agent experience, not a universal standard.
+Use OpenCode for the workshop. Its terminal shows what the agent reads, edits, runs, and asks you to approve.
 
 ## Start OpenCode
 
-From the repository root, change into the selected lab before launching so its project instructions and skills are discoverable:
+From the repository root, enter the lab folder and launch OpenCode:
 
 ```bash
 cd exercises/lab-01-first-contact
 opencode
 ```
 
-Begin with a read-only orientation prompt. Ask which instruction files and skills were loaded, then verify the files on disk. For subsequent safe work in the disposable Codespace, use `opencode --auto` for the TUI (auto-approves permissions that are not explicitly denied; dangerous) only after observing ordinary approvals. The non-interactive form is `opencode run --auto "<quoted prompt>"`. Current launch and configuration details belong to the [OpenCode documentation](https://opencode.ai/docs/).
+First ask which instruction files and skills OpenCode loaded, without letting it edit anything. Check its answer against the files on disk.
 
-Other agents can be useful comparisons:
+After you have seen ordinary approval prompts, the labs may ask you to use `opencode --auto` in this disposable Codespace. It auto-approves permissions that are not explicitly denied. For a non-interactive prompt, use `opencode run --auto "<quoted prompt>"`. Check the [OpenCode documentation](https://opencode.ai/docs/) if the interface or commands differ.
 
-- **Antigravity:** a Google agent/workbench with its own project rules and sandbox settings; see its current official documentation.
-- **Codex:** an OpenAI coding agent with account-specific data controls and a distinct approval/sandbox model; see the [Codex guide](https://developers.openai.com/codex/).
-- **Claude Code:** a terminal agent using `CLAUDE.md` and its own permission model; see the [Claude Code documentation](https://code.claude.com/docs/).
+## Optional comparisons
 
-These products differ in instruction precedence, hooks/plugins, skills, permissions, model routes, and automatic modes. A file named `AGENTS.md` is not evidence that every harness will discover it in the same way.
+- **Antigravity** is Google's agent workbench. It has its own project rules and sandbox settings.
+- **Codex** is OpenAI's coding agent. See the [Codex guide](https://developers.openai.com/codex/).
+- **Claude Code** is Anthropic's terminal agent. See the [Claude Code documentation](https://code.claude.com/docs/).
+
+Their instruction precedence, hooks/plugins, skills, permissions, model routes, and automatic modes differ. For example, each agent may treat `AGENTS.md` differently.
 
 ::: {.callout-warning}
-Do not import retired command-line setup from older workshop copies. Antigravity is a distinct product. Never connect a real account or real research data just to compare interfaces.
+Antigravity is not the retired Gemini CLI. Do not connect real research data just to compare agents.
 :::

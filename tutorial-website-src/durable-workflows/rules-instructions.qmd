@@ -2,14 +2,21 @@
 title: "Rules and project instructions"
 ---
 
-Instruction files put durable, human-reviewed context near a project. In this repository, `AGENTS.md` is the common source and `CLAUDE.md`/`GEMINI.md` adapters import it where supported. Antigravity needs its verified project-rules mechanism as well; file names alone do not guarantee discovery.
+Put stable, human-reviewed project guidance in instruction files. Here, `AGENTS.md` is the common source. `CLAUDE.md` and `GEMINI.md` adapters import it where supported. Antigravity also needs its verified project-rules mechanism. A file name alone does not guarantee discovery.
 
-Precedence is harness-specific. OpenCode traverses project `AGENTS.md` upward and falls back to `CLAUDE.md`; Codex layers root-to-current-directory files with nearer files later; Claude layers `CLAUDE.md` files and managed policy; Antigravity rules have activation modes rather than a documented automatic `AGENTS.md` import. Confirm the installed product's rules page and actual loaded context.
+Each harness loads and prioritises instructions differently:
 
-Keep instructions concise: scope, safe-data boundary, commands, conventions, and how to verify. Separate a project rule from a personal/global preference. Ask an agent what it loaded, then inspect the files and documentation rather than trusting its explanation.
+- OpenCode traverses project `AGENTS.md` upward and falls back to `CLAUDE.md`.
+- Codex layers root-to-current-directory files, with nearer files later.
+- Claude layers `CLAUDE.md` files and managed policy.
+- Antigravity rules have activation modes. There is no documented automatic `AGENTS.md` import.
 
-Rules are not enforcement. They can be ignored, overridden, or bypassed through a tool. For access control, use least-privilege permissions, a disposable environment, and deterministic checks.
+Check the installed product's rules page and the context it actually loaded.
+
+Keep instructions to the scope, safe-data boundary, commands, conventions, and verification steps. Separate project rules from personal or global preferences. Ask the agent what it loaded, then verify its answer against the files and documentation.
+
+Rules are not access control. A model may ignore them, another instruction may override them, or a tool may bypass them. Use least-privilege permissions, a disposable environment, and deterministic checks.
 
 ::: {.callout-tip}
-Classify repeated knowledge before adding it: one-off prompt, project instruction, global instruction, skill, memory/log, or deterministic script. The smallest correct location is usually easiest to maintain.
+Before saving repeated knowledge, decide where it belongs: a one-off prompt, project instruction, global instruction, skill, memory or log, or deterministic script. Choose the smallest place that fits.
 :::

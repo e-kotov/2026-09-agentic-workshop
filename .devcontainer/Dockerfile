@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     glances \
     gnupg \
     htop \
+    jq \
     lfm \
     mc \
     micro \
@@ -193,10 +194,20 @@ RUN mkdir -p /home/$USERNAME/.config/fish && \
     curl -fsSL https://pixi.sh/install.sh | bash && \
     # Install Antigravity CLI
     curl -fsSL https://antigravity.google/cli/install.sh | bash && \
+    # Install the optional cache-observability displays without accounts or session data
+    curl -fsSL https://herdr.dev/install.sh | sh && \
+    herdr plugin install e-kotov/herdr-cache-hit --yes && \
+    mkdir -p /home/$USERNAME/.config/herdr && \
+    printf '%s\n' \
+        '[ui.sidebar.agents]' \
+        'rows = [["state_icon", "agent"], ["$cache"], ["workspace", "tab"]]' \
+        > /home/$USERNAME/.config/herdr/config.toml && \
+    git clone --depth 1 https://github.com/e-kotov/opencode-cache-hit.git /tmp/opencode-cache-hit && \
+    /tmp/opencode-cache-hit/install.sh --placement auto && \
     # Install arf console to user's home directory
     curl --proto '=https' --tlsv1.2 -LsSf https://github.com/eitsupi/arf/releases/latest/download/arf-console-installer.sh | CARGO_HOME=/home/$USERNAME/.cargo sh && \
     # Cleanup user caches and unnecessary files
-    rm -rf /home/$USERNAME/.cache/uv /home/$USERNAME/.cache/pip /home/$USERNAME/.npm/_cacache $NVM_DIR/.cache $NVM_DIR/src $NVM_DIR/test
+    rm -rf /tmp/opencode-cache-hit /home/$USERNAME/.cache/uv /home/$USERNAME/.cache/pip /home/$USERNAME/.npm/_cacache $NVM_DIR/.cache $NVM_DIR/src $NVM_DIR/test
 
 # Set the default workspace directory
 WORKDIR /workspace

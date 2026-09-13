@@ -6,21 +6,20 @@ number-sections: false
 
 Welcome to **Beyond the Chatbox: LLM Coding Agents for Research** (September 2026).
 
-This is a practical field guide to coding agents in research: how they work, where their evidence comes from, and how to keep human responsibility visible. You will work in a disposable GitHub Codespace with source-free synthetic data and small, reviewable artefacts.
+You will use a coding agent on small research tasks, check its work, and stay responsible for the result.
 
-## Start safely
+## What you need
 
-- **Audience:** researchers, data managers, analysts, and computational scientists.
-- **Prerequisites:** a GitHub account, basic file/terminal literacy, and a small safe project you can discuss without sharing it.
-- **Default path:** OpenCode in Codespaces; Antigravity, Codex, and Claude are optional comparisons.
-- **Data boundary:** use only the supplied fake data or other source-free toy data with provider-facing agents. “Public” does not automatically mean approved for an external AI service.
+- A [GitHub account](https://github.com/signup)
+- Basic file and terminal skills
+- The supplied fake data. Do not bring real research data.
 
-Start with [Open the Codespace](start/codespace.qmd), then [Navigate VS Code](start/vscode.qmd) and [choose an agent](start/choose-agent.qmd). Each lab README is the runnable source of truth and is included in the corresponding website page, so you can continue when the browser is closed.
+We use OpenCode in a disposable GitHub Codespace. Antigravity, Codex, and Claude are optional comparisons.
 
-The pages are deliberately short: concepts explain the durable ideas, while Labs 1–4 turn them into bounded tasks with an artefact, a check, and a reflection. Follow the beginner route first; medium and advanced routes are optional.
+Start with [Open the Codespace](start/codespace.qmd), then [find your way around VS Code](start/vscode.qmd) and [choose an agent](start/choose-agent.qmd).
 
 ::: {.callout-warning}
-## Provider-facing safety reminder
+## Use fake data only
 
-Never paste restricted SOEP rows, unpublished results, personal information, credentials, or participant material into an agent. Prompts and entered data may be retained or used for model improvement depending on the provider and account controls. Check your institution's policy and the current provider terms before connecting anything beyond this Codespace.
+Never give an agent restricted SOEP rows, unpublished results, personal information, credentials, or participant material. Even public data may not be approved for an external AI service. Check your institution's policy and the provider's current terms.
 :::
