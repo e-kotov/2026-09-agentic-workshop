@@ -8,7 +8,7 @@
 
 <meta name="description" content="Beyond the Chatbox: LLM Coding Agents for Research">
 
-<title>Beyond the Chatbox</title>
+<title>21&nbsp; Lab 1: First contact – Beyond the Chatbox</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,31 +27,67 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./start/codespace.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ccdd104a4a75b30bf490f0c1de805517.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../labs/lab-02.html" rel="next">
+<link href="../durable-workflows/memory-loops.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-ccdd104a4a75b30bf490f0c1de805517.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -276,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Beyond the Chatbox</span>
     </a>
   </div>
@@ -296,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Beyond the Chatbox</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-01.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-01.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -318,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beyond the Chatbox</span></a>
   </div>
 </li>
@@ -333,37 +369,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/codespace.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/codespace.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open the Codespace</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Navigate VS Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/choose-agent.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/choose-agent.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Choose an agent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/opencode-login.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/opencode-login.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">OpenCode login and model routes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/other-agents.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/other-agents.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Other agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/permissions.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/permissions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Permissions and auto mode</span></span></a>
   </div>
 </li>
@@ -380,25 +416,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/chat-to-agent.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/chat-to-agent.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">From chat to agent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/models-and-harnesses.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/models-and-harnesses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Models and agent harnesses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Context, instructions, and cost</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/writing-tasks.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/writing-tasks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Writing tasks for agents</span></span></a>
   </div>
 </li>
@@ -415,7 +451,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./responsibility/ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
   </div>
 </li>
@@ -432,19 +468,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
+  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
+  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
+  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
   </div>
 </li>
@@ -461,19 +497,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
+  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
+  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
+  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
   </div>
 </li>
@@ -490,19 +526,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
+  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
   </div>
 </li>
@@ -519,25 +555,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-01.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-02.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-03.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-04.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">lab-04.html</span></span></a>
   </div>
 </li>
@@ -554,25 +590,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/agent-comparison.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/agent-comparison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Agent comparison</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/data-and-privacy.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/data-and-privacy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Data and privacy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/further-reading.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/further-reading.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Further reading</span></span></a>
   </div>
 </li>
@@ -588,28 +624,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#beyond-the-chatbox" id="toc-beyond-the-chatbox" class="nav-link active" data-scroll-target="#beyond-the-chatbox">Beyond the Chatbox</a>
-  <ul class="collapse">
-  <li><a href="#what-you-need" id="toc-what-you-need" class="nav-link" data-scroll-target="#what-you-need">What you need</a></li>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next">Read next</a></li>
-  </ul></li>
+  <li><a href="#start-here" id="toc-start-here" class="nav-link active" data-scroll-target="#start-here"><span class="header-section-number">21.1</span> Start here</a></li>
+  <li><a href="#what-you-learn" id="toc-what-you-learn" class="nav-link" data-scroll-target="#what-you-learn"><span class="header-section-number">21.2</span> What you learn</a></li>
+  <li><a href="#beginner-recommended" id="toc-beginner-recommended" class="nav-link" data-scroll-target="#beginner-recommended"><span class="header-section-number">21.3</span> Beginner — recommended</a></li>
+  <li><a href="#optional-medium-route" id="toc-optional-medium-route" class="nav-link" data-scroll-target="#optional-medium-route"><span class="header-section-number">21.4</span> Optional medium route</a></li>
+  <li><a href="#optional-advanced-route" id="toc-optional-advanced-route" class="nav-link" data-scroll-target="#optional-advanced-route"><span class="header-section-number">21.5</span> Optional advanced route</a></li>
+  <li><a href="#stop-reset-or-continue" id="toc-stop-reset-or-continue" class="nav-link" data-scroll-target="#stop-reset-or-continue"><span class="header-section-number">21.6</span> Stop, reset, or continue</a></li>
+  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next"><span class="header-section-number">21.7</span> Read next</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/labs/lab-01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-01.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-01.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Beyond the Chatbox</h1>
+<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 1: First contact</span></h1>
 </div>
 
-<div>
-  <div class="description">
-    Beyond the Chatbox: LLM Coding Agents for Research
-  </div>
-</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Author</div>
@@ -649,43 +682,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="beyond-the-chatbox" class="level1 unnumbered">
-<h1 class="unnumbered">Beyond the Chatbox</h1>
-<p>Welcome to <strong>Beyond the Chatbox: LLM Coding Agents for Research</strong> (September 2026).</p>
-<p>You will use a coding agent on small research tasks, check its work, and stay responsible for the result.</p>
-<section id="what-you-need" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-need">What you need</h2>
+<p>cd “$(git rev-parse –show-toplevel)/exercises/lab-01-first-contact”</p>
+<p>Allow about 70 minutes. This lab uses OpenCode, a disposable Codespace, and a complete source-free synthetic panel release. The staff-like task is to repair one questionnaire-metadata defect without silently changing anything else.</p>
+<section id="start-here" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="start-here"><span class="header-section-number">21.1</span> Start here</h2>
+<p>Open a VS Code terminal and paste the first command above. Now run <code>pwd</code>. It must end in <code>/exercises/lab-01-first-contact</code>. If it does not, stop and ask for help.</p>
+<p>Initialize the writable folder and run the exact checker once:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> tools/start_lab.sh</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> checks/check_lab1.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first check is expected to fail: it should report <code>PASS precondition: fixture has one duplicate (wave, item_id) key: 2019::EMP</code>, followed by missing work artefacts. The immutable starting release is <code>fixture/release/</code>; edit only <code>work/</code>. The defect is an appended, byte-identical second <code>2019::EMP</code> declaration in <code>questionnaire.csv</code>. These are invented teaching data, not SOEP data or valid production metadata.</p>
+<p>Choose one mode before the agent edits anything:</p>
 <ul>
-<li>A <a href="https://github.com/signup">GitHub account</a></li>
-<li>Basic file and terminal skills</li>
-<li>The supplied fake data. Do not bring real research data.</li>
+<li><strong>Standalone — recommended:</strong> work only in this lab. It is complete by itself.</li>
+<li><strong>Cumulative — optional:</strong> complete and review the standalone task first; only then export its allowlisted payload to <code>exercises/workshop-project/lab-01/</code>.</li>
 </ul>
-<p>We use OpenCode in a disposable GitHub Codespace. Antigravity, Codex, and Claude are optional comparisons.</p>
-<p>Start with <a href="./start/codespace.html">Open the Codespace</a>, then <a href="./start/vscode.html">find your way around VS Code</a> and <a href="./start/choose-agent.html">choose an agent</a>.</p>
+<p>If you do not choose, stay standalone. Never use credentials, restricted rows, unpublished results, or personal or participant data. Do not edit <code>fixture/</code>, <code>checks/</code>, or <code>tools/</code>.</p>
 </section>
-<section id="read-next" class="level2">
-<h2 class="anchored" data-anchor-id="read-next">Read next</h2>
+<section id="what-you-learn" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="what-you-learn"><span class="header-section-number">21.2</span> What you learn</h2>
+<p><strong>Agent-learning goal:</strong> observe orientation, instruction discovery, permissions, selective file inspection, assumptions, tool use, and the difference between an agent claim and a checked edit.</p>
+<p><strong>Plausible staff task:</strong> a questionnaire-metadata release contains a duplicated wave/item declaration. Produce a corrected questionnaire table, record provenance, and distinguish session observations from inferences before metadata goes to downstream processing.</p>
+<p><strong>Expected artefacts:</strong> <code>work/corrected-questionnaire.csv</code>, <code>work/provenance.md</code>, and <code>work/session-observations.md</code>. The provenance must name <code>fixture/release/questionnaire.csv</code>, key <code>2019::EMP</code>, the exact transformation “removed one exact duplicate; retained one declaration”, and the checker command. The observations file must have non-empty headings <code>Observed</code>, <code>Inferred</code>, <code>Permission</code>, and <code>Verification</code>.</p>
+</section>
+<section id="beginner-recommended" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="beginner-recommended"><span class="header-section-number">21.3</span> Beginner — recommended</h2>
+<p>Do not complete every route. Finish Beginner — recommended, then choose at most one optional route if time remains.</p>
+<p>Follow this one mandatory linear spine:</p>
+<ol type="1">
+<li><strong>Orient without action (5 minutes).</strong> Launch the agent with ordinary approval prompts. Ask it to report the current directory, README, immutable fixture, writable files, project instructions, and checker without editing or running task commands.</li>
+<li><strong>Observe context and permissions (8 minutes).</strong> Ask what instructions and tools it can actually observe. Approve two benign, scoped reads individually; do not enable auto mode yet. Record one observation and one inference.</li>
+<li><strong>Run the failing check (5 minutes).</strong> Read the precondition/failure output. Ask the agent to inspect only <code>questionnaire.csv</code>, <code>schema.csv</code>, and relevant release-contract information before proposing a repair.</li>
+<li><strong>Improve the task (10 minutes).</strong> Compare “fix the metadata” with a bounded prompt naming goal, allowed paths, artefacts, check, and the ambiguity stop. The agent must prove duplicate identity before removing a row.</li>
+<li><strong>Repair and document (15 minutes).</strong> Create the corrected CSV and provenance. Remove exactly one duplicate only after proving all columns match. Preserve questionnaire versions, numeric ranges, and every other field; keep the release fixture unchanged.</li>
+<li><strong>Verify and review (10 minutes).</strong> Complete the session observations, run <code>Rscript checks/check_lab1.R</code>, inspect the three files, and review the result. A passing check supports structural correctness, not substantive validity of invented questionnaire content.</li>
+<li><strong>Dry-run the R skill (10 minutes).</strong> Use the existing <code>.agents/skills/r-binary-packages/SKILL.md</code> with: “The package <code>workshopMissing</code> is reported missing. Dry-diagnose the configured compatible binary route; inspect <code>R.version$platform</code> and <code>getOption('repos')</code>, run <code>Rscript task/r-package-diagnostic.R</code>, and do not install, use <code>sudo</code>, change repositories, or access the network.” Record what the skill added beyond the prompt.</li>
+<li><strong>Close (7 minutes).</strong> Stop after the pass and human review. Auto mode is optional only for the remaining bounded disposable task; it is not a security control.</li>
+</ol>
+<p>At about 20 minutes, confirm you can name the fixture, writable path, and intended duplicate. At about 45 minutes, confirm the repaired CSV and provenance are ready for the checker.</p>
+</section>
+<section id="optional-medium-route" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="optional-medium-route"><span class="header-section-number">21.4</span> Optional medium route</h2>
+<p>After a standalone pass, reset to an archive and repeat once with a vague prompt. Compare reads, assumptions, corrections, and checker outcome with the bounded prompt. Do not self-configure unrelated settings in the mandatory route.</p>
+</section>
+<section id="optional-advanced-route" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="optional-advanced-route"><span class="header-section-number">21.5</span> Optional advanced route</h2>
+<p>Audit context growth, tool calls, skill activation, and avoidable reads. Propose one smaller task decomposition. Do not read the entire release merely to locate a duplicate key.</p>
+</section>
+<section id="stop-reset-or-continue" class="level2" data-number="21.6">
+<h2 data-number="21.6" class="anchored" data-anchor-id="stop-reset-or-continue"><span class="header-section-number">21.6</span> Stop, reset, or continue</h2>
+<p>Stop the mandatory task when <code>Rscript checks/check_lab1.R</code> exits 0 and prints <code>PASS lab 1: duplicate questionnaire item repaired; provenance and session observations present</code>. Review the three artefacts yourself. Do not start an optional route merely because the agent suggests one.</p>
 <ul>
-<li><a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a> — A compact map of agent loops and workflows; read it to place the workshop’s hands-on model in a broader design vocabulary.</li>
-<li><a href="https://doi.org/10.6028/NIST.AI.600-1">NIST’s Generative AI Profile</a> — A governance and risk-management frame; it explains why a working agent demo does not remove human or institutional responsibility.</li>
-<li><a href="https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en">EDPB Opinion 28/2024</a> — The EU data-protection view behind our warning that publicly available personal data is not automatically approved for AI processing.</li>
+<li>Safe reset: <code>bash tools/reset_lab.sh --archive</code> archives this lab’s <code>work/</code> and recreates it. It does not touch another lab or the cumulative project; the printed archive path is recoverable.</li>
+<li>Optional cumulative export, only after review: <code>bash tools/handoff.sh</code>, then type exactly <code>EXPORT lab-01</code>. It copies only the three reviewed artefacts and refuses to overwrite existing payloads.</li>
+<li>Optional cumulative-path check after export: <code>Rscript checks/check_lab1.R --cumulative ../workshop-project/lab-01</code>.</li>
+<li>Next lab: <code>cd "$(git rev-parse --show-toplevel)/exercises/lab-02-engineering"</code>.</li>
 </ul>
-<div class="callout callout-style-simple callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Use fake data only
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Never give an agent restricted SOEP rows, unpublished results, personal information, credentials, or participant material. Even public data may not be approved for an external AI service. Check your institution’s policy and the provider’s current terms.</p>
-</div>
-</div>
+<p>Reflection: Which action was verified by a tool? Which claim remained an inference? What would you change in the task brief?</p>
+</section>
+<section id="read-next" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="read-next"><span class="header-section-number">21.7</span> Read next</h2>
+<ul>
+<li><a href="https://doi.org/10.48550/arXiv.2210.03629">ReAct</a> — The research pattern behind the reason–action–observation loop you just watched in the terminal.</li>
+<li><a href="https://doi.org/10.52202/075280-3275">Language Models Don’t Always Say What They Think</a> — A reminder that a fluent step-by-step explanation is not evidence that the agent used the reason it reports.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1111,10 +1172,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../durable-workflows/memory-loops.html" class="pagination-link" aria-label="Memory and agentic loops">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start/codespace.html" class="pagination-link" aria-label="Open the Codespace">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open the Codespace</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../labs/lab-02.html" class="pagination-link" aria-label="lab-02.html">
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1132,7 +1196,7 @@ ul.task-list li input[type="checkbox"] {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/labs/lab-01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

@@ -8,7 +8,7 @@
 
 <meta name="description" content="Beyond the Chatbox: LLM Coding Agents for Research">
 
-<title>Beyond the Chatbox</title>
+<title>6&nbsp; Permissions and auto mode – Beyond the Chatbox</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,28 +30,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./start/codespace.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ccdd104a4a75b30bf490f0c1de805517.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../understand-agents/chat-to-agent.html" rel="next">
+<link href="../start/other-agents.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-ccdd104a4a75b30bf490f0c1de805517.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -276,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Beyond the Chatbox</span>
     </a>
   </div>
@@ -296,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Beyond the Chatbox</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../start/codespace.html">Start here</a></li><li class="breadcrumb-item"><a href="../start/permissions.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Permissions and auto mode</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -318,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beyond the Chatbox</span></a>
   </div>
 </li>
@@ -333,37 +334,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/codespace.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/codespace.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open the Codespace</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/vscode.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Navigate VS Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/choose-agent.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/choose-agent.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Choose an agent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/opencode-login.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/opencode-login.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">OpenCode login and model routes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/other-agents.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/other-agents.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Other agents</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/permissions.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/permissions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Permissions and auto mode</span></span></a>
   </div>
 </li>
@@ -380,25 +381,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/chat-to-agent.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/chat-to-agent.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">From chat to agent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/models-and-harnesses.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/models-and-harnesses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Models and agent harnesses</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Context, instructions, and cost</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./understand-agents/writing-tasks.html" class="sidebar-item-text sidebar-link">
+  <a href="../understand-agents/writing-tasks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Writing tasks for agents</span></span></a>
   </div>
 </li>
@@ -415,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./responsibility/ownership.html" class="sidebar-item-text sidebar-link">
+  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
   </div>
 </li>
@@ -432,19 +433,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
+  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
+  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
+  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
   </div>
 </li>
@@ -461,19 +462,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
+  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
+  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
+  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
   </div>
 </li>
@@ -490,19 +491,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
+  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
+  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
   </div>
 </li>
@@ -519,25 +520,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-01.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-02.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-03.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./labs/lab-04.html" class="sidebar-item-text sidebar-link">
+  <a href="../labs/lab-04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">lab-04.html</span></span></a>
   </div>
 </li>
@@ -554,25 +555,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/agent-comparison.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/agent-comparison.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Agent comparison</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/data-and-privacy.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/data-and-privacy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Data and privacy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/glossary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reference/further-reading.html" class="sidebar-item-text sidebar-link">
+  <a href="../reference/further-reading.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Further reading</span></span></a>
   </div>
 </li>
@@ -588,28 +589,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#beyond-the-chatbox" id="toc-beyond-the-chatbox" class="nav-link active" data-scroll-target="#beyond-the-chatbox">Beyond the Chatbox</a>
-  <ul class="collapse">
-  <li><a href="#what-you-need" id="toc-what-you-need" class="nav-link" data-scroll-target="#what-you-need">What you need</a></li>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next">Read next</a></li>
-  </ul></li>
+  <li><a href="#read-next" id="toc-read-next" class="nav-link active" data-scroll-target="#read-next"><span class="header-section-number">6.1</span> Read next</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/start/permissions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../start/codespace.html">Start here</a></li><li class="breadcrumb-item"><a href="../start/permissions.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Permissions and auto mode</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Beyond the Chatbox</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Permissions and auto mode</span></h1>
 </div>
 
-<div>
-  <div class="description">
-    Beyond the Chatbox: LLM Coding Agents for Research
-  </div>
-</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Author</div>
@@ -649,43 +641,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="beyond-the-chatbox" class="level1 unnumbered">
-<h1 class="unnumbered">Beyond the Chatbox</h1>
-<p>Welcome to <strong>Beyond the Chatbox: LLM Coding Agents for Research</strong> (September 2026).</p>
-<p>You will use a coding agent on small research tasks, check its work, and stay responsible for the result.</p>
-<section id="what-you-need" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-need">What you need</h2>
+<p>Start with ordinary approval prompts. Before you approve, read the path and command. Notice how quickly repeated prompts become routine.</p>
+<p>For the next safe task, launch <code>opencode --auto</code> from the lab directory. This auto-approves permissions that are not explicitly denied. An explicit <code>deny</code> still applies. For a non-interactive prompt, use <code>opencode run --auto "&lt;quoted prompt&gt;"</code>. If a flag has changed, check the OpenCode permissions documentation.</p>
+<p>The recordings show <a href="../media/videos/opencode-gui.mp4">OpenCode’s GUI</a> and <a href="../media/videos/agent-mode-switch-tab.mp4">agent mode switching</a>. Controls and names may have changed.</p>
+<section id="read-next" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="read-next"><span class="header-section-number">6.1</span> Read next</h2>
 <ul>
-<li>A <a href="https://github.com/signup">GitHub account</a></li>
-<li>Basic file and terminal skills</li>
-<li>The supplied fake data. Do not bring real research data.</li>
+<li><a href="https://opencode.ai/docs/permissions/">OpenCode permissions</a> — The live meaning of <code>allow</code>, <code>ask</code>, and <code>deny</code>; useful because approval convenience is not an operating-system boundary.</li>
+<li><a href="https://code.claude.com/docs/en/sandboxing">Claude Code sandboxing</a> — A concrete comparison between permission checks and filesystem/network isolation, including documented limitations.</li>
+<li><a href="https://developers.openai.com/codex/security/">Codex security</a> — Compare how another harness separates approval policy, sandbox mode, and external data handling.</li>
 </ul>
-<p>We use OpenCode in a disposable GitHub Codespace. Antigravity, Codex, and Claude are optional comparisons.</p>
-<p>Start with <a href="./start/codespace.html">Open the Codespace</a>, then <a href="./start/vscode.html">find your way around VS Code</a> and <a href="./start/choose-agent.html">choose an agent</a>.</p>
-</section>
-<section id="read-next" class="level2">
-<h2 class="anchored" data-anchor-id="read-next">Read next</h2>
-<ul>
-<li><a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a> — A compact map of agent loops and workflows; read it to place the workshop’s hands-on model in a broader design vocabulary.</li>
-<li><a href="https://doi.org/10.6028/NIST.AI.600-1">NIST’s Generative AI Profile</a> — A governance and risk-management frame; it explains why a working agent demo does not remove human or institutional responsibility.</li>
-<li><a href="https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en">EDPB Opinion 28/2024</a> — The EU data-protection view behind our warning that publicly available personal data is not automatically approved for AI processing.</li>
-</ul>
-<div class="callout callout-style-simple callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Use fake data only
+<div class="callout-body-container">
+<p>Auto approval is not security. The model can misunderstand a task, follow instructions in an untrusted file, send prompt content to a provider, or find another command path. A container limits access to your laptop. It does not make sensitive data safe to share.</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Never give an agent restricted SOEP rows, unpublished results, personal information, credentials, or participant material. Even public data may not be approved for an external AI service. Check your institution’s policy and the provider’s current terms.</p>
 </div>
-</div>
+<p>Other agents name these controls differently. Never copy a permission or sandbox flag from one product to another. Labs 2 and 3 compare instructions, permission prompts, hooks, and environment boundaries.</p>
+<p>If a command or file access surprises you, deny it. Note the path and reason, inspect <code>git diff</code>, then reset the disposable task folder using its README. Never test a bypass on your laptop, credentials, or real research data.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1111,10 +1090,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../start/other-agents.html" class="pagination-link" aria-label="Other agents">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Other agents</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start/codespace.html" class="pagination-link" aria-label="Open the Codespace">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open the Codespace</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../understand-agents/chat-to-agent.html" class="pagination-link" aria-label="From chat to agent">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">From chat to agent</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1132,7 +1114,7 @@ ul.task-list li input[type="checkbox"] {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/start/permissions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
