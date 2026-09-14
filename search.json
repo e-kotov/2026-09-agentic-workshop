@@ -20,16 +20,6 @@
     ]
   },
   {
-    "objectID": "index.html#read-next",
-    "href": "index.html#read-next",
-    "title": "Beyond the Chatbox",
-    "section": "Read next",
-    "text": "Read next\n\nBuilding effective agents — A compact map of agent loops and workflows; read it to place the workshop’s hands-on model in a broader design vocabulary.\nNIST’s Generative AI Profile — A governance and risk-management frame; it explains why a working agent demo does not remove human or institutional responsibility.\nEDPB Opinion 28/2024 — The EU data-protection view behind our warning that publicly available personal data is not automatically approved for AI processing.\n\n\n\n\n\n\n\nWarningUse fake data only\n\n\n\nNever give an agent restricted SOEP rows, unpublished results, personal information, credentials, or participant material. Even public data may not be approved for an external AI service. Check your institution’s policy and the provider’s current terms.",
-    "crumbs": [
-      "Beyond the Chatbox"
-    ]
-  },
-  {
     "objectID": "start/codespace.html",
     "href": "start/codespace.html",
     "title": "1  Open the Codespace",
@@ -45,7 +35,7 @@
     "href": "start/codespace.html#launch",
     "title": "1  Open the Codespace",
     "section": "",
-    "text": "Open the workshop repository.\nClick the green Code button.\nSelect the Codespaces tab.\nCreate a Codespace on the main branch. Use the default machine unless the tutor tells you otherwise.\nWait for VS Code and the automatic setup to finish. Then open a terminal.\n\n\n\n\nThe Code menu for starting a Codespace.\n\n\n\n\n\n\n\n\n\nNoteCheck the setup\n\n\n\nIn the terminal, run:\npwd\nR --version\npython --version\nfind exercises -mindepth 2 -maxdepth 2 -name README.md -print | sort\nCheck that pwd ends in the workshop repository name, both version commands print a version, and the last command lists a README.md for each of Labs 1–4. If setup is still running or a check fails, wait for the notification and ask the tutor before starting an agent.",
+    "text": "Open the workshop repository.\nClick the green Code button.\nSelect the Codespaces tab.\nCreate a Codespace on the main branch.\nWait for VS Code and the automatic setup to finish. Then open a terminal.\n\n\n\n\nThe Code menu for starting a Codespace.\n\n\n\n\n\n\n\n\n\nNoteCheck the setup\n\n\n\nIn the terminal, run:\npwd\nR --version\npython --version\nfind exercises -mindepth 2 -maxdepth 2 -name README.md -print | sort\nCheck that pwd ends in the workshop repository name, both version commands print a version, and the last command lists a README.md for each of Labs 1–4. If setup is still running or a check fails, wait for the notification and ask the tutor before starting an agent.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Open the Codespace</span>"
@@ -74,11 +64,11 @@
     ]
   },
   {
-    "objectID": "start/codespace.html#read-next",
-    "href": "start/codespace.html#read-next",
+    "objectID": "start/codespace.html#further-reading",
+    "href": "start/codespace.html#further-reading",
     "title": "1  Open the Codespace",
-    "section": "1.4 Read next",
-    "text": "1.4 Read next\n\nGitHub Codespaces quickstart — Use this for current launch and recovery steps when the workshop screenshots no longer match the interface.\nSecurity in GitHub Codespaces — Read what the Codespace isolates, and what it does not; provider-bound prompts remain outside that boundary.\n\n\n\n\n\n\n\nA Codespace separates workshop files from your laptop. It does not keep agent prompts inside the Codespace. Use only fake or source-free data with provider-facing agents.",
+    "section": "1.4 Further reading",
+    "text": "1.4 Further reading\n\nGitHub Codespaces quickstart — Use this for current launch and recovery steps when the workshop screenshots no longer match the interface.\nSecurity in GitHub Codespaces — Read what the Codespace isolates, and what it does not; provider-bound prompts remain outside that boundary.\n\n\n\n\n\n\n\nA Codespace separates workshop files and agents from your laptop. Your credentials (e.g. API keys, accoutn subscriptions) inside Codespace are relatively safe, but rotate any keys or passowrds after using them inside Codespace.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Open the Codespace</span>"
@@ -118,11 +108,11 @@
     ]
   },
   {
-    "objectID": "start/vscode.html#read-next",
-    "href": "start/vscode.html#read-next",
+    "objectID": "start/vscode.html#further-reading",
+    "href": "start/vscode.html#further-reading",
     "title": "2  Navigate VS Code",
-    "section": "2.3 Read next",
-    "text": "2.3 Read next\n\nVisual Studio Code user interface — A durable reference for Explorer, editors, panels, the terminal, and the status bar when the workshop recording looks different.",
+    "section": "2.3 Further reading",
+    "text": "2.3 Further reading\n\nVisual Studio Code user interface — A durable reference for Explorer, editors, panels, the terminal, and the status bar when the workshop recording looks different.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Navigate VS Code</span>"
@@ -173,11 +163,11 @@
     ]
   },
   {
-    "objectID": "start/choose-agent.html#read-next",
-    "href": "start/choose-agent.html#read-next",
+    "objectID": "start/choose-agent.html#further-reading",
+    "href": "start/choose-agent.html#further-reading",
     "title": "3  Choose an agent",
-    "section": "3.4 Read next",
-    "text": "3.4 Read next\n\nOpenCode documentation — The current reference for the supported workshop harness and its model, tool, and configuration surface.\nCodex documentation — Compare OpenAI’s first-party description instead of assuming that another terminal agent has OpenCode’s controls.\nClaude Code overview — A third first-party comparison that makes the model-versus-harness distinction concrete.\n\n\n\n\n\n\n\nAntigravity is not the retired Gemini CLI. Do not connect real research data just to compare agents.",
+    "section": "3.4 Further reading",
+    "text": "3.4 Further reading\n\nOpenCode documentation — The current reference for the supported workshop harness and its model, tool, and configuration surface.\nCodex documentation — Compare OpenAI’s first-party description instead of assuming that another terminal agent has OpenCode’s controls.\nClaude Code overview — A third first-party comparison that makes the model-versus-harness distinction concrete.\n\n\n\n\n\n\n\nAntigravity is not the retired Gemini CLI. Do not connect real research data just to compare agents.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Choose an agent</span>"
@@ -206,11 +196,11 @@
     ]
   },
   {
-    "objectID": "start/opencode-login.html#read-next",
-    "href": "start/opencode-login.html#read-next",
+    "objectID": "start/opencode-login.html#further-reading",
+    "href": "start/opencode-login.html#further-reading",
     "title": "4  OpenCode login and model routes",
-    "section": "4.2 Read next",
-    "text": "4.2 Read next\n\nOpenCode providers — Check the live OpenRouter, NVIDIA, and Zen authentication and model-routing instructions if the workshop menus have changed.\nOpenCode Zen — Read the current model, retention, and provider-exception table before choosing this route for anything beyond toy data.\n\nOpenCode Zen describes zero-retention/no-training defaults with named exceptions. Check its live retention table. OpenRouter routes follow the terms of the selected provider and account.\n\n\n\n\n\n\nNever put an API key in a shell command, README, chat, issue, or commit. Prompts may be retained or used for model improvement, depending on the provider and account. Never enter restricted SOEP rows, unpublished findings, personal information, or participant material. Public data is not automatically approved for an external AI service.\n\n\n\nIf authentication fails, stop and ask the tutor. Do not expose a secret to make the demo work.",
+    "section": "4.2 Further reading",
+    "text": "4.2 Further reading\n\nOpenCode providers — Check the live OpenRouter, NVIDIA, and Zen authentication and model-routing instructions if the workshop menus have changed.\nOpenCode Zen — Read the current model, retention, and provider-exception table before choosing this route for anything beyond toy data.\n\nOpenCode Zen describes zero-retention/no-training defaults with named exceptions. Check its live retention table. OpenRouter routes follow the terms of the selected provider and account.\n\n\n\n\n\n\nNever put an API key in a shell command, README, chat, issue, or commit. Prompts may be retained or used for model improvement, depending on the provider and account. Never enter restricted SOEP rows, unpublished findings, personal information, or participant material. Public data is not automatically approved for an external AI service.\n\n\n\nIf authentication fails, stop and ask the tutor. Do not expose a secret to make the demo work.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>OpenCode login and model routes</span>"
@@ -239,11 +229,11 @@
     ]
   },
   {
-    "objectID": "start/other-agents.html#read-next",
-    "href": "start/other-agents.html#read-next",
+    "objectID": "start/other-agents.html#further-reading",
+    "href": "start/other-agents.html#further-reading",
     "title": "5  Other agents",
-    "section": "5.2 Read next",
-    "text": "5.2 Read next\n\nCodex agent approvals and security — Distinguishes approval policy and sandboxing for Codex rather than borrowing another product’s vocabulary.\nClaude Code security — Explains Claude Code’s trust model and the limits of permission prompts.\nAntigravity permissions — Use the current rule precedence and wildcard semantics when comparing Antigravity with the supported path.\n\n\n\n\n\n\n\nApproval bypass and sandbox settings are separate controls. Antigravity’s --dangerously-skip-permissions approves all tool calls and differs from --sandbox. Codex’s --ask-for-approval never differs from --sandbox danger-full-access. Claude’s --dangerously-skip-permissions is a permission mode, not a sandbox. Verify current help, and never use these bypass modes on your laptop or with real data.\n\n\n\nFor every agent, check the working directory, loaded instructions, permissions, and changed files. If it does not run in the Codespace, inspect its documentation or interface and continue with OpenCode.",
+    "section": "5.2 Further reading",
+    "text": "5.2 Further reading\n\nCodex agent approvals and security — Distinguishes approval policy and sandboxing for Codex rather than borrowing another product’s vocabulary.\nClaude Code security — Explains Claude Code’s trust model and the limits of permission prompts.\nAntigravity permissions — Use the current rule precedence and wildcard semantics when comparing Antigravity with the supported path.\n\n\n\n\n\n\n\nApproval bypass and sandbox settings are separate controls. Antigravity’s --dangerously-skip-permissions approves all tool calls and differs from --sandbox. Codex’s --ask-for-approval never differs from --sandbox danger-full-access. Claude’s --dangerously-skip-permissions is a permission mode, not a sandbox. Verify current help, and never use these bypass modes on your laptop or with real data.\n\n\n\nFor every agent, check the working directory, loaded instructions, permissions, and changed files. If it does not run in the Codespace, inspect its documentation or interface and continue with OpenCode.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other agents</span>"
@@ -254,15 +244,15 @@
     "href": "start/permissions.html",
     "title": "6  Permissions and auto mode",
     "section": "",
-    "text": "6.1 Read next\nStart with ordinary approval prompts. Before you approve, read the path and command. Notice how quickly repeated prompts become routine.\nFor the next safe task, launch opencode --auto from the lab directory. This auto-approves permissions that are not explicitly denied. An explicit deny still applies. For a non-interactive prompt, use opencode run --auto \"&lt;quoted prompt&gt;\". If a flag has changed, check the OpenCode permissions documentation.\nThe recordings show OpenCode’s GUI and agent mode switching. Controls and names may have changed.\nOther agents name these controls differently. Never copy a permission or sandbox flag from one product to another. Labs 2 and 3 compare instructions, permission prompts, hooks, and environment boundaries.\nIf a command or file access surprises you, deny it. Note the path and reason, inspect git diff, then reset the disposable task folder using its README. Never test a bypass on your laptop, credentials, or real research data.",
+    "text": "6.1 Further reading\nStart with ordinary approval prompts. Before you approve, read the path and command. Notice how quickly repeated prompts become routine.\nFor the next safe task, launch opencode --auto from the lab directory. This auto-approves permissions that are not explicitly denied. An explicit deny still applies. For a non-interactive prompt, use opencode run --auto \"&lt;quoted prompt&gt;\". If a flag has changed, check the OpenCode permissions documentation.\nThe recordings show OpenCode’s GUI and agent mode switching. Controls and names may have changed.\nOther agents name these controls differently. Never copy a permission or sandbox flag from one product to another. Labs 2 and 3 compare instructions, permission prompts, hooks, and environment boundaries.\nIf a command or file access surprises you, deny it. Note the path and reason, inspect git diff, then reset the disposable task folder using its README. Never test a bypass on your laptop, credentials, or real research data.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Permissions and auto mode</span>"
     ]
   },
   {
-    "objectID": "start/permissions.html#read-next",
-    "href": "start/permissions.html#read-next",
+    "objectID": "start/permissions.html#further-reading",
+    "href": "start/permissions.html#further-reading",
     "title": "6  Permissions and auto mode",
     "section": "",
     "text": "OpenCode permissions — The live meaning of allow, ask, and deny; useful because approval convenience is not an operating-system boundary.\nClaude Code sandboxing — A concrete comparison between permission checks and filesystem/network isolation, including documented limitations.\nCodex agent approvals and security — Compare how another harness separates approval policy from sandbox mode.\n\n\n\n\n\n\n\nAuto approval is not security. The model can misunderstand a task, follow instructions in an untrusted file, send prompt content to a provider, or find another command path. A container limits access to your laptop. It does not make sensitive data safe to share.",
@@ -294,11 +284,11 @@
     ]
   },
   {
-    "objectID": "understand-agents/chat-to-agent.html#read-next",
-    "href": "understand-agents/chat-to-agent.html#read-next",
+    "objectID": "understand-agents/chat-to-agent.html#further-reading",
+    "href": "understand-agents/chat-to-agent.html#further-reading",
     "title": "7  From chat to agent",
-    "section": "7.2 Read next",
-    "text": "7.2 Read next\n\nBuilding effective agents — Distinguishes fixed workflows from agents and shows why simple tool loops and stop conditions are often enough.\nReAct — The influential reason–action–observation pattern behind the loop on this page; its early results are useful context, not a guarantee for current agents.\nLanguage Models Don’t Always Say What They Think — Shows that a plausible explanation can omit the cue that actually changed an answer, which is why we inspect actions and outputs.",
+    "section": "7.2 Further reading",
+    "text": "7.2 Further reading\n\nBuilding effective agents — Distinguishes fixed workflows from agents and shows why simple tool loops and stop conditions are often enough.\nReAct — The influential reason–action–observation pattern behind the loop on this page; its early results are useful context, not a guarantee for current agents.\nLanguage Models Don’t Always Say What They Think — Shows that a plausible explanation can omit the cue that actually changed an answer, which is why we inspect actions and outputs.",
     "crumbs": [
       "From chatbot to agent",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>From chat to agent</span>"
@@ -309,15 +299,15 @@
     "href": "understand-agents/models-and-harnesses.html",
     "title": "8  Models and agent harnesses",
     "section": "",
-    "text": "8.1 Read next\nFour parts help explain why apparently similar agents behave differently. The model generates text and proposes actions. The provider runs the model service and handles the request under its account terms. The harness supplies the interface, instructions, tools, and permission checks. A tool performs one operation, such as reading a file or running an R script.\nOpenCode is the workshop harness; you select a model through a provider route. Changing that route can change cost, availability, and data handling without changing the project files. Changing the harness can change which tools or instructions reach the same model. A model name alone therefore does not describe your complete working setup.\nThe model works from context: the instructions, conversation, and selected tool results supplied for the current response. It does not automatically see every file in your repository. The harness may add a system prompt, meaning instructions about the agent’s role and behaviour, alongside project guidance and your request. There need not be one universal stack of visible prompts: products assemble and prioritise these inputs differently.\nAn agent cannot reliably reveal hidden provider instructions. If it says “my system prompt requires this,” ask whether that is an observed instruction, a documented product rule, or an inference. Check evidence at the appropriate layer:\nSuppose two agents are asked to repair a synthetic panel table. One runs the supplied checker; another writes its own test and reports success. The difference could reflect the model’s choice, missing project guidance, or tool access. Compare the loaded instructions and actual calls before attributing the result to model quality.\nSome interfaces show reasoning traces, text describing intermediate reasoning. These can be useful signals for spotting a mistaken assumption, but they are not faithful audit logs of why an answer was produced. The studies below explain why a persuasive narrated explanation is insufficient evidence. Keep the tool output, changed files, and independent checks as reviewable records.\nIn Lab 1, separate what you observed from what the agent inferred about its setup. Record the harness and selected model/provider too, so a later comparison has a clear starting point.",
+    "text": "8.1 Further reading\nFour parts help explain why apparently similar agents behave differently. The model generates text and proposes actions. The provider runs the model service and handles the request under its account terms. The harness supplies the interface, instructions, tools, and permission checks. A tool performs one operation, such as reading a file or running an R script.\nOpenCode is the workshop harness; you select a model through a provider route. Changing that route can change cost, availability, and data handling without changing the project files. Changing the harness can change which tools or instructions reach the same model. A model name alone therefore does not describe your complete working setup.\nThe model works from context: the instructions, conversation, and selected tool results supplied for the current response. It does not automatically see every file in your repository. The harness may add a system prompt, meaning instructions about the agent’s role and behaviour, alongside project guidance and your request. There need not be one universal stack of visible prompts: products assemble and prioritise these inputs differently.\nAn agent cannot reliably reveal hidden provider instructions. If it says “my system prompt requires this,” ask whether that is an observed instruction, a documented product rule, or an inference. Check evidence at the appropriate layer:\nSuppose two agents are asked to repair a synthetic panel table. One runs the supplied checker; another writes its own test and reports success. The difference could reflect the model’s choice, missing project guidance, or tool access. Compare the loaded instructions and actual calls before attributing the result to model quality.\nSome interfaces show reasoning traces, text describing intermediate reasoning. These can be useful signals for spotting a mistaken assumption, but they are not faithful audit logs of why an answer was produced. The studies below explain why a persuasive narrated explanation is insufficient evidence. Keep the tool output, changed files, and independent checks as reviewable records.\nIn Lab 1, separate what you observed from what the agent inferred about its setup. Record the harness and selected model/provider too, so a later comparison has a clear starting point.",
     "crumbs": [
       "From chatbot to agent",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Models and agent harnesses</span>"
     ]
   },
   {
-    "objectID": "understand-agents/models-and-harnesses.html#read-next",
-    "href": "understand-agents/models-and-harnesses.html#read-next",
+    "objectID": "understand-agents/models-and-harnesses.html#further-reading",
+    "href": "understand-agents/models-and-harnesses.html#further-reading",
     "title": "8  Models and agent harnesses",
     "section": "",
     "text": "Building effective agents — A practical vocabulary for separating the model, tools, workflow, and agent loop.\nMeasuring Faithfulness in Chain-of-Thought Reasoning — This research preprint reports intervention experiments showing that reliance on a narrated chain varies sharply by model and task.\nChain of Thought Monitorability: A New and Fragile Opportunity for AI Safety — This position paper makes a qualified case for treating visible reasoning as an extra oversight signal, not a faithful internal transcript.",
@@ -382,11 +372,11 @@
     ]
   },
   {
-    "objectID": "understand-agents/context-instructions-cost.html#read-next",
-    "href": "understand-agents/context-instructions-cost.html#read-next",
+    "objectID": "understand-agents/context-instructions-cost.html#further-reading",
+    "href": "understand-agents/context-instructions-cost.html#further-reading",
     "title": "9  Context, instructions, and cost",
-    "section": "9.5 Read next",
-    "text": "9.5 Read next\n\nLost in the Middle — Controlled evidence that relevant information can be used less reliably inside long contexts; it supports careful curation without inventing a universal fullness threshold.\nEffective context engineering for AI agents — Practical patterns for just-in-time retrieval, compact notes, compaction, and scoped tools; treat them as vendor experience rather than cost guarantees.",
+    "section": "9.5 Further reading",
+    "text": "9.5 Further reading\n\nLost in the Middle — Controlled evidence that relevant information can be used less reliably inside long contexts; it supports careful curation without inventing a universal fullness threshold.\nEffective context engineering for AI agents — Practical patterns for just-in-time retrieval, compact notes, compaction, and scoped tools; treat them as vendor experience rather than cost guarantees.",
     "crumbs": [
       "Core mechanics: context, prompts, skills, and cost",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Context, instructions, and cost</span>"
@@ -397,15 +387,15 @@
     "href": "understand-agents/writing-tasks.html",
     "title": "10  Writing tasks for agents",
     "section": "",
-    "text": "10.1 Read next\nTell the agent what result you need, where it may work, and how you will check the result. “Clean this analysis” leaves decisions open: should it remove records, change variable definitions, or rewrite a report? An agent can make a plausible choice that is wrong for your research question.\nDescribe the outcome in terms a colleague could review. Name the scope, meaning the files and actions allowed, and the constraints that must survive the repair. An artefact is the concrete output you expect, such as a corrected table. Provenance records its inputs, transformations, and relevant versions. A compact brief can use this pattern:\nFor the synthetic questionnaire in Lab 1, “remove duplicate items” is still ambiguous. The same item can legitimately appear in several waves or questionnaire versions. A better brief asks the agent to compare all fields in the duplicated wave/item group, remove one row only if the rows are identical, and preserve every version and range. If the rows disagree, it should stop and report the difference.\nThat stop condition matters as much as the requested edit. Decide which uncertainties the agent may resolve by inspecting files and which require your judgement. Reading a schema (the table’s declared structure) can settle a column’s expected type; choosing which conflicting questionnaire definition is authoritative may require a researcher. Ask the agent to state consequential assumptions before acting, rather than burying them in the completion message.\nSplit a task when the next step depends on a decision you have not made. For example: inspect the defect, agree on the repair rule, then implement and verify it. Each part should leave evidence the next part can use. Splitting every tiny edit adds overhead; splitting at a research decision makes that decision visible.\nSpecify verification independently of the agent’s confidence. Ask for the relevant changed lines, the actual checker output, and any limitation the check cannot settle. A passing structural check does not tell you whether a questionnaire measures the intended concept. Once the agreed output and check are complete, stop for review rather than inviting unrelated improvements.",
+    "text": "10.1 Further reading\nTell the agent what result you need, where it may work, and how you will check the result. “Clean this analysis” leaves decisions open: should it remove records, change variable definitions, or rewrite a report? An agent can make a plausible choice that is wrong for your research question.\nDescribe the outcome in terms a colleague could review. Name the scope, meaning the files and actions allowed, and the constraints that must survive the repair. An artefact is the concrete output you expect, such as a corrected table. Provenance records its inputs, transformations, and relevant versions. A compact brief can use this pattern:\nFor the synthetic questionnaire in Lab 1, “remove duplicate items” is still ambiguous. The same item can legitimately appear in several waves or questionnaire versions. A better brief asks the agent to compare all fields in the duplicated wave/item group, remove one row only if the rows are identical, and preserve every version and range. If the rows disagree, it should stop and report the difference.\nThat stop condition matters as much as the requested edit. Decide which uncertainties the agent may resolve by inspecting files and which require your judgement. Reading a schema (the table’s declared structure) can settle a column’s expected type; choosing which conflicting questionnaire definition is authoritative may require a researcher. Ask the agent to state consequential assumptions before acting, rather than burying them in the completion message.\nSplit a task when the next step depends on a decision you have not made. For example: inspect the defect, agree on the repair rule, then implement and verify it. Each part should leave evidence the next part can use. Splitting every tiny edit adds overhead; splitting at a research decision makes that decision visible.\nSpecify verification independently of the agent’s confidence. Ask for the relevant changed lines, the actual checker output, and any limitation the check cannot settle. A passing structural check does not tell you whether a questionnaire measures the intended concept. Once the agreed output and check are complete, stop for review rather than inviting unrelated improvements.",
     "crumbs": [
       "Core mechanics: context, prompts, skills, and cost",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Writing tasks for agents</span>"
     ]
   },
   {
-    "objectID": "understand-agents/writing-tasks.html#read-next",
-    "href": "understand-agents/writing-tasks.html#read-next",
+    "objectID": "understand-agents/writing-tasks.html#further-reading",
+    "href": "understand-agents/writing-tasks.html#further-reading",
     "title": "10  Writing tasks for agents",
     "section": "",
     "text": "Harness engineering — A current case study of written intent, small tasks, repository structure, and mechanical feedback; its scale claims are not scientific evidence.\nEffective context engineering for AI agents — Explains why clear, scoped instructions and selectively loaded context beat an ornate universal prompt.\nBuilding effective agents — Use its workflow patterns to decide whether a task needs an agent at all or a simpler deterministic sequence.",
@@ -437,11 +427,11 @@
     ]
   },
   {
-    "objectID": "durable-workflows/skills-tools.html#read-next",
-    "href": "durable-workflows/skills-tools.html#read-next",
+    "objectID": "durable-workflows/skills-tools.html#further-reading",
+    "href": "durable-workflows/skills-tools.html#further-reading",
     "title": "11  Skills and deterministic tools",
-    "section": "11.3 Read next",
-    "text": "11.3 Read next\n\nOpenCode agent skills — The live discovery and loading contract for the skill mechanism participants inspect in the lab.\nWriting effective tools for agents — with agents — Treats a tool as a designed contract whose boundaries, descriptions, and outputs shape agent behaviour.\nDefeating Prompt Injections by Design — This research preprint shows why deterministic capability boundaries can matter more than another natural-language warning.",
+    "section": "11.3 Further reading",
+    "text": "11.3 Further reading\n\nOpenCode agent skills — The live discovery and loading contract for the skill mechanism participants inspect in the lab.\nWriting effective tools for agents — with agents — Treats a tool as a designed contract whose boundaries, descriptions, and outputs shape agent behaviour.\nDefeating Prompt Injections by Design — This research preprint shows why deterministic capability boundaries can matter more than another natural-language warning.",
     "crumbs": [
       "Core mechanics: context, prompts, skills, and cost",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Skills and deterministic tools</span>"
@@ -540,15 +530,15 @@
     "href": "responsibility/ownership.html",
     "title": "13  Ownership and responsibility",
     "section": "",
-    "text": "13.1 Read next\nThe researcher remains responsible for the question, authority to use the data, interpretation, and decision to publish. Record what the agent changed, what you checked, and what remains uncertain. Follow the safety and evidence practices in the labs and reference pages.",
+    "text": "13.1 Further reading\nThe researcher remains responsible for the question, authority to use the data, interpretation, and decision to publish. Record what the agent changed, what you checked, and what remains uncertain. Follow the safety and evidence practices in the labs and reference pages.",
     "crumbs": [
       "Ownership and responsibility",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Ownership and responsibility</span>"
     ]
   },
   {
-    "objectID": "responsibility/ownership.html#read-next",
-    "href": "responsibility/ownership.html#read-next",
+    "objectID": "responsibility/ownership.html#further-reading",
+    "href": "responsibility/ownership.html#further-reading",
     "title": "13  Ownership and responsibility",
     "section": "",
     "text": "NIST’s Generative AI Profile — Places human oversight, evaluation, privacy, and incident handling across the whole lifecycle rather than at the final prompt.\nEDPB Opinion 28/2024 — Grounds responsibility for personal-data use in a case-specific legal assessment, not in the model’s confidence or the data’s public availability.\nReasoning Models Don’t Always Say What They Think — This research preprint reports modern experiments showing why a model’s self-explanation cannot substitute for independent review of evidence and actions.\nMonitoring Reasoning Models for Misbehavior — Reasoning traces may be useful monitoring signals, but they are not faithful audit logs; keep independent review of evidence and actions.",
@@ -562,15 +552,15 @@
     "href": "engineer-workflow/git-recovery.html",
     "title": "14  Git and recoverable change",
     "section": "",
-    "text": "14.1 Read next\nGit records selected versions of your project so you can inspect changes and recover earlier work. A repository holds that history. The working tree is the set of files you are editing now; a commit is a named checkpoint, or snapshot, of the tracked contents you chose to save. It does not prove those contents are correct.\nA diff shows what changed between versions. Read it before accepting agent work: did a repair touch only the intended transformation, or also alter tests, variable definitions, and documentation? A green test can hide a weakened assertion. Small, purposeful changes are easier to review than a single “improve everything” edit.\nThe staging area holds changes selected for the next commit. git diff shows unstaged edits; git diff --cached shows staged ones. git status --short also lists new, untracked files that a normal diff does not display. Review those files too, then commit a useful checkpoint with a message explaining its purpose. Saving a file in the editor does not put it in Git history, and a local commit does not upload it to GitHub.\nFor example, an agent repairing a synthetic panel table might accidentally increase a survey weight. A prior reviewed checkpoint lets you identify the changed value and recover it. Git cannot explain which weight is substantively right; the contract and researcher supply that judgement.\nIn Lab 2, the helper creates a separate, nested repository inside work/recovery-demo/. It saves the repaired table, deliberately changes one weight, observes a failed test, and uses revert: a new commit that undoes the earlier committed change while preserving its history. The exercise leaves the outer workshop repository untouched. Inspect both the failure and recovery evidence; a clean working tree only means there are no pending changes.\nOutside the demonstration, stop the agent before recovery so it cannot keep editing. Identify the exact files and checkpoint, preserve unrelated work, and choose the smallest recovery operation. Do not ask an agent to “reset everything”: uncommitted and untracked work may have no recoverable Git copy. Git history also complements, rather than replaces, a backup kept elsewhere.",
+    "text": "14.1 Further reading\nGit records selected versions of your project so you can inspect changes and recover earlier work. A repository holds that history. The working tree is the set of files you are editing now; a commit is a named checkpoint, or snapshot, of the tracked contents you chose to save. It does not prove those contents are correct.\nA diff shows what changed between versions. Read it before accepting agent work: did a repair touch only the intended transformation, or also alter tests, variable definitions, and documentation? A green test can hide a weakened assertion. Small, purposeful changes are easier to review than a single “improve everything” edit.\nThe staging area holds changes selected for the next commit. git diff shows unstaged edits; git diff --cached shows staged ones. git status --short also lists new, untracked files that a normal diff does not display. Review those files too, then commit a useful checkpoint with a message explaining its purpose. Saving a file in the editor does not put it in Git history, and a local commit does not upload it to GitHub.\nFor example, an agent repairing a synthetic panel table might accidentally increase a survey weight. A prior reviewed checkpoint lets you identify the changed value and recover it. Git cannot explain which weight is substantively right; the contract and researcher supply that judgement.\nIn Lab 2, the helper creates a separate, nested repository inside work/recovery-demo/. It saves the repaired table, deliberately changes one weight, observes a failed test, and uses revert: a new commit that undoes the earlier committed change while preserving its history. The exercise leaves the outer workshop repository untouched. Inspect both the failure and recovery evidence; a clean working tree only means there are no pending changes.\nOutside the demonstration, stop the agent before recovery so it cannot keep editing. Identify the exact files and checkpoint, preserve unrelated work, and choose the smallest recovery operation. Do not ask an agent to “reset everything”: uncommitted and untracked work may have no recoverable Git copy. Git history also complements, rather than replaces, a backup kept elsewhere.",
     "crumbs": [
       "Software engineering basics for researchers",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Git and recoverable change</span>"
     ]
   },
   {
-    "objectID": "engineer-workflow/git-recovery.html#read-next",
-    "href": "engineer-workflow/git-recovery.html#read-next",
+    "objectID": "engineer-workflow/git-recovery.html#further-reading",
+    "href": "engineer-workflow/git-recovery.html#further-reading",
     "title": "14  Git and recoverable change",
     "section": "",
     "text": "Pro Git: Git Basics — The smallest useful reference for the working tree, staging, commits, and inspectable history used in the lab.\nHarness engineering — A modern example of agents working inside repository structure and mechanical checks; read it as a case study, not a universal recipe.\n\n\n\n\n\n\n\nDo not commit credentials, restricted data, or provider configuration. Review staged paths and .gitignore. An ignored file is not securely protected.",
@@ -584,15 +574,15 @@
     "href": "engineer-workflow/tests-verification.html",
     "title": "15  Tests and verification",
     "section": "",
-    "text": "15.1 Read next\nAsk for executable evidence, not reassurance. A data contract is a set of executable rules for a table’s schema, values, keys, and invariants. A reviewer should understand the test, and you should inspect tables, manifests, warnings, and uncertainty too. Passing code does not prove substantive meaning.\nIn Lab 2, first prove that duplicate (pid, wave) rows are identical before deleting one. Then check that the right-hand join keys are unique and that the row count is unchanged. Report each wave’s row count and person-weight total. Referential integrity means that keys on the left match valid keys on the right; the lab’s joins must not create orphans or multiply rows. A smoke test is a quick check that this main path works.\nTests can pass because an agent weakened, skipped, deleted, or hard-coded the test. Read the diff of test files and checks, not only the green result. Lab 2 marks checks/ read-only: its immutable checker, not the participant test, decides acceptance. The participant test is still useful evidence to inspect: it should be red on fixture/release/person_wave.csv and green on work/derived/person_wave.csv.\nIn Lab 2’s Git failure/recovery (8 min) step (bash tools/run_git_recovery_demo.sh), a deliberate weight mutation makes the test go red before Git recovers the output. That is mutation testing by hand. Tools can flip &lt;/&gt;, +/-, or ==/!=; a surviving mutant shows a testing gap.",
+    "text": "15.1 Further reading\nAsk for executable evidence, not reassurance. A data contract is a set of executable rules for a table’s schema, values, keys, and invariants. A reviewer should understand the test, and you should inspect tables, manifests, warnings, and uncertainty too. Passing code does not prove substantive meaning.\nIn Lab 2, first prove that duplicate (pid, wave) rows are identical before deleting one. Then check that the right-hand join keys are unique and that the row count is unchanged. Report each wave’s row count and person-weight total. Referential integrity means that keys on the left match valid keys on the right; the lab’s joins must not create orphans or multiply rows. A smoke test is a quick check that this main path works.\nTests can pass because an agent weakened, skipped, deleted, or hard-coded the test. Read the diff of test files and checks, not only the green result. Lab 2 marks checks/ read-only: its immutable checker, not the participant test, decides acceptance. The participant test is still useful evidence to inspect: it should be red on fixture/release/person_wave.csv and green on work/derived/person_wave.csv.\nIn Lab 2’s Git failure/recovery (8 min) step (bash tools/run_git_recovery_demo.sh), a deliberate weight mutation makes the test go red before Git recovers the output. That is mutation testing by hand. Tools can flip &lt;/&gt;, +/-, or ==/!=; a surviving mutant shows a testing gap.",
     "crumbs": [
       "Software engineering basics for researchers",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tests and verification</span>"
     ]
   },
   {
-    "objectID": "engineer-workflow/tests-verification.html#read-next",
-    "href": "engineer-workflow/tests-verification.html#read-next",
+    "objectID": "engineer-workflow/tests-verification.html#further-reading",
+    "href": "engineer-workflow/tests-verification.html#further-reading",
     "title": "15  Tests and verification",
     "section": "",
     "text": "Ten Simple Rules for Reproducible Computational Research — Durable guidance on recording how results were produced and avoiding invisible manual steps; agents make these rules more important, not less.\nUncle Bob on Software Fundamentals in the Age of AI — Robert C. Martin, in conversation with Matt Pocock, describes running mutation testing as an automated gate that agent-written code must pass before it is accepted.\nmuttest (R) and mutmut (Python) — Mutation testing tools that work with ordinary testthat and pytest suites.",
@@ -606,15 +596,15 @@
     "href": "engineer-workflow/build-systems.html",
     "title": "16  Build systems and reproducibility",
     "section": "",
-    "text": "16.1 Read next\nA workflow system records how inputs become outputs and decides what needs running again. This helps when an agent creates several scripts that work once but leaves you unsure which to rerun after a correction. A finished-looking report can contain yesterday’s table if nothing rebuilds it.\nA dependency is something a step needs: an input file, a function, or an earlier result. A dependency graph connects these steps with arrows. For a synthetic panel, the graph might be raw person-wave table → repaired table → wave summary. Changing the raw weights should trigger the repair step and then the summary. Editing unrelated presentation notes should not.\nAn output is stale when the inputs or code it depends on have changed since it was built. Invalidation marks that output as needing a rebuild. The workflow can only respond to dependencies it knows about: a script that silently reads an undeclared file can leave an apparently up-to-date result wrong.\nIn Lab 2, choose one route and inspect three runs: a clean build, an unchanged repeat, and a repeat after an upstream weight change. Compare the log with the resulting table and wave totals. Identical output bytes alone do not prove a step was skipped; a script could have rerun and produced the same bytes.\nReproducibility also depends on the environment, the software and package versions running the code. A lockfile records package versions; a manifest inventories release files and their properties. A checksum is a fingerprint of file bytes, useful for detecting change, not for judging analytical quality. Keep these records alongside the workflow. renv and uv help manage environments; they do not replace the dependency graph. Make is another workflow option.\nKeep fixed transformations and checks in deterministic code: with the same inputs and environment, they should give the same result. Record random seeds where relevant, but do not assume a seed controls an external model service or changing web input. Let the agent help construct the workflow, then rerun it independently. A successful rebuild still cannot decide whether the research choices were appropriate.",
+    "text": "16.1 Further reading\nA workflow system records how inputs become outputs and decides what needs running again. This helps when an agent creates several scripts that work once but leaves you unsure which to rerun after a correction. A finished-looking report can contain yesterday’s table if nothing rebuilds it.\nA dependency is something a step needs: an input file, a function, or an earlier result. A dependency graph connects these steps with arrows. For a synthetic panel, the graph might be raw person-wave table → repaired table → wave summary. Changing the raw weights should trigger the repair step and then the summary. Editing unrelated presentation notes should not.\nAn output is stale when the inputs or code it depends on have changed since it was built. Invalidation marks that output as needing a rebuild. The workflow can only respond to dependencies it knows about: a script that silently reads an undeclared file can leave an apparently up-to-date result wrong.\nIn Lab 2, choose one route and inspect three runs: a clean build, an unchanged repeat, and a repeat after an upstream weight change. Compare the log with the resulting table and wave totals. Identical output bytes alone do not prove a step was skipped; a script could have rerun and produced the same bytes.\nReproducibility also depends on the environment, the software and package versions running the code. A lockfile records package versions; a manifest inventories release files and their properties. A checksum is a fingerprint of file bytes, useful for detecting change, not for judging analytical quality. Keep these records alongside the workflow. renv and uv help manage environments; they do not replace the dependency graph. Make is another workflow option.\nKeep fixed transformations and checks in deterministic code: with the same inputs and environment, they should give the same result. Record random seeds where relevant, but do not assume a seed controls an external model service or changing web input. Let the agent help construct the workflow, then rerun it independently. A successful rebuild still cannot decide whether the research choices were appropriate.",
     "crumbs": [
       "Software engineering basics for researchers",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Build systems and reproducibility</span>"
     ]
   },
   {
-    "objectID": "engineer-workflow/build-systems.html#read-next",
-    "href": "engineer-workflow/build-systems.html#read-next",
+    "objectID": "engineer-workflow/build-systems.html#further-reading",
+    "href": "engineer-workflow/build-systems.html#further-reading",
     "title": "16  Build systems and reproducibility",
     "section": "",
     "text": "Ten Simple Rules for Reproducible Computational Research — The broader reproducibility principles behind explicit dependencies, recorded versions, and inspectable intermediate results.\nThe targets R package user manual — A complete R guide to dependency-aware pipelines and rebuilding only stale results.\nSnakemake documentation — The corresponding rule-based workflow reference for Python and cross-language projects.",
@@ -727,15 +717,15 @@
     "href": "control-agent/data-protection.html",
     "title": "18  Data protection and threat model",
     "section": "",
-    "text": "18.1 Read next\nBefore the first prompt, decide what information may leave your environment. A threat model is a short account of what you need to protect, how it could be exposed or changed, and which controls address that route. For an agent, consider both disclosure to a model provider and unwanted changes to your own files.\nStart with data classification: distinguish invented teaching data, public material approved for this use, unpublished work, personal data, and restricted records. Your institution’s categories and approvals govern real projects. Public availability alone does not mean external processing is approved; removing names alone does not establish anonymity.\nThe prompt box is only one disclosure route. Selected file contents and tool output may also enter model context. An error message can print a row of data; a broad search can reveal a credential; a session log can retain both. Running an R script locally does not keep its output local if the harness sends that output back to the model. Check what crosses the provider boundary, the point where information is sent to the service processing the request.\nUse the supplied source-free synthetic panel: invented records generated without fitting to or copying respondent rows. For example, an agent can debug a household/person join using fake identifiers and deliberately duplicated keys. It does not need real respondents to learn why rows multiply. Synthetic data generated from confidential source records would need a separate disclosure assessment; the word “synthetic” alone is no guarantee.\nApply minimisation before the tool runs: provide only the approved information needed to solve the problem. A schema (column names and types) and a few invented rows may be sufficient. Keep restricted data outside the agent’s accessible environment. If a real project needs a restricted-data run, use an institutionally approved environment and review any proposed output before external processing.\nProvider terms differ and change. OpenCode Zen describes zero-retention and no-training defaults with named exceptions in its privacy table. OpenRouter routes and other products have their own terms. Free access, paid access, and a training opt-out are not interchangeable confidentiality guarantees.\nFor personal OpenAI accounts, check the general data controls and the separate Codex setting for training on full environments, described in the Data Controls FAQ. Treat Google/Antigravity telemetry settings, which concern collected usage information, as distinct from a confidentiality guarantee; see the CLI settings documentation.\nIn Lab 3, the threat/control table pairs each observed failure with a proposed control and its limitation. The fake token and codebook make the disclosure paths visible without exposing real secrets.",
+    "text": "18.1 Further reading\nBefore the first prompt, decide what information may leave your environment. A threat model is a short account of what you need to protect, how it could be exposed or changed, and which controls address that route. For an agent, consider both disclosure to a model provider and unwanted changes to your own files.\nStart with data classification: distinguish invented teaching data, public material approved for this use, unpublished work, personal data, and restricted records. Your institution’s categories and approvals govern real projects. Public availability alone does not mean external processing is approved; removing names alone does not establish anonymity.\nThe prompt box is only one disclosure route. Selected file contents and tool output may also enter model context. An error message can print a row of data; a broad search can reveal a credential; a session log can retain both. Running an R script locally does not keep its output local if the harness sends that output back to the model. Check what crosses the provider boundary, the point where information is sent to the service processing the request.\nUse the supplied source-free synthetic panel: invented records generated without fitting to or copying respondent rows. For example, an agent can debug a household/person join using fake identifiers and deliberately duplicated keys. It does not need real respondents to learn why rows multiply. Synthetic data generated from confidential source records would need a separate disclosure assessment; the word “synthetic” alone is no guarantee.\nApply minimisation before the tool runs: provide only the approved information needed to solve the problem. A schema (column names and types) and a few invented rows may be sufficient. Keep restricted data outside the agent’s accessible environment. If a real project needs a restricted-data run, use an institutionally approved environment and review any proposed output before external processing.\nProvider terms differ and change. OpenCode Zen describes zero-retention and no-training defaults with named exceptions in its privacy table. OpenRouter routes and other products have their own terms. Free access, paid access, and a training opt-out are not interchangeable confidentiality guarantees.\nFor personal OpenAI accounts, check the general data controls and the separate Codex setting for training on full environments, described in the Data Controls FAQ. Treat Google/Antigravity telemetry settings, which concern collected usage information, as distinct from a confidentiality guarantee; see the CLI settings documentation.\nIn Lab 3, the threat/control table pairs each observed failure with a proposed control and its limitation. The fake token and codebook make the disclosure paths visible without exposing real secrets.",
     "crumbs": [
       "Security, data protection, and isolation",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Data protection and threat model</span>"
     ]
   },
   {
-    "objectID": "control-agent/data-protection.html#read-next",
-    "href": "control-agent/data-protection.html#read-next",
+    "objectID": "control-agent/data-protection.html#further-reading",
+    "href": "control-agent/data-protection.html#further-reading",
     "title": "18  Data protection and threat model",
     "section": "",
     "text": "NIST’s Generative AI Profile — A lifecycle checklist for privacy, information security, evaluation, governance, and incident response.\nNIST’s Adversarial Machine Learning taxonomy — Precise terms for prompt injection, privacy compromise, misuse, attacker capabilities, and mitigation limits.\nEDPB Opinion 28/2024 — Explains why public availability alone does not settle anonymity, lawful processing, or downstream responsibility.\n\n\n\n\n\n\n\nNever “anonymise later.” Minimise before the first prompt. Keep fake fixtures separate. Stop if a tool proposes an external upload or reads beyond the allowed folder.",
@@ -749,15 +739,15 @@
     "href": "control-agent/permissions-isolation.html",
     "title": "19  Permissions, sandboxes, and isolation",
     "section": "",
-    "text": "19.1 Read next\nDifferent controls answer different questions:\nThese boundaries depend on configuration. A folder mounted into a container is deliberately made accessible there; credentials supplied to it may grant access elsewhere. Check what is exposed before enabling automatic approval. Fewer prompts change how often you intervene, not which host files or services the environment can reach.\nAn agent denied a native file read (its built-in reading tool) may still reach the same file through an allowed shell command. Permission configuration is not an operating-system sandbox.\nLab 3 makes this concrete: a native read and a named shell command can be denied while an allowed Python script reads the same fake file. Record what actually ran. A configuration file saying “deny” is static evidence; an observed denial is runtime evidence, limited to the path you tested. Neither proves every equivalent route is blocked. Native child sessions may inherit restrictions; a separately launched process is a different, optional experiment.",
+    "text": "19.1 Further reading\nDifferent controls answer different questions:\nThese boundaries depend on configuration. A folder mounted into a container is deliberately made accessible there; credentials supplied to it may grant access elsewhere. Check what is exposed before enabling automatic approval. Fewer prompts change how often you intervene, not which host files or services the environment can reach.\nAn agent denied a native file read (its built-in reading tool) may still reach the same file through an allowed shell command. Permission configuration is not an operating-system sandbox.\nLab 3 makes this concrete: a native read and a named shell command can be denied while an allowed Python script reads the same fake file. Record what actually ran. A configuration file saying “deny” is static evidence; an observed denial is runtime evidence, limited to the path you tested. Neither proves every equivalent route is blocked. Native child sessions may inherit restrictions; a separately launched process is a different, optional experiment.",
     "crumbs": [
       "Security, data protection, and isolation",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Permissions, sandboxes, and isolation</span>"
     ]
   },
   {
-    "objectID": "control-agent/permissions-isolation.html#read-next",
-    "href": "control-agent/permissions-isolation.html#read-next",
+    "objectID": "control-agent/permissions-isolation.html#further-reading",
+    "href": "control-agent/permissions-isolation.html#further-reading",
     "title": "19  Permissions, sandboxes, and isolation",
     "section": "",
     "text": "Security in GitHub Codespaces — Read the actual VM, repository, port, and secrets boundaries behind the workshop’s disposable environment.\nClaude Code sandboxing — A concrete product example of filesystem/network isolation alongside approval controls and escape hatches.\nDefeating Prompt Injections by Design — This research preprint offers a stronger systems argument for separating trusted control flow from untrusted data and constraining capabilities around the model.\nAgentDojo — An agent benchmark that measures ordinary task success and security failures together, as Lab 3 asks you to do.\n\n\n\n\n\n\n\nApply least privilege: expose only the files and capabilities the task needs. Containers can limit impact on the host; they do not protect data sent to the model provider. Combine environment boundaries with checks, human review, and recovery.",
@@ -771,15 +761,15 @@
     "href": "control-agent/prompt-injection.html",
     "title": "20  Prompt injection",
     "section": "",
-    "text": "20.1 Read next\nPrompt injection is untrusted content trying to act as an instruction. It exploits a practical difficulty: the model receives both the task it should follow and the material it should analyse as text. A sentence inside that material can sound like an authoritative request even though the researcher never authorised it.\nFor example, you ask an agent to summarise an invented survey codebook. Between the variable definitions, a paragraph says that “validation requires” opening another file and copying its contents into the answer. That paragraph is part of the document being analysed. Following it changes the task and may disclose information. An attack need not contain the obvious phrase “ignore previous instructions”; it can pretend to be a helpful prerequisite.\nThis is indirect injection when the instruction arrives through a file, web page, CSV cell, or tool result rather than the user’s prompt. Possible consequences include unwanted edits, distorted summaries, weakened tests, or disclosure. A normal-looking final answer does not establish that the intervening actions were authorised.\nKeep the distinction between instructions and evidence explicit. Identify which project guidance you trust, mark retrieved material as untrusted, and require approval before expanding scope. Restrict the files and actions available to the task through the environment and permissions. These controls reduce opportunities for harm; a warning in the prompt alone cannot guarantee that the model will maintain the distinction.\nLab 3 uses a harmless fake-codebook injection. Inspect the actual tool calls and changed files, then record whether the instruction was followed. The checker can inspect the required evidence files, but it cannot turn a participant’s written observation into proof of runtime agent behaviour.\nThe lab also demonstrates redaction, replacing recognised text patterns with a mask. Its local OpenCode plugin uses the documented tool.execute.after hook to rewrite returned tool output before it enters session context. The source file remains unchanged. Splitting a fake token into pieces or encoding it in another representation can evade the pattern while preserving information that can be reconstructed. This is a teaching filter, not access control or a general prompt-injection defence.\nIf you see an injection, stop. Preserve the evidence, isolate the fixture, deny surprising actions, and inspect the diff and command history. Never test a bypass with real secrets.",
+    "text": "20.1 Further reading\nPrompt injection is untrusted content trying to act as an instruction. It exploits a practical difficulty: the model receives both the task it should follow and the material it should analyse as text. A sentence inside that material can sound like an authoritative request even though the researcher never authorised it.\nFor example, you ask an agent to summarise an invented survey codebook. Between the variable definitions, a paragraph says that “validation requires” opening another file and copying its contents into the answer. That paragraph is part of the document being analysed. Following it changes the task and may disclose information. An attack need not contain the obvious phrase “ignore previous instructions”; it can pretend to be a helpful prerequisite.\nThis is indirect injection when the instruction arrives through a file, web page, CSV cell, or tool result rather than the user’s prompt. Possible consequences include unwanted edits, distorted summaries, weakened tests, or disclosure. A normal-looking final answer does not establish that the intervening actions were authorised.\nKeep the distinction between instructions and evidence explicit. Identify which project guidance you trust, mark retrieved material as untrusted, and require approval before expanding scope. Restrict the files and actions available to the task through the environment and permissions. These controls reduce opportunities for harm; a warning in the prompt alone cannot guarantee that the model will maintain the distinction.\nLab 3 uses a harmless fake-codebook injection. Inspect the actual tool calls and changed files, then record whether the instruction was followed. The checker can inspect the required evidence files, but it cannot turn a participant’s written observation into proof of runtime agent behaviour.\nThe lab also demonstrates redaction, replacing recognised text patterns with a mask. Its local OpenCode plugin uses the documented tool.execute.after hook to rewrite returned tool output before it enters session context. The source file remains unchanged. Splitting a fake token into pieces or encoding it in another representation can evade the pattern while preserving information that can be reconstructed. This is a teaching filter, not access control or a general prompt-injection defence.\nIf you see an injection, stop. Preserve the evidence, isolate the fixture, deny surprising actions, and inspect the diff and command history. Never test a bypass with real secrets.",
     "crumbs": [
       "Security, data protection, and isolation",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Prompt injection</span>"
     ]
   },
   {
-    "objectID": "control-agent/prompt-injection.html#read-next",
-    "href": "control-agent/prompt-injection.html#read-next",
+    "objectID": "control-agent/prompt-injection.html#further-reading",
+    "href": "control-agent/prompt-injection.html#further-reading",
     "title": "20  Prompt injection",
     "section": "",
     "text": "Not What You’ve Signed Up For — The foundational demonstration that retrieved documents and tool output can become indirect instructions that trigger unintended actions.\nDefeating Prompt Injections by Design — This research preprint proposes a structural defence based on trusted control flow and capability constraints; its guarantees still depend on the policy and threat model.\nDesigning AI agents to resist prompt injection — A current vendor account of why input filtering alone is insufficient and why source-to-sink safeguards matter.\nAuto mode is now the default in Claude Code — Anthropic’s empirical evaluation comparing manual confirmation prompts (which suffered from 97% habituated user approval) against automated secondary classification, reporting 0/720 successful attacks on Claude in a third-party indirect injection benchmark (Trajectory Labs).\nMitigating the risk of prompt injections in browser use — Anthropic research on the challenges of defending models against untrusted external content when tools browse or fetch live web pages.",
@@ -903,15 +893,15 @@
     "href": "durable-workflows/rules-instructions.html",
     "title": "22  Rules and project instructions",
     "section": "",
-    "text": "22.1 Read next\nPut stable, human-reviewed project guidance in instruction files so you do not have to repeat it in every task prompt. Useful rules explain where to work, how to run checks, and which decisions require review. “Use only invented data; preserve the supplied inputs; report the checker result” gives an agent more actionable guidance than “be a careful researcher.”\nScope determines where guidance applies. Project instructions belong with the repository; global instructions are personal defaults used across projects. A survey-specific rule about preserving questionnaire versions belongs in that project. A preference for concise explanations may fit globally. Do not make every project carry a previous project’s assumptions.\nHere, AGENTS.md is the common source. CLAUDE.md and GEMINI.md adapters import it where supported. Antigravity also uses its project-rules mechanism. An adapter is a small file that connects the shared guidance to a particular harness. A file name alone does not guarantee discovery.\nPrecedence means which instruction has priority when guidance conflicts. Each harness loads and prioritises instructions differently:\nCheck the installed product’s rules page and the context it actually loaded; the agent comparison links the product-specific references. If a global preference says “rewrite freely” but the lab says “edit only work/,” resolve the conflict before editing. Do not assume the model will choose your intended boundary.\nKeep guidance concise and testable. For a synthetic release repair, ask the agent to identify the allowed output folder and exact checker before making changes. Then inspect its edits and commands. After revising an instruction, repeat that harmless task in a fresh session; a claim that the file was loaded is weaker evidence than observable compliance.\nRules are context and policy, not access control. A model may ignore them or misinterpret a conflict. Enforce critical file boundaries in the environment and keep acceptance checks separate from writable task outputs. Review changes to instruction files as carefully as changes to code: an agent permitted to rewrite its own guidance could weaken the constraint you meant to preserve.\nIn Lab 4, classify repeated knowledge before saving it. Stable guidance belongs here; a session’s current failure and next action belong in its handoff or work log.",
+    "text": "22.1 Further reading\nPut stable, human-reviewed project guidance in instruction files so you do not have to repeat it in every task prompt. Useful rules explain where to work, how to run checks, and which decisions require review. “Use only invented data; preserve the supplied inputs; report the checker result” gives an agent more actionable guidance than “be a careful researcher.”\nScope determines where guidance applies. Project instructions belong with the repository; global instructions are personal defaults used across projects. A survey-specific rule about preserving questionnaire versions belongs in that project. A preference for concise explanations may fit globally. Do not make every project carry a previous project’s assumptions.\nHere, AGENTS.md is the common source. CLAUDE.md and GEMINI.md adapters import it where supported. Antigravity also uses its project-rules mechanism. An adapter is a small file that connects the shared guidance to a particular harness. A file name alone does not guarantee discovery.\nPrecedence means which instruction has priority when guidance conflicts. Each harness loads and prioritises instructions differently:\nCheck the installed product’s rules page and the context it actually loaded; the agent comparison links the product-specific references. If a global preference says “rewrite freely” but the lab says “edit only work/,” resolve the conflict before editing. Do not assume the model will choose your intended boundary.\nKeep guidance concise and testable. For a synthetic release repair, ask the agent to identify the allowed output folder and exact checker before making changes. Then inspect its edits and commands. After revising an instruction, repeat that harmless task in a fresh session; a claim that the file was loaded is weaker evidence than observable compliance.\nRules are context and policy, not access control. A model may ignore them or misinterpret a conflict. Enforce critical file boundaries in the environment and keep acceptance checks separate from writable task outputs. Review changes to instruction files as carefully as changes to code: an agent permitted to rewrite its own guidance could weaken the constraint you meant to preserve.\nIn Lab 4, classify repeated knowledge before saving it. Stable guidance belongs here; a session’s current failure and next action belong in its handoff or work log.",
     "crumbs": [
       "Advanced: skills, agentic loops, and project memory",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Rules and project instructions</span>"
     ]
   },
   {
-    "objectID": "durable-workflows/rules-instructions.html#read-next",
-    "href": "durable-workflows/rules-instructions.html#read-next",
+    "objectID": "durable-workflows/rules-instructions.html#further-reading",
+    "href": "durable-workflows/rules-instructions.html#further-reading",
     "title": "22  Rules and project instructions",
     "section": "",
     "text": "OpenCode rules — The current discovery and precedence rules for the supported workshop harness.\nCodex project instructions — A contrasting first-party account of root-to-working-directory instruction layering.\nEffective context engineering for AI agents — The case for small, clear, progressively disclosed context instead of one permanent instruction monolith.",
@@ -925,15 +915,15 @@
     "href": "durable-workflows/memory-loops.html",
     "title": "23  Memory and agentic loops",
     "section": "",
-    "text": "23.1 Read next\nProject memory is maintained information that helps a later session resume. It can be ordinary Markdown files; it does not require a special service. Conversation history records what was said, but it also contains abandoned ideas and superseded results. Durable notes should identify what remains true and point to evidence.\nSeparate the records by the question they answer. Goals say what you are trying to achieve. Current state says what works and what is blocked. A work log records actions and check results; a decision record explains why you chose an approach. A handoff tells the next person or agent where to resume, what to inspect, and when to stop. Keep code, inputs, tests, and outputs in the project itself rather than copying them into prose.\nFor a synthetic income release, a useful decision note might explain why the summary includes imputed values, meaning values filled in when the original response was missing. It should point to the summary script and the agreed task definition. “The summary is correct” is not a useful substitute for that evidence. The current attempt result belongs in the work log and handoff; a durable definition should not be copied into several competing notes.\nA bounded loop makes the stopping rule explicit. Build produces the agreed change. Review checks the result against fixed criteria. Revise addresses a specific failure. Ready means the result awaits human acceptance. Decide the attempt budget before starting, and preserve a failed result rather than letting the agent quietly redefine success. In Lab 4, the repair/check loop allows at most two attempts and stops for human review.\nMemory can also become stale. A handoff may say that a check passed before the latest edit; a decision note may describe a variable that has been renamed. Give results a clear reference to the relevant file or run, supersede obsolete notes, and ask a fresh session to verify the current state before continuing. Test whether it can find the source, exact check, uncertainty, and next action without the old conversation.\nContinue a session while its task and context remain coherent; start fresh when a checked handoff can replace irrelevant history. Provider caching, which may reuse part of an earlier request, is a separate cost consideration. Evaluate memory by useful resumption, maintenance effort, duplication, and human oversight rather than the number of files it creates.\nConductor-for-all is one comparison, not the prescribed system. For an optional advanced comparison, inspect the published demo-control-project, which splits records into a fuller docs/ structure. Lab 4’s small flat files remain sufficient for its task. Logs should clarify human responsibility; they do not authorise an agent to make research decisions without review.",
+    "text": "23.1 Further reading\nProject memory is maintained information that helps a later session resume. It can be ordinary Markdown files; it does not require a special service. Conversation history records what was said, but it also contains abandoned ideas and superseded results. Durable notes should identify what remains true and point to evidence.\nSeparate the records by the question they answer. Goals say what you are trying to achieve. Current state says what works and what is blocked. A work log records actions and check results; a decision record explains why you chose an approach. A handoff tells the next person or agent where to resume, what to inspect, and when to stop. Keep code, inputs, tests, and outputs in the project itself rather than copying them into prose.\nFor a synthetic income release, a useful decision note might explain why the summary includes imputed values, meaning values filled in when the original response was missing. It should point to the summary script and the agreed task definition. “The summary is correct” is not a useful substitute for that evidence. The current attempt result belongs in the work log and handoff; a durable definition should not be copied into several competing notes.\nA bounded loop makes the stopping rule explicit. Build produces the agreed change. Review checks the result against fixed criteria. Revise addresses a specific failure. Ready means the result awaits human acceptance. Decide the attempt budget before starting, and preserve a failed result rather than letting the agent quietly redefine success. In Lab 4, the repair/check loop allows at most two attempts and stops for human review.\nMemory can also become stale. A handoff may say that a check passed before the latest edit; a decision note may describe a variable that has been renamed. Give results a clear reference to the relevant file or run, supersede obsolete notes, and ask a fresh session to verify the current state before continuing. Test whether it can find the source, exact check, uncertainty, and next action without the old conversation.\nContinue a session while its task and context remain coherent; start fresh when a checked handoff can replace irrelevant history. Provider caching, which may reuse part of an earlier request, is a separate cost consideration. Evaluate memory by useful resumption, maintenance effort, duplication, and human oversight rather than the number of files it creates.\nConductor-for-all is one comparison, not the prescribed system. For an optional advanced comparison, inspect the published demo-control-project, which splits records into a fuller docs/ structure. Lab 4’s small flat files remain sufficient for its task. Logs should clarify human responsibility; they do not authorise an agent to make research decisions without review.",
     "crumbs": [
       "Advanced: skills, agentic loops, and project memory",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Memory and agentic loops</span>"
     ]
   },
   {
-    "objectID": "durable-workflows/memory-loops.html#read-next",
-    "href": "durable-workflows/memory-loops.html#read-next",
+    "objectID": "durable-workflows/memory-loops.html#further-reading",
+    "href": "durable-workflows/memory-loops.html#further-reading",
     "title": "23  Memory and agentic loops",
     "section": "",
     "text": "Lost in the Middle — Evidence that simply retaining more context can make important information harder to use, which motivates selective handoffs and retrieval.\nEffective context engineering for AI agents — Practical patterns for structured notes, compaction, and just-in-time memory, with no claim that one memory system fits every project.\nOWASP Top 10 for Agentic Applications 2026 — The counterweight to memory enthusiasm: persistent context can also be poisoned, stale, or granted too much authority.",
@@ -1046,15 +1036,15 @@
     "href": "reference/agent-comparison.html",
     "title": "25  Agent comparison",
     "section": "",
-    "text": "25.1 Read next\nChecked 2026-09-12. Product interfaces and policies change. Verify the installed version and official documentation before teaching.\n“Auto approval,” “approval bypass,” and “sandbox removal” mean different things. A permission hook can deny or transform a tool request. A container or VM provides the environment boundary. Ask each harness what it loaded, then verify the files, diffs, and command evidence.",
+    "text": "25.1 Further reading\nChecked 2026-09-12. Product interfaces and policies change. Verify the installed version and official documentation before teaching.\n“Auto approval,” “approval bypass,” and “sandbox removal” mean different things. A permission hook can deny or transform a tool request. A container or VM provides the environment boundary. Ask each harness what it loaded, then verify the files, diffs, and command evidence.",
     "crumbs": [
       "Continue learning",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Agent comparison</span>"
     ]
   },
   {
-    "objectID": "reference/agent-comparison.html#read-next",
-    "href": "reference/agent-comparison.html#read-next",
+    "objectID": "reference/agent-comparison.html#further-reading",
+    "href": "reference/agent-comparison.html#further-reading",
     "title": "25  Agent comparison",
     "section": "",
     "text": "Codex documentation — Check the current OpenAI product rather than transferring settings from OpenCode.\nClaude Code security — Read Claude’s own trust and permission model, including its limits.\nAntigravity permissions — Confirm current precedence and modes for the Google comparison.",
@@ -1068,15 +1058,15 @@
     "href": "reference/data-and-privacy.html",
     "title": "26  Data and privacy",
     "section": "",
-    "text": "26.1 Read next\nUse the workshop’s small, source-free synthetic data. It resembles survey/panel data so you can practise joins, metadata, flags, weights, missingness, and release checks. It is not SOEP, does not reproduce SOEP weights, and is not substantive evidence.\n“Public” does not mean “approved for an external AI service.” Before sending data, check institutional policy, contractual restrictions, provider retention and training settings, and account controls. In this workshop, never send restricted rows, unpublished results, personal or participant data, or credentials.\nCheck the OpenCode Zen terms, general OpenAI data controls, and separate Codex agent approvals and security guidance. For Google/Antigravity, check the current permissions and CLI usage pages. Telemetry controls are not a confidentiality guarantee. Recheck these policies before publication.",
+    "text": "26.1 Further reading\nUse the workshop’s small, source-free synthetic data. It resembles survey/panel data so you can practise joins, metadata, flags, weights, missingness, and release checks. It is not SOEP, does not reproduce SOEP weights, and is not substantive evidence.\n“Public” does not mean “approved for an external AI service.” Before sending data, check institutional policy, contractual restrictions, provider retention and training settings, and account controls. In this workshop, never send restricted rows, unpublished results, personal or participant data, or credentials.\nCheck the OpenCode Zen terms, general OpenAI data controls, and separate Codex agent approvals and security guidance. For Google/Antigravity, check the current permissions and CLI usage pages. Telemetry controls are not a confidentiality guarantee. Recheck these policies before publication.",
     "crumbs": [
       "Continue learning",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Data and privacy</span>"
     ]
   },
   {
-    "objectID": "reference/data-and-privacy.html#read-next",
-    "href": "reference/data-and-privacy.html#read-next",
+    "objectID": "reference/data-and-privacy.html#further-reading",
+    "href": "reference/data-and-privacy.html#further-reading",
     "title": "26  Data and privacy",
     "section": "",
     "text": "EDPB Opinion 28/2024 — The strongest public authority here for why public availability, anonymity, lawful processing, and downstream responsibility are separate questions.\nNIST’s Generative AI Profile — A broader risk-management frame for data governance, privacy, security, evaluation, and incident response.\nSecurity in GitHub Codespaces — Clarifies the boundary between isolating workshop execution and authorizing data disclosure to a model provider.",
@@ -1090,15 +1080,15 @@
     "href": "reference/glossary.html",
     "title": "27  Glossary",
     "section": "",
-    "text": "27.1 Read next",
+    "text": "27.1 Further reading",
     "crumbs": [
       "Continue learning",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
-    "objectID": "reference/glossary.html#read-next",
-    "href": "reference/glossary.html#read-next",
+    "objectID": "reference/glossary.html#further-reading",
+    "href": "reference/glossary.html#further-reading",
     "title": "27  Glossary",
     "section": "",
     "text": "Building effective agents — A readable source for the workflow, agent, tool, and loop vocabulary used throughout the glossary.\nNIST’s Adversarial Machine Learning taxonomy — The deeper standardized reference for security terms such as prompt injection, attacker capability, and mitigation.",

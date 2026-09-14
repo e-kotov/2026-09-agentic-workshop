@@ -85,9 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-ccdd104a4a75b30bf490f0c1de805517.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-f94e64121077e3e8d298d6b7c0d84106.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-15f2743b22ade5a1b08dcf764475ff15.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-669e447c421b9f1e20cc165f184e0b7c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-15f2743b22ade5a1b08dcf764475ff15.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -624,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link active" data-scroll-target="#read-next"><span class="header-section-number">14.1</span> Read next</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link active" data-scroll-target="#further-reading"><span class="header-section-number">14.1</span> Further reading</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/engineer-workflow/git-recovery.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -686,8 +686,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For example, an agent repairing a synthetic panel table might accidentally increase a survey weight. A prior reviewed checkpoint lets you identify the changed value and recover it. Git cannot explain which weight is substantively right; the contract and researcher supply that judgement.</p>
 <p>In <a href="../labs/lab-02.html">Lab 2</a>, the helper creates a separate, nested repository inside <code>work/recovery-demo/</code>. It saves the repaired table, deliberately changes one weight, observes a failed test, and uses <strong>revert</strong>: a new commit that undoes the earlier committed change while preserving its history. The exercise leaves the outer workshop repository untouched. Inspect both the failure and recovery evidence; a clean working tree only means there are no pending changes.</p>
 <p>Outside the demonstration, stop the agent before recovery so it cannot keep editing. Identify the exact files and checkpoint, preserve unrelated work, and choose the smallest recovery operation. Do not ask an agent to “reset everything”: uncommitted and untracked work may have no recoverable Git copy. Git history also complements, rather than replaces, a backup kept elsewhere.</p>
-<section id="read-next" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="read-next"><span class="header-section-number">14.1</span> Read next</h2>
+<section id="further-reading" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">14.1</span> Further reading</h2>
 <ul>
 <li><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">Pro Git: Git Basics</a> — The smallest useful reference for the working tree, staging, commits, and inspectable history used in the lab.</li>
 <li><a href="https://openai.com/index/harness-engineering/">Harness engineering</a> — A modern example of agents working inside repository structure and mechanical checks; read it as a case study, not a universal recipe.</li>
