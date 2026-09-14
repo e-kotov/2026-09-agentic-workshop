@@ -8,7 +8,7 @@
 
 <meta name="description" content="Beyond the Chatbox: LLM Coding Agents for Research">
 
-<title>19&nbsp; Skills and deterministic tools – Beyond the Chatbox</title>
+<title>11&nbsp; Skills and deterministic tools – Beyond the Chatbox</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,8 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../durable-workflows/memory-loops.html" rel="next">
-<link href="../durable-workflows/rules-instructions.html" rel="prev">
+<link href="../labs/lab-01.html" rel="next">
+<link href="../understand-agents/writing-tasks.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -297,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../durable-workflows/rules-instructions.html">Build durable workflows</a></li><li class="breadcrumb-item"><a href="../durable-workflows/skills-tools.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../understand-agents/context-instructions-cost.html">Core mechanics: context, prompts, skills, and cost</a></li><li class="breadcrumb-item"><a href="../durable-workflows/skills-tools.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -326,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Start here</span></a>
+ <span class="menu-text">Setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -373,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Understand agents</span></a>
+ <span class="menu-text">From chatbot to agent</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -391,6 +391,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Models and agent harnesses</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Core mechanics: context, prompts, skills, and cost</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
@@ -403,21 +414,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Writing tasks for agents</span></span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Take responsibility</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
+  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab 1 — First contact</span></span></a>
   </div>
 </li>
       </ul>
@@ -425,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Engineer the workflow</span></a>
+ <span class="menu-text">Ownership and responsibility</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -433,20 +439,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
+  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
   </div>
 </li>
       </ul>
@@ -454,7 +448,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Control the agent</span></a>
+ <span class="menu-text">Software engineering basics for researchers</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -462,20 +456,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
+  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
+  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
+  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lab 2 — Engineering for research</span></span></a>
   </div>
 </li>
       </ul>
@@ -483,7 +483,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Build durable workflows</span></a>
+ <span class="menu-text">Security, data protection, and isolation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -491,20 +491,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
+  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
+  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
+  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></span></a>
   </div>
 </li>
       </ul>
@@ -512,7 +518,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Labs</span></a>
+ <span class="menu-text">Advanced: skills, agentic loops, and project memory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -520,26 +526,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></span></a>
+  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></span></a>
+  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">lab-04.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lab 4 — Skills, bounded loops, and project memory</span></span></a>
   </div>
 </li>
       </ul>
@@ -589,9 +589,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-a-skill-contains" id="toc-what-a-skill-contains" class="nav-link active" data-scroll-target="#what-a-skill-contains"><span class="header-section-number">19.1</span> What a skill contains</a></li>
-  <li><a href="#test-a-skill-on-a-fresh-case" id="toc-test-a-skill-on-a-fresh-case" class="nav-link" data-scroll-target="#test-a-skill-on-a-fresh-case"><span class="header-section-number">19.2</span> Test a skill on a fresh case</a></li>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next"><span class="header-section-number">19.3</span> Read next</a></li>
+  <li><a href="#what-a-skill-contains" id="toc-what-a-skill-contains" class="nav-link active" data-scroll-target="#what-a-skill-contains"><span class="header-section-number">11.1</span> What a skill contains</a></li>
+  <li><a href="#test-a-skill-on-a-fresh-case" id="toc-test-a-skill-on-a-fresh-case" class="nav-link" data-scroll-target="#test-a-skill-on-a-fresh-case"><span class="header-section-number">11.2</span> Test a skill on a fresh case</a></li>
+  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next"><span class="header-section-number">11.3</span> Read next</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/durable-workflows/skills-tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -599,9 +599,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../durable-workflows/rules-instructions.html">Build durable workflows</a></li><li class="breadcrumb-item"><a href="../durable-workflows/skills-tools.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../understand-agents/context-instructions-cost.html">Core mechanics: context, prompts, skills, and cost</a></li><li class="breadcrumb-item"><a href="../durable-workflows/skills-tools.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></h1>
 </div>
 
 
@@ -646,15 +646,15 @@ ul.task-list li input[type="checkbox"] {
 <p>A tool can read a file, run a shell command, or perform another action. A skill is reusable guidance for a specific task. If the result should always follow fixed rules, use a script or test.</p>
 <p>Each exercise includes a repository-scoped R binary-package skill. It documents the Linux/P3M installation path and its limits. It does not permit arbitrary package installation or real data. Read its trigger and scope in <code>.agents/skills/r-binary-packages/SKILL.md</code> before using it.</p>
 <p>Create a skill only after a safe task repeats. Try a one-off prompt first, save only stable guidance, and test the skill on a new case. Harnesses discover skills in different directories. The Claude copy is a synchronised file, not a symlink.</p>
-<section id="what-a-skill-contains" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="what-a-skill-contains"><span class="header-section-number">19.1</span> What a skill contains</h2>
+<section id="what-a-skill-contains" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="what-a-skill-contains"><span class="header-section-number">11.1</span> What a skill contains</h2>
 <p>A portable skill is a directory whose <code>SKILL.md</code> starts with YAML metadata. For OpenCode, <code>name</code> and <code>description</code> are required; the description tells the agent when the skill is relevant. The Markdown body supplies the procedure, boundaries, and checks. Optional <code>scripts/</code>, <code>references/</code>, or templates can sit beside it, but their contents are not loaded automatically. Let the skill point to only the supporting file needed for the current task.</p>
 <p>Put shared project skills in <code>.agents/skills/&lt;name&gt;/SKILL.md</code>. OpenCode searches this compatible project location, <code>.opencode/skills/</code>, and corresponding global directories under your home folder. Project scope is the safer default: use a global skill only for stable guidance that truly applies across projects. OpenCode walks from the current directory towards the Git worktree, so start it inside the project that owns the skill. See the current <a href="https://opencode.ai/docs/skills/">OpenCode skill discovery contract</a>.</p>
 <p>At first, the model sees each permitted skill’s name and description—not every full body. It loads the chosen body on demand with the <code>skill</code> tool. Ask explicitly when testing: <code>Use the r-binary-packages skill for this diagnosis.</code> Then confirm that the session shows a skill-tool call before judging the answer. Natural-language triggers are useful, but they are model choices rather than deterministic routing.</p>
 <p>After creating, moving, or renaming a skill, start a fresh OpenCode session for the discovery test. The documentation defines startup/path discovery but does not promise that an already-running session will rescan every changed skill reliably.</p>
 </section>
-<section id="test-a-skill-on-a-fresh-case" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="test-a-skill-on-a-fresh-case"><span class="header-section-number">19.2</span> Test a skill on a fresh case</h2>
+<section id="test-a-skill-on-a-fresh-case" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="test-a-skill-on-a-fresh-case"><span class="header-section-number">11.2</span> Test a skill on a fresh case</h2>
 <ol type="1">
 <li>Check that the directory name, frontmatter <code>name</code>, and lowercase hyphenated identifier agree, and that the description names a specific trigger.</li>
 <li>Start OpenCode inside the intended project scope and ask it to list the skill before loading it.</li>
@@ -663,8 +663,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Revise or remove guidance that is ambiguous, stale, duplicated elsewhere, or grants more scope than the task needs.</li>
 </ol>
 </section>
-<section id="read-next" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="read-next"><span class="header-section-number">19.3</span> Read next</h2>
+<section id="read-next" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="read-next"><span class="header-section-number">11.3</span> Read next</h2>
 <ul>
 <li><a href="https://opencode.ai/docs/skills">OpenCode agent skills</a> — The live discovery and loading contract for the skill mechanism participants inspect in the lab.</li>
 <li><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Writing effective tools for agents — with agents</a> — Treats a tool as a designed contract whose boundaries, descriptions, and outputs shape agent behaviour.</li>
@@ -1097,13 +1097,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../durable-workflows/rules-instructions.html" class="pagination-link" aria-label="Rules and project instructions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span>
+      <a href="../understand-agents/writing-tasks.html" class="pagination-link" aria-label="Writing tasks for agents">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Writing tasks for agents</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../durable-workflows/memory-loops.html" class="pagination-link" aria-label="Memory and agentic loops">
-        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../labs/lab-01.html" class="pagination-link" aria-label="Lab 1 — First contact">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab 1 — First contact</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

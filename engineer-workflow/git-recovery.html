@@ -8,7 +8,7 @@
 
 <meta name="description" content="Beyond the Chatbox: LLM Coding Agents for Research">
 
-<title>12&nbsp; Git and recoverable change – Beyond the Chatbox</title>
+<title>14&nbsp; Git and recoverable change – Beyond the Chatbox</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html">Engineer the workflow</a></li><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html">Software engineering basics for researchers</a></li><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -361,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Start here</span></a>
+ <span class="menu-text">Setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -408,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Understand agents</span></a>
+ <span class="menu-text">From chatbot to agent</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -426,6 +426,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Models and agent harnesses</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Core mechanics: context, prompts, skills, and cost</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
@@ -438,21 +449,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Writing tasks for agents</span></span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Take responsibility</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
+  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab 1 — First contact</span></span></a>
   </div>
 </li>
       </ul>
@@ -460,7 +466,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Engineer the workflow</span></a>
+ <span class="menu-text">Ownership and responsibility</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -468,20 +474,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
+  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
   </div>
 </li>
       </ul>
@@ -489,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Control the agent</span></a>
+ <span class="menu-text">Software engineering basics for researchers</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -497,20 +491,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
+  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
+  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
+  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lab 2 — Engineering for research</span></span></a>
   </div>
 </li>
       </ul>
@@ -518,7 +518,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Build durable workflows</span></a>
+ <span class="menu-text">Security, data protection, and isolation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -526,20 +526,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
+  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
+  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
+  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></span></a>
   </div>
 </li>
       </ul>
@@ -547,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Labs</span></a>
+ <span class="menu-text">Advanced: skills, agentic loops, and project memory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -555,26 +561,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></span></a>
+  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></span></a>
+  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">lab-04.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lab 4 — Skills, bounded loops, and project memory</span></span></a>
   </div>
 </li>
       </ul>
@@ -624,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link active" data-scroll-target="#read-next"><span class="header-section-number">12.1</span> Read next</a></li>
+  <li><a href="#read-next" id="toc-read-next" class="nav-link active" data-scroll-target="#read-next"><span class="header-section-number">14.1</span> Read next</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/engineer-workflow/git-recovery.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -632,9 +632,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html">Engineer the workflow</a></li><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html">Software engineering basics for researchers</a></li><li class="breadcrumb-item"><a href="../engineer-workflow/git-recovery.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></h1>
 </div>
 
 
@@ -676,13 +676,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Git makes an agent’s edits inspectable and recoverable. Read <code>git diff</code> before accepting work. Commit useful checkpoints with a clear message. A commit does not prove the work is correct.</p>
+<p>Git records selected versions of your project so you can inspect changes and recover earlier work. A <strong>repository</strong> holds that history. The <strong>working tree</strong> is the set of files you are editing now; a <strong>commit</strong> is a named checkpoint, or snapshot, of the tracked contents you chose to save. It does not prove those contents are correct.</p>
+<p>A <strong>diff</strong> shows what changed between versions. Read it before accepting agent work: did a repair touch only the intended transformation, or also alter tests, variable definitions, and documentation? A green test can hide a weakened assertion. Small, purposeful changes are easier to review than a single “improve everything” edit.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status <span class="at">--short</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--</span> path/to/file</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--max-count</span><span class="op">=</span>5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Lab 2 breaks and repairs a disposable project. Keep deliberate failures isolated, record the starting commit, and never experiment in a production checkout. If you do not want a change, stop the agent, inspect the diff, and use the smallest recovery operation your team accepts.</p>
-<section id="read-next" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="read-next"><span class="header-section-number">12.1</span> Read next</h2>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--cached</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--max-count</span><span class="op">=</span>5</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <strong>staging area</strong> holds changes selected for the next commit. <code>git diff</code> shows unstaged edits; <code>git diff --cached</code> shows staged ones. <code>git status --short</code> also lists new, untracked files that a normal diff does not display. Review those files too, then commit a useful checkpoint with a message explaining its purpose. Saving a file in the editor does not put it in Git history, and a local commit does not upload it to GitHub.</p>
+<p>For example, an agent repairing a synthetic panel table might accidentally increase a survey weight. A prior reviewed checkpoint lets you identify the changed value and recover it. Git cannot explain which weight is substantively right; the contract and researcher supply that judgement.</p>
+<p>In <a href="../labs/lab-02.html">Lab 2</a>, the helper creates a separate, nested repository inside <code>work/recovery-demo/</code>. It saves the repaired table, deliberately changes one weight, observes a failed test, and uses <strong>revert</strong>: a new commit that undoes the earlier committed change while preserving its history. The exercise leaves the outer workshop repository untouched. Inspect both the failure and recovery evidence; a clean working tree only means there are no pending changes.</p>
+<p>Outside the demonstration, stop the agent before recovery so it cannot keep editing. Identify the exact files and checkpoint, preserve unrelated work, and choose the smallest recovery operation. Do not ask an agent to “reset everything”: uncommitted and untracked work may have no recoverable Git copy. Git history also complements, rather than replaces, a backup kept elsewhere.</p>
+<section id="read-next" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="read-next"><span class="header-section-number">14.1</span> Read next</h2>
 <ul>
 <li><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">Pro Git: Git Basics</a> — The smallest useful reference for the working tree, staging, commits, and inspectable history used in the lab.</li>
 <li><a href="https://openai.com/index/harness-engineering/">Harness engineering</a> — A modern example of agents working inside repository structure and mechanical checks; read it as a case study, not a universal recipe.</li>
@@ -1125,12 +1130,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../responsibility/ownership.html" class="pagination-link" aria-label="Ownership and responsibility">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../engineer-workflow/tests-verification.html" class="pagination-link" aria-label="Tests and verification">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tests and verification</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tests and verification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -8,7 +8,7 @@
 
 <meta name="description" content="Beyond the Chatbox: LLM Coding Agents for Research">
 
-<title>23&nbsp; Lab 3 — Security, data protection, and isolation – Beyond the Chatbox</title>
+<title>21&nbsp; Lab 3 — Security, data protection, and isolation – Beyond the Chatbox</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,8 +72,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../labs/lab-04.html" rel="next">
-<link href="../labs/lab-02.html" rel="prev">
+<link href="../durable-workflows/rules-instructions.html" rel="next">
+<link href="../control-agent/prompt-injection.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-01.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-03.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../control-agent/data-protection.html">Security, data protection, and isolation</a></li><li class="breadcrumb-item"><a href="../labs/lab-03.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -361,7 +361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Start here</span></a>
+ <span class="menu-text">Setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -408,7 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Understand agents</span></a>
+ <span class="menu-text">From chatbot to agent</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -426,6 +426,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Models and agent harnesses</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Core mechanics: context, prompts, skills, and cost</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../understand-agents/context-instructions-cost.html" class="sidebar-item-text sidebar-link">
@@ -438,21 +449,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Writing tasks for agents</span></span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Take responsibility</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
+  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lab 1 — First contact</span></span></a>
   </div>
 </li>
       </ul>
@@ -460,7 +466,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Engineer the workflow</span></a>
+ <span class="menu-text">Ownership and responsibility</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -468,20 +474,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
+  <a href="../responsibility/ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Ownership and responsibility</span></span></a>
   </div>
 </li>
       </ul>
@@ -489,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Control the agent</span></a>
+ <span class="menu-text">Software engineering basics for researchers</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -497,20 +491,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
+  <a href="../engineer-workflow/git-recovery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Git and recoverable change</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
+  <a href="../engineer-workflow/tests-verification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tests and verification</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
+  <a href="../engineer-workflow/build-systems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Build systems and reproducibility</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lab 2 — Engineering for research</span></span></a>
   </div>
 </li>
       </ul>
@@ -518,7 +518,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Build durable workflows</span></a>
+ <span class="menu-text">Security, data protection, and isolation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -526,20 +526,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
+  <a href="../control-agent/data-protection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Data protection and threat model</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/skills-tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Skills and deterministic tools</span></span></a>
+  <a href="../control-agent/permissions-isolation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Permissions, sandboxes, and isolation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
+  <a href="../control-agent/prompt-injection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prompt injection</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></span></a>
   </div>
 </li>
       </ul>
@@ -547,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Labs</span></a>
+ <span class="menu-text">Advanced: skills, agentic loops, and project memory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -555,26 +561,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">lab-01.html</span></span></a>
+  <a href="../durable-workflows/rules-instructions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs/lab-02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../labs/lab-03.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></span></a>
+  <a href="../durable-workflows/memory-loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Memory and agentic loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../labs/lab-04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">lab-04.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lab 4 — Skills, bounded loops, and project memory</span></span></a>
   </div>
 </li>
       </ul>
@@ -624,19 +624,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#start-here" id="toc-start-here" class="nav-link active" data-scroll-target="#start-here"><span class="header-section-number">23.1</span> Start here</a></li>
-  <li><a href="#what-you-learn" id="toc-what-you-learn" class="nav-link" data-scroll-target="#what-you-learn"><span class="header-section-number">23.2</span> What you learn</a></li>
-  <li><a href="#beginner-recommended" id="toc-beginner-recommended" class="nav-link" data-scroll-target="#beginner-recommended"><span class="header-section-number">23.3</span> Beginner — recommended</a>
+  <li><a href="#start-here" id="toc-start-here" class="nav-link active" data-scroll-target="#start-here"><span class="header-section-number">21.1</span> Start here</a></li>
+  <li><a href="#what-you-learn" id="toc-what-you-learn" class="nav-link" data-scroll-target="#what-you-learn"><span class="header-section-number">21.2</span> What you learn</a></li>
+  <li><a href="#beginner-recommended" id="toc-beginner-recommended" class="nav-link" data-scroll-target="#beginner-recommended"><span class="header-section-number">21.3</span> Beginner — recommended</a>
   <ul class="collapse">
-  <li><a href="#copyable-bounded-prompt-attempt-1" id="toc-copyable-bounded-prompt-attempt-1" class="nav-link" data-scroll-target="#copyable-bounded-prompt-attempt-1"><span class="header-section-number">23.3.1</span> Copyable bounded prompt (attempt 1)</a></li>
-  <li><a href="#copyable-bounded-continuation-attempt-2-only" id="toc-copyable-bounded-continuation-attempt-2-only" class="nav-link" data-scroll-target="#copyable-bounded-continuation-attempt-2-only"><span class="header-section-number">23.3.2</span> Copyable bounded continuation (attempt 2 only)</a></li>
+  <li><a href="#copyable-bounded-prompt-attempt-1" id="toc-copyable-bounded-prompt-attempt-1" class="nav-link" data-scroll-target="#copyable-bounded-prompt-attempt-1"><span class="header-section-number">21.3.1</span> Copyable bounded prompt (attempt 1)</a></li>
+  <li><a href="#copyable-bounded-continuation-attempt-2-only" id="toc-copyable-bounded-continuation-attempt-2-only" class="nav-link" data-scroll-target="#copyable-bounded-continuation-attempt-2-only"><span class="header-section-number">21.3.2</span> Copyable bounded continuation (attempt 2 only)</a></li>
   </ul></li>
-  <li><a href="#optional-medium-route" id="toc-optional-medium-route" class="nav-link" data-scroll-target="#optional-medium-route"><span class="header-section-number">23.4</span> Optional medium route</a></li>
-  <li><a href="#optional-advanced-route" id="toc-optional-advanced-route" class="nav-link" data-scroll-target="#optional-advanced-route"><span class="header-section-number">23.5</span> Optional advanced route</a></li>
-  <li><a href="#required-evidence" id="toc-required-evidence" class="nav-link" data-scroll-target="#required-evidence"><span class="header-section-number">23.6</span> Required evidence</a></li>
-  <li><a href="#stop-reset-or-continue" id="toc-stop-reset-or-continue" class="nav-link" data-scroll-target="#stop-reset-or-continue"><span class="header-section-number">23.7</span> Stop, reset, or continue</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">23.8</span> Reflection</a></li>
-  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next"><span class="header-section-number">23.9</span> Read next</a></li>
+  <li><a href="#optional-medium-route" id="toc-optional-medium-route" class="nav-link" data-scroll-target="#optional-medium-route"><span class="header-section-number">21.4</span> Optional medium route</a></li>
+  <li><a href="#optional-advanced-route" id="toc-optional-advanced-route" class="nav-link" data-scroll-target="#optional-advanced-route"><span class="header-section-number">21.5</span> Optional advanced route</a></li>
+  <li><a href="#required-evidence" id="toc-required-evidence" class="nav-link" data-scroll-target="#required-evidence"><span class="header-section-number">21.6</span> Required evidence</a></li>
+  <li><a href="#stop-reset-or-continue" id="toc-stop-reset-or-continue" class="nav-link" data-scroll-target="#stop-reset-or-continue"><span class="header-section-number">21.7</span> Stop, reset, or continue</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">21.8</span> Reflection</a></li>
+  <li><a href="#read-next" id="toc-read-next" class="nav-link" data-scroll-target="#read-next"><span class="header-section-number">21.9</span> Read next</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/edit/main/tutorial-website-src/labs/lab-03.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/e-kotov/2026-09-agentic-workshop/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -644,9 +644,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../labs/lab-01.html">Labs</a></li><li class="breadcrumb-item"><a href="../labs/lab-03.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">lab-03.html</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../control-agent/data-protection.html">Security, data protection, and isolation</a></li><li class="breadcrumb-item"><a href="../labs/lab-03.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></h1>
+<h1 class="title"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lab 3 — Security, data protection, and isolation</span></h1>
 </div>
 
 
@@ -688,12 +688,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Allow about 45 minutes. This is a standalone, disposable exercise using only invented, source-free data.</p>
-<section id="start-here" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="start-here"><span class="header-section-number">23.1</span> Start here</h2>
-<p>Open a VS Code terminal. The first command is:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">"</span><span class="va">$(</span><span class="fu">git</span> rev-parse <span class="at">--show-toplevel</span><span class="va">)</span><span class="st">/exercises/lab-03-security"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Run <code>pwd</code>. It must end in <code>/exercises/lab-03-security</code>. If it does not, stop and ask for help.</p>
+<p>Allow about 45 minutes. This is a standalone, disposable exercise using only invented, source-free data.</p>
+<section id="start-here" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="start-here"><span class="header-section-number">21.1</span> Start here</h2>
+<p>Open a VS Code terminal and paste the first command above. Run <code>pwd</code>. It must end in <code>/exercises/lab-03-security</code>. If it does not, stop and ask for help.</p>
 <p>Run the starter and precheck:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> tools/start_lab.sh</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> checks/check_lab3.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -706,15 +705,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you do not choose, stay standalone.</p>
 <p>Never use credentials, restricted rows, unpublished results, or personal or participant data. Do not probe the host, network, account, or external paths. The stale manifest is evidence to detect, not to repair in this lab.</p>
 </section>
-<section id="what-you-learn" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="what-you-learn"><span class="header-section-number">23.2</span> What you learn</h2>
+<section id="what-you-learn" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="what-you-learn"><span class="header-section-number">21.2</span> What you learn</h2>
 <p>Distinguish a release-integrity check, product permission rule, bounded runtime observation, prompt-injection handling, mechanical output redaction, and an actual environment boundary. Every control has a limitation; static configuration is not runtime isolation.</p>
 </section>
-<section id="beginner-recommended" class="level2" data-number="23.3">
-<h2 data-number="23.3" class="anchored" data-anchor-id="beginner-recommended"><span class="header-section-number">23.3</span> Beginner — recommended</h2>
+<section id="beginner-recommended" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="beginner-recommended"><span class="header-section-number">21.3</span> Beginner — recommended</h2>
 <p>Do not complete every route. Finish Beginner — recommended, then choose at most one optional route if time remains.</p>
-<section id="copyable-bounded-prompt-attempt-1" class="level3" data-number="23.3.1">
-<h3 data-number="23.3.1" class="anchored" data-anchor-id="copyable-bounded-prompt-attempt-1"><span class="header-section-number">23.3.1</span> Copyable bounded prompt (attempt 1)</h3>
+<section id="copyable-bounded-prompt-attempt-1" class="level3" data-number="21.3.1">
+<h3 data-number="21.3.1" class="anchored" data-anchor-id="copyable-bounded-prompt-attempt-1"><span class="header-section-number">21.3.1</span> Copyable bounded prompt (attempt 1)</h3>
 <p>After choosing <strong>Standalone</strong>, paste this once into the supported OpenCode session. It is the mandatory spine; do not start an optional route or broad repository scan. Use at most the two bounded sessions shown here. If the continuation cannot finish, stop and ask the tutor; do not start a third automated attempt.</p>
 <pre class="text"><code>Route choice: Standalone (the participant has chosen this recommended route).
 Work only in this standalone Lab 3 directory. First confirm `pwd` ends in
@@ -752,8 +751,8 @@ Step G — run `python checks/check_lab3.py` once. If a command is denied or
    unavailable, record that exact observation and continue; never invent a
    runtime result. Stop after the checker PASS lines and human review.</code></pre>
 </section>
-<section id="copyable-bounded-continuation-attempt-2-only" class="level3" data-number="23.3.2">
-<h3 data-number="23.3.2" class="anchored" data-anchor-id="copyable-bounded-continuation-attempt-2-only"><span class="header-section-number">23.3.2</span> Copyable bounded continuation (attempt 2 only)</h3>
+<section id="copyable-bounded-continuation-attempt-2-only" class="level3" data-number="21.3.2">
+<h3 data-number="21.3.2" class="anchored" data-anchor-id="copyable-bounded-continuation-attempt-2-only"><span class="header-section-number">21.3.2</span> Copyable bounded continuation (attempt 2 only)</h3>
 <p>If the first bounded session stops with partial work, do not reset or restart the route. Paste this once in a fresh session, then stop after the checker. This is the only second attempt:</p>
 <pre class="text"><code>Continue the standalone Lab 3 task from the current `work/` only. Do not
 perform a broad scan, optional route, export, or reset. Inspect the existing
@@ -777,16 +776,16 @@ both documented success lines. Stop for human review.</code></pre>
 </ol>
 </section>
 </section>
-<section id="optional-medium-route" class="level2" data-number="23.4">
-<h2 data-number="23.4" class="anchored" data-anchor-id="optional-medium-route"><span class="header-section-number">23.4</span> Optional medium route</h2>
+<section id="optional-medium-route" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="optional-medium-route"><span class="header-section-number">21.4</span> Optional medium route</h2>
 <p>Copy the redactor into <code>work/</code>, add one narrowly scoped fake-pattern rule, and add one new deterministic bypass case. Do not edit the shipped plugin or source fixtures. Re-run the supplied checks and document what the new filter still does not prove.</p>
 </section>
-<section id="optional-advanced-route" class="level2" data-number="23.5">
-<h2 data-number="23.5" class="anchored" data-anchor-id="optional-advanced-route"><span class="header-section-number">23.5</span> Optional advanced route</h2>
+<section id="optional-advanced-route" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="optional-advanced-route"><span class="header-section-number">21.5</span> Optional advanced route</h2>
 <p>In a separately disposable container only, compare a version-current Antigravity sandbox observation or a separately launched process with a native child session. Record this as reviewed, version-specific runtime evidence. Do not use a bypass flag on a host system and do not make this experiment a release gate.</p>
 </section>
-<section id="required-evidence" class="level2" data-number="23.6">
-<h2 data-number="23.6" class="anchored" data-anchor-id="required-evidence"><span class="header-section-number">23.6</span> Required evidence</h2>
+<section id="required-evidence" class="level2" data-number="21.6">
+<h2 data-number="21.6" class="anchored" data-anchor-id="required-evidence"><span class="header-section-number">21.6</span> Required evidence</h2>
 <p>The checker expects these participant artefacts:</p>
 <ul>
 <li><code>work/threat-control.md</code> — one table with columns <code>Threat</code>, <code>Attempted control</code>, <code>Evidence</code>, <code>What it does not prove</code>, and <code>Better boundary</code>; include stale manifest, permission-equivalent read, prompt injection, and redaction bypass.</li>
@@ -797,8 +796,8 @@ both documented success lines. Stop for human review.</code></pre>
 <li><code>work/BOUNDARY.md</code> — one stronger boundary and its limitation.</li>
 </ul>
 </section>
-<section id="stop-reset-or-continue" class="level2" data-number="23.7">
-<h2 data-number="23.7" class="anchored" data-anchor-id="stop-reset-or-continue"><span class="header-section-number">23.7</span> Stop, reset, or continue</h2>
+<section id="stop-reset-or-continue" class="level2" data-number="21.7">
+<h2 data-number="21.7" class="anchored" data-anchor-id="stop-reset-or-continue"><span class="header-section-number">21.7</span> Stop, reset, or continue</h2>
 <p>Stop the mandatory task when <code>python checks/check_lab3.py</code> exits 0 and prints <code>PASS lab 3: integrity, permission, injection, and redaction evidence are bounded and limitations are stated</code> followed by <code>NOT MECHANICALLY VERIFIED: runtime agent behavior remains a reviewed session observation</code>. Review the artefacts yourself. Do not start an optional route merely because the agent suggests one.</p>
 <ul>
 <li>Safe reset: <code>bash tools/reset_lab.sh --archive</code> archives this lab’s <code>work/</code> and recreates it. It does not touch another lab or the cumulative project.</li>
@@ -807,12 +806,12 @@ both documented success lines. Stop for human review.</code></pre>
 <li>Next lab: <code>cd "$(git rev-parse --show-toplevel)/exercises/lab-04-skills-memory"</code>.</li>
 </ul>
 </section>
-<section id="reflection" class="level2" data-number="23.8">
-<h2 data-number="23.8" class="anchored" data-anchor-id="reflection"><span class="header-section-number">23.8</span> Reflection</h2>
+<section id="reflection" class="level2" data-number="21.8">
+<h2 data-number="21.8" class="anchored" data-anchor-id="reflection"><span class="header-section-number">21.8</span> Reflection</h2>
 <p>Which boundary stopped an action? Which was only an instruction or static configuration? What route remains for a determined or compromised agent, and which control belongs in the environment rather than in prose?</p>
 </section>
-<section id="read-next" class="level2" data-number="23.9">
-<h2 data-number="23.9" class="anchored" data-anchor-id="read-next"><span class="header-section-number">23.9</span> Read next</h2>
+<section id="read-next" class="level2" data-number="21.9">
+<h2 data-number="21.9" class="anchored" data-anchor-id="read-next"><span class="header-section-number">21.9</span> Read next</h2>
 <ul>
 <li><a href="https://csrc.nist.gov/pubs/ai/100/2/e2025/final">NIST’s Adversarial Machine Learning taxonomy</a> — Gives precise names for attacks and mitigations that these fake-data exercises simplify.</li>
 <li><a href="https://doi.org/10.48550/arXiv.2302.12173">Not What You’ve Signed Up For</a> — The original indirect-prompt-injection mechanism behind the hostile codebook exercise.</li>
@@ -1245,13 +1244,13 @@ both documented success lines. Stop for human review.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../labs/lab-02.html" class="pagination-link" aria-label="lab-02.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">lab-02.html</span></span>
+      <a href="../control-agent/prompt-injection.html" class="pagination-link" aria-label="Prompt injection">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Prompt injection</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../labs/lab-04.html" class="pagination-link" aria-label="lab-04.html">
-        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">lab-04.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../durable-workflows/rules-instructions.html" class="pagination-link" aria-label="Rules and project instructions">
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Rules and project instructions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
