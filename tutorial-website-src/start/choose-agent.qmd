@@ -36,7 +36,3 @@ Their instruction precedence, hooks/plugins, skills, permissions, model routes, 
 - [OpenCode documentation](https://opencode.ai/docs/) — The current reference for the supported workshop harness and its model, tool, and configuration surface.
 - [Codex documentation](https://developers.openai.com/codex/) — Compare OpenAI's first-party description instead of assuming that another terminal agent has OpenCode's controls.
 - [Claude Code overview](https://code.claude.com/docs/en/overview) — A third first-party comparison that makes the model-versus-harness distinction concrete.
-
-::: {.callout-warning}
-Antigravity is not the retired Gemini CLI. Do not connect real research data just to compare agents.
-:::
