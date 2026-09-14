@@ -782,7 +782,7 @@
     "href": "control-agent/prompt-injection.html#read-next",
     "title": "20  Prompt injection",
     "section": "",
-    "text": "Not What You’ve Signed Up For — The foundational demonstration that retrieved documents and tool output can become indirect instructions that trigger unintended actions.\nDefeating Prompt Injections by Design — This research preprint proposes a structural defence based on trusted control flow and capability constraints; its guarantees still depend on the policy and threat model.\nDesigning AI agents to resist prompt injection — A current vendor account of why input filtering alone is insufficient and why source-to-sink safeguards matter.",
+    "text": "Not What You’ve Signed Up For — The foundational demonstration that retrieved documents and tool output can become indirect instructions that trigger unintended actions.\nDefeating Prompt Injections by Design — This research preprint proposes a structural defence based on trusted control flow and capability constraints; its guarantees still depend on the policy and threat model.\nDesigning AI agents to resist prompt injection — A current vendor account of why input filtering alone is insufficient and why source-to-sink safeguards matter.\nAuto mode is now the default in Claude Code — Anthropic’s empirical evaluation comparing manual confirmation prompts (which suffered from 97% habituated user approval) against automated secondary classification, reporting 0/720 successful attacks on Claude in a third-party indirect injection benchmark (Trajectory Labs).\nMitigating the risk of prompt injections in browser use — Anthropic research on the challenges of defending models against untrusted external content when tools browse or fetch live web pages.",
     "crumbs": [
       "Security, data protection, and isolation",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Prompt injection</span>"
@@ -1134,7 +1134,7 @@
     "href": "reference/further-reading.html#agent-security",
     "title": "28  Further reading",
     "section": "28.2 Agent security",
-    "text": "28.2 Agent security\n\nOWASP Top 10 for Agentic Applications 2026 — A practical map from goal hijacking and tool misuse to identity, code execution, memory poisoning, and cascading failures; it is guidance, not certification.",
+    "text": "28.2 Agent security\n\nOWASP Top 10 for Agentic Applications 2026 — A practical map from goal hijacking and tool misuse to identity, code execution, memory poisoning, and cascading failures; it is guidance, not certification.\nAuto mode is now the default in Claude Code — Anthropic’s empirical evaluation comparing manual confirmation prompts (97% approval habituation) against automated secondary classification, reporting 0/720 indirect injection successes on Claude in Trajectory Labs benchmarks.\nMitigating the risk of prompt injections in browser use — Anthropic research on the threat surface when agents interact with untrusted web content and the need for defense-in-depth safeguards.",
     "crumbs": [
       "Continue learning",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Further reading</span>"
