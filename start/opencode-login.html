@@ -27,41 +27,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -627,7 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#connect" id="toc-connect" class="nav-link active" data-scroll-target="#connect"><span class="header-section-number">4.1</span> Connect</a>
   <ul class="collapse">
   <li><a href="#openrouter-recommended" id="toc-openrouter-recommended" class="nav-link" data-scroll-target="#openrouter-recommended"><span class="header-section-number">4.1.1</span> OpenRouter (recommended)</a></li>
-  <li><a href="#nvidia" id="toc-nvidia" class="nav-link" data-scroll-target="#nvidia"><span class="header-section-number">4.1.2</span> NVIDIA</a></li>
+  <li><a href="#nvidia-optional" id="toc-nvidia-optional" class="nav-link" data-scroll-target="#nvidia-optional"><span class="header-section-number">4.1.2</span> NVIDIA (optional)</a></li>
   <li><a href="#opencode-zen-optional" id="toc-opencode-zen-optional" class="nav-link" data-scroll-target="#opencode-zen-optional"><span class="header-section-number">4.1.3</span> OpenCode Zen (optional)</a></li>
   </ul></li>
   <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">4.2</span> Further reading</a></li>
@@ -695,10 +660,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Run <code>/models</code>, search for <code>free</code>, choose that OpenRouter model, and return to the prompt.</li>
 </ol>
 </section>
-<section id="nvidia" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="nvidia"><span class="header-section-number">4.1.2</span> NVIDIA</h3>
+<section id="nvidia-optional" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="nvidia-optional"><span class="header-section-number">4.1.2</span> NVIDIA (optional)</h3>
 <ol type="1">
-<li>Open the <a href="https://build.nvidia.com/">NVIDIA model catalogue</a>, create or sign in to an NVIDIA account, choose a hosted model, and use its <strong>Get API Key</strong> flow.</li>
+<li>Open the <a href="https://build.nvidia.com/">NVIDIA model catalogue</a>, create or sign in to an NVIDIA account (requires verification via SMS message with your mobile phone number), choose a hosted model, and use its <strong>Get API Key</strong> flow.</li>
 <li>In OpenCode, run <code>/connect</code>, choose <strong>NVIDIA</strong>, and paste the key into the key prompt.</li>
 <li>Run <code>/models</code>, choose an NVIDIA model available to your account, and return to the prompt.</li>
 </ol>
@@ -710,27 +675,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>In OpenCode, run <code>/connect</code>, choose <strong>OpenCode Zen</strong>, and paste the key into the key prompt.</li>
 <li>Run <code>/models</code> and select a model that your account actually exposes.</li>
 </ol>
-<p>In a live workshop check on 2026-09-14, a registered-user Zen key did not expose the planned free Meta Muse route, although other free models may still work. Do not rely on a particular free Zen model.</p>
 <p>For any route, send a harmless orientation prompt such as <code>What directory are you working in? Do not change files.</code> A usable reply confirms that authentication, model selection, and the current session all work.</p>
-<p>You can also watch the <a href="../media/videos/opencode-zen-api.mp4">Zen</a>, <a href="../media/videos/opencode-openrouter-api.mp4">OpenRouter</a>, or <a href="../media/videos/opencode-nvidia-api.mp4">NVIDIA</a> walkthrough. Screens may have changed.</p>
+<p>You can also watch the <a href="../media/videos/opencode-zen-api.mp4">Zen</a>, <a href="../media/videos/opencode-openrouter-api.mp4">OpenRouter</a>, or <a href="../media/videos/opencode-nvidia-api.mp4">NVIDIA</a> walkthrough.</p>
 <p>Before the first prompt, check that the working directory contains only the workshop repository and fake data. Start with ordinary approval prompts. The labs introduce auto mode later.</p>
-<div class="callout callout-style-simple callout-tip callout-titled" title="Workshop fallback if free credits run out">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Workshop fallback if free credits run out
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Codespace already knows the workshop fallback provider and models. Get the temporary key from the tutor through the announced secure channel, then set it in your current terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">read</span> <span class="at">-rsp</span> <span class="st">"Workshop key: "</span> <span class="va">WORKSHOP_API_KEY</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">WORKSHOP_API_KEY</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Type the key at the hidden prompt and press Enter. This keeps the secret out of the command itself and the visible terminal; do not paste it after <code>export ...=</code>. Start OpenCode, run <code>/models</code>, and choose a model under <strong>Workshop fallback</strong>. You do not need to edit an OpenCode JSON file. The variable lasts only for that terminal session. When finished, exit OpenCode and run <code>unset WORKSHOP_API_KEY</code>.</p>
-</div>
-</div>
 </section>
 </section>
 <section id="further-reading" class="level2" data-number="4.2">
@@ -740,17 +687,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://opencode.ai/docs/zen/">OpenCode Zen</a> — Read the current model, retention, and provider-exception table before choosing this route for anything beyond toy data.</li>
 </ul>
 <p>OpenCode Zen describes zero-retention/no-training defaults with named exceptions. Check its live retention table. OpenRouter routes follow the terms of the selected provider and account.</p>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Never put an API key in a shell command, README, chat, issue, or commit. Prompts may be retained or used for model improvement, depending on the provider and account. Never enter restricted SOEP rows, unpublished findings, personal information, or participant material. Public data is not automatically approved for an external AI service.</p>
-</div>
-</div>
-</div>
-<p>If authentication fails, stop and ask the tutor. Do not expose a secret to make the demo work.</p>
 
 
 </section>
