@@ -1,0 +1,33 @@
+---
+title: "Skills and deterministic tools"
+---
+
+A tool can read a file, run a shell command, or perform another action. A skill is reusable guidance for a specific task. If the result should always follow fixed rules, use a script or test.
+
+Each exercise includes a repository-scoped R binary-package skill. It documents the Linux/P3M installation path and its limits. It does not permit arbitrary package installation or real data. Read its trigger and scope in `.agents/skills/r-binary-packages/SKILL.md` before using it.
+
+Create a skill only after a safe task repeats. Try a one-off prompt first, save only stable guidance, and test the skill on a new case. Harnesses discover skills in different directories. The Claude copy is a synchronised file, not a symlink.
+
+## What a skill contains
+
+A portable skill is a directory whose `SKILL.md` starts with YAML metadata. For OpenCode, `name` and `description` are required; the description tells the agent when the skill is relevant. The Markdown body supplies the procedure, boundaries, and checks. Optional `scripts/`, `references/`, or templates can sit beside it, but their contents are not loaded automatically. Let the skill point to only the supporting file needed for the current task.
+
+Put shared project skills in `.agents/skills/<name>/SKILL.md`. OpenCode searches this compatible project location, `.opencode/skills/`, and corresponding global directories under your home folder. Project scope is the safer default: use a global skill only for stable guidance that truly applies across projects. OpenCode walks from the current directory towards the Git worktree, so start it inside the project that owns the skill. See the current [OpenCode skill discovery contract](https://opencode.ai/docs/skills/).
+
+At first, the model sees each permitted skill's name and description—not every full body. It loads the chosen body on demand with the `skill` tool. Ask explicitly when testing: `Use the r-binary-packages skill for this diagnosis.` Then confirm that the session shows a skill-tool call before judging the answer. Natural-language triggers are useful, but they are model choices rather than deterministic routing.
+
+After creating, moving, or renaming a skill, start a fresh OpenCode session for the discovery test. The documentation defines startup/path discovery but does not promise that an already-running session will rescan every changed skill reliably.
+
+## Test a skill on a fresh case
+
+1. Check that the directory name, frontmatter `name`, and lowercase hyphenated identifier agree, and that the description names a specific trigger.
+2. Start OpenCode inside the intended project scope and ask it to list the skill before loading it.
+3. Invoke it explicitly on a harmless case; observe the skill-tool call, files read, and commands run.
+4. Run an independent deterministic check on the result. Also try one nearby task that should **not** trigger the skill.
+5. Revise or remove guidance that is ambiguous, stale, duplicated elsewhere, or grants more scope than the task needs.
+
+## Further reading
+
+- [OpenCode agent skills](https://opencode.ai/docs/skills) — The live discovery and loading contract for the skill mechanism participants inspect in the lab.
+- [Writing effective tools for agents — with agents](https://www.anthropic.com/engineering/writing-tools-for-agents) — Treats a tool as a designed contract whose boundaries, descriptions, and outputs shape agent behaviour.
+- [Defeating Prompt Injections by Design](https://arxiv.org/abs/2503.18813) — This research preprint shows why deterministic capability boundaries can matter more than another natural-language warning.

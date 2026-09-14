@@ -1,0 +1,16 @@
+---
+title: "Ownership and responsibility"
+---
+
+::: {.callout-note}
+Dominique's argument, slides, and selected references will appear here after their review.
+:::
+
+The researcher remains responsible for the question, authority to use the data, interpretation, and decision to publish. Record what the agent changed, what you checked, and what remains uncertain. Follow the safety and evidence practices in the labs and reference pages.
+
+## Further reading
+
+- [NIST's Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) — Places human oversight, evaluation, privacy, and incident handling across the whole lifecycle rather than at the final prompt.
+- [EDPB Opinion 28/2024](https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en) — Grounds responsibility for personal-data use in a case-specific legal assessment, not in the model's confidence or the data's public availability.
+- [Reasoning Models Don't Always Say What They Think](https://arxiv.org/abs/2505.05410) — This research preprint reports modern experiments showing why a model's self-explanation cannot substitute for independent review of evidence and actions.
+- [Monitoring Reasoning Models for Misbehavior](https://arxiv.org/abs/2503.11926) — Reasoning traces may be useful monitoring signals, but they are not faithful audit logs; keep independent review of evidence and actions.

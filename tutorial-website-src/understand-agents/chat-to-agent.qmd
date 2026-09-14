@@ -1,0 +1,40 @@
+---
+title: "From chat to agent"
+---
+
+A coding agent connects a language model to tools that can inspect files, make changes, and run code. The **harness** is the software that carries messages between the model and those tools, applies permission checks, and shows you what happened. Some chat interfaces also use tools; the useful distinction is what the system can act on and how you supervise those actions.
+
+## The loop
+
+```{mermaid}
+%%| fig-alt: "A goal reaches the model, which proposes a tool call. The harness checks permission and executes an allowed action. The result returns to the model; a completed artefact goes to human review."
+flowchart LR
+  A[Goal and constraints] --> B[Model proposes next action]
+  B --> D[Harness checks permission]
+  D --> E[Allowed tool reads, edits, or runs]
+  E --> F[Observed result]
+  F --> B
+  F --> G[Human reviews artefact]
+```
+
+The cycle is **observe, decide, act**. The model receives the task and available evidence, proposes a next step, and receives the tool's result. An error can lead to another inspection or repair. A denied action should lead to a stop or clarification when proceeding would exceed the agreed scope. The loop does not need a new human prompt for every step.
+
+For example, a synthetic questionnaire contains a repeated item. The agent might read the column names, compare the two rows, write a corrected copy, and run a check. Each result should narrow the next decision. Simply deleting everything with a repeated item name could also remove legitimate versions from different waves.
+
+The system's **state** is what has accumulated so far: conversation, files, settings, and running processes. A message saying “I will fix it” changes the conversation; a successful edit changes a file. “All checks passed” is still a claim until you inspect the command result and the actual output. An agent can stop early, check the wrong file, or describe work it never performed.
+
+**Autonomy** means how much the system may do before returning to you. Define that boundary through allowed folders, permitted actions, checks, and a stop condition. In [Lab 1](../labs/lab-01.qmd), watch the reads and approvals, inspect the corrected questionnaire, and compare the agent's account with the checker result.
+
+A **CLI** (command-line interface) exposes this work in a terminal; a **GUI** (graphical user interface) uses windows, buttons, and visual controls. Appearance alone does not establish safety or autonomy. Compare available tools and boundaries.
+
+::: {.callout-tip}
+### Try it now (5 minutes)
+
+Ask an agent: "List the files you would inspect for this task. Do not read or edit anything." Then ask which statements are observations and which are guesses.
+:::
+
+## Further reading
+
+- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — Distinguishes fixed workflows from agents and shows why simple tool loops and stop conditions are often enough.
+- [ReAct](https://doi.org/10.48550/arXiv.2210.03629) — The influential reason–action–observation pattern behind the loop on this page; its early results are useful context, not a guarantee for current agents.
+- [Language Models Don't Always Say What They Think](https://doi.org/10.52202/075280-3275) — Shows that a plausible explanation can omit the cue that actually changed an answer, which is why we inspect actions and outputs.

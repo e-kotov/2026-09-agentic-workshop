@@ -1,0 +1,61 @@
+---
+title: "OpenCode login and model routes"
+---
+
+Connect OpenCode to an available model provider. This page was checked 2026-09-14. If the menus differ, follow the current provider guide.
+
+## Connect
+
+From the selected lab directory, run `opencode`. OpenCode may initially show currently available free models without extra configuration, but availability and shared quotas change. For a self-service workshop setup, configure **OpenRouter**. You need only one working route.
+
+### OpenRouter (recommended)
+
+1. [Register or sign in](https://openrouter.ai/) and create a free API key on the [OpenRouter API Keys page](https://openrouter.ai/keys).
+2. Review the [live model catalogue](https://openrouter.ai/models), filter for free models, and note one current choice. Model availability, upstream provider, and data policy can differ.
+3. In OpenCode, run `/connect`, choose **OpenRouter**, and paste the key into the key prompt.
+4. Run `/models`, search for `free`, choose that OpenRouter model, and return to the prompt.
+
+### NVIDIA
+
+1. Open the [NVIDIA model catalogue](https://build.nvidia.com/), create or sign in to an NVIDIA account, choose a hosted model, and use its **Get API Key** flow.
+2. In OpenCode, run `/connect`, choose **NVIDIA**, and paste the key into the key prompt.
+3. Run `/models`, choose an NVIDIA model available to your account, and return to the prompt.
+
+### OpenCode Zen (optional)
+
+1. Open [OpenCode Zen authentication](https://opencode.ai/auth), sign in, and create an API key. Check the [current Zen models and pricing](https://opencode.ai/docs/zen/) rather than assuming that a listed model is available to your account.
+2. In OpenCode, run `/connect`, choose **OpenCode Zen**, and paste the key into the key prompt.
+3. Run `/models` and select a model that your account actually exposes.
+
+In a live workshop check on 2026-09-14, a registered-user Zen key did not expose the planned free Meta Muse route, although other free models may still work. Do not rely on a particular free Zen model.
+
+For any route, send a harmless orientation prompt such as `What directory are you working in? Do not change files.` A usable reply confirms that authentication, model selection, and the current session all work.
+
+You can also watch the [Zen](../media/videos/opencode-zen-api.mp4), [OpenRouter](../media/videos/opencode-openrouter-api.mp4), or [NVIDIA](../media/videos/opencode-nvidia-api.mp4) walkthrough. Screens may have changed.
+
+Before the first prompt, check that the working directory contains only the workshop repository and fake data. Start with ordinary approval prompts. The labs introduce auto mode later.
+
+::: {.callout-tip title="Workshop fallback if free credits run out"}
+The Codespace already knows the workshop fallback provider and models. Get the temporary key from the tutor through the announced secure channel, then set it in your current terminal:
+
+```bash
+read -rsp "Workshop key: " WORKSHOP_API_KEY
+echo
+export WORKSHOP_API_KEY
+```
+
+Type the key at the hidden prompt and press Enter. This keeps the secret out of the command itself and the visible terminal; do not paste it after `export ...=`. Start OpenCode, run `/models`, and choose a model under **Workshop fallback**. You do not need to edit an OpenCode JSON file. The variable lasts only for that terminal session. When finished, exit OpenCode and run `unset WORKSHOP_API_KEY`.
+:::
+
+## Further reading
+
+- [OpenCode providers](https://opencode.ai/docs/providers/) — Check the live OpenRouter, NVIDIA, and Zen authentication and model-routing instructions if the workshop menus have changed.
+- [OpenCode Zen](https://opencode.ai/docs/zen/) — Read the current model, retention, and provider-exception table before choosing this route for anything beyond toy data.
+
+OpenCode Zen describes zero-retention/no-training defaults with named exceptions. Check its live retention table. OpenRouter routes follow the terms of the selected provider and account.
+
+::: {.callout-warning}
+Never put an API key in a shell command, README, chat, issue, or commit. Prompts may be retained or used for model improvement, depending on the provider and account. Never enter restricted SOEP rows, unpublished findings, personal information, or participant material. Public data is not automatically approved for an external AI service.
+:::
+
+If authentication fails, stop and ask the tutor. Do not expose a secret to make the demo work.

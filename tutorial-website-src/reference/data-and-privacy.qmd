@@ -1,0 +1,15 @@
+---
+title: "Data and privacy"
+---
+
+Use the workshop's small, source-free synthetic data. It resembles survey/panel data so you can practise joins, metadata, flags, weights, missingness, and release checks. It is not SOEP, does not reproduce SOEP weights, and is not substantive evidence.
+
+"Public" does not mean "approved for an external AI service." Before sending data, check institutional policy, contractual restrictions, provider retention and training settings, and account controls. In this workshop, never send restricted rows, unpublished results, personal or participant data, or credentials.
+
+Check the [OpenCode Zen terms](https://opencode.ai/docs/zen/), [general OpenAI data controls](https://help.openai.com/en/articles/5722486-how-do-i-opt-out-of-my-content-being-used-to-improve-model-performance), and separate [Codex agent approvals and security guidance](https://learn.chatgpt.com/docs/agent-approvals-security). For Google/Antigravity, check the current [permissions](https://antigravity.google/docs/cli/permissions/) and [CLI usage](https://antigravity.google/docs/cli/using/) pages. Telemetry controls are not a confidentiality guarantee. Recheck these policies before publication.
+
+## Further reading
+
+- [EDPB Opinion 28/2024](https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en) — The strongest public authority here for why public availability, anonymity, lawful processing, and downstream responsibility are separate questions.
+- [NIST's Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) — A broader risk-management frame for data governance, privacy, security, evaluation, and incident response.
+- [Security in GitHub Codespaces](https://docs.github.com/en/codespaces/reference/security-in-github-codespaces) — Clarifies the boundary between isolating workshop execution and authorizing data disclosure to a model provider.

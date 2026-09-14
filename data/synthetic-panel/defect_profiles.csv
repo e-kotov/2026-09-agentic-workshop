@@ -1,0 +1,7 @@
+profile,physical_change,intended_failed_checks
+duplicate_person_wave,Append one duplicate person-wave row,unique_person_wave|weight_targets|income_consistency
+duplicate_questionnaire_item,Append one duplicate wave-item declaration,unique_questionnaire|response_cardinality|questionnaire_metadata
+orphan_household,Replace one current household ID with absent H9999,foreign_keys|household_size|membership_origin|move_mechanics|movement_agreement
+zero_person_weight,Set one cross-sectional person weight to zero,positive_weights|weight_targets
+inconsistent_imputation_flag,Turn one true income imputation flag off,income_consistency
+stale_manifest_checksum,Replace the person-wave checksum with 64 zeroes,manifest_checksums

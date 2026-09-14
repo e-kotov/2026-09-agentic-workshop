@@ -1,0 +1,21 @@
+---
+title: "Tests and verification"
+---
+
+Ask for executable evidence, not reassurance. A **data contract** is a set of executable rules for a table's schema, values, keys, and invariants. A reviewer should understand the test, and you should inspect tables, manifests, warnings, and uncertainty too. Passing code does not prove substantive meaning.
+
+In Lab 2, first prove that duplicate `(pid, wave)` rows are identical before deleting one. Then check that the right-hand join keys are unique and that the row count is unchanged. Report each wave's row count and person-weight total. **Referential integrity** means that keys on the left match valid keys on the right; the lab's joins must not create orphans or multiply rows. A **smoke test** is a quick check that this main path works.
+
+Tests can pass because an agent weakened, skipped, deleted, or hard-coded the test. Read the diff of test files and checks, not only the green result. Lab 2 marks `checks/` read-only: its immutable checker, not the participant test, decides acceptance. The participant test is still useful evidence to inspect: it should be red on `fixture/release/person_wave.csv` and green on `work/derived/person_wave.csv`.
+
+In Lab 2's **Git failure/recovery (8 min)** step (`bash tools/run_git_recovery_demo.sh`), a deliberate weight mutation makes the test go red before Git recovers the output. That is mutation testing by hand. Tools can flip `<`/`>`, `+`/`-`, or `==`/`!=`; a surviving mutant shows a testing gap.
+
+::: {.callout-tip}
+Practise this in [Lab 2](../labs/lab-02.qmd), using the synthetic panel and its checker-owned acceptance evidence.
+:::
+
+## Further reading
+
+- [Ten Simple Rules for Reproducible Computational Research](https://doi.org/10.1371/journal.pcbi.1003285) — Durable guidance on recording how results were produced and avoiding invisible manual steps; agents make these rules more important, not less.
+- [Uncle Bob on Software Fundamentals in the Age of AI](https://www.youtube.com/watch?v=zcLPGC-tvgk) — Robert C. Martin, in conversation with Matt Pocock, describes running mutation testing as an automated gate that agent-written code must pass before it is accepted.
+- [muttest](https://cran.r-project.org/package=muttest) (R) and [mutmut](https://github.com/boxed/mutmut) (Python) — Mutation testing tools that work with ordinary `testthat` and `pytest` suites.

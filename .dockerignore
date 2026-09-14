@@ -1,0 +1,7 @@
+# The devcontainer Dockerfile does not copy repository files into the image.
+# Keep generated site output and the private instructor workspace out of the
+# BuildKit context.
+*
+!.devcontainer/
+!.devcontainer/Dockerfile
+!.devcontainer/opencode.json

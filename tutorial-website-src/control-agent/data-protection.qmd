@@ -1,0 +1,29 @@
+---
+title: "Data protection and threat model"
+---
+
+Before the first prompt, decide what information may leave your environment. A **threat model** is a short account of what you need to protect, how it could be exposed or changed, and which controls address that route. For an agent, consider both disclosure to a model provider and unwanted changes to your own files.
+
+Start with **data classification**: distinguish invented teaching data, public material approved for this use, unpublished work, personal data, and restricted records. Your institution's categories and approvals govern real projects. Public availability alone does not mean external processing is approved; removing names alone does not establish anonymity.
+
+The prompt box is only one disclosure route. Selected file contents and tool output may also enter model context. An error message can print a row of data; a broad search can reveal a credential; a session log can retain both. Running an R script locally does not keep its output local if the harness sends that output back to the model. Check what crosses the **provider boundary**, the point where information is sent to the service processing the request.
+
+Use the supplied **source-free synthetic panel**: invented records generated without fitting to or copying respondent rows. For example, an agent can debug a household/person join using fake identifiers and deliberately duplicated keys. It does not need real respondents to learn why rows multiply. Synthetic data generated from confidential source records would need a separate disclosure assessment; the word “synthetic” alone is no guarantee.
+
+Apply **minimisation** before the tool runs: provide only the approved information needed to solve the problem. A schema (column names and types) and a few invented rows may be sufficient. Keep restricted data outside the agent's accessible environment. If a real project needs a restricted-data run, use an institutionally approved environment and review any proposed output before external processing.
+
+Provider terms differ and change. OpenCode Zen describes zero-retention and no-training defaults with named exceptions in its [privacy table](https://opencode.ai/docs/zen/#privacy). OpenRouter routes and other products have their own terms. Free access, paid access, and a training opt-out are not interchangeable confidentiality guarantees.
+
+For personal OpenAI accounts, check the [general data controls](https://help.openai.com/en/articles/5722486-how-your-data-is-used) and the separate Codex setting for training on full environments, described in the [Data Controls FAQ](https://help.openai.com/en/articles/7730893-data-controls-faq). Treat Google/Antigravity telemetry settings, which concern collected usage information, as distinct from a confidentiality guarantee; see the [CLI settings documentation](https://antigravity.google/docs/cli-settings).
+
+In [Lab 3](../labs/lab-03.qmd), the threat/control table pairs each observed failure with a proposed control and its limitation. The fake token and codebook make the disclosure paths visible without exposing real secrets.
+
+## Further reading
+
+- [NIST's Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) — A lifecycle checklist for privacy, information security, evaluation, governance, and incident response.
+- [NIST's Adversarial Machine Learning taxonomy](https://csrc.nist.gov/pubs/ai/100/2/e2025/final) — Precise terms for prompt injection, privacy compromise, misuse, attacker capabilities, and mitigation limits.
+- [EDPB Opinion 28/2024](https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en) — Explains why public availability alone does not settle anonymity, lawful processing, or downstream responsibility.
+
+::: {.callout-warning}
+Never "anonymise later." Minimise before the first prompt. Keep fake fixtures separate. Stop if a tool proposes an external upload or reads beyond the allowed folder.
+:::

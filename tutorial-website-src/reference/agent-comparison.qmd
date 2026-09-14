@@ -1,0 +1,20 @@
+---
+title: "Agent comparison"
+---
+
+Checked 2026-09-12. Product interfaces and policies change. Verify the installed version and official documentation before teaching.
+
+| Harness | Instructions and precedence | Skills/hooks | Approval and isolation |
+|---|---|---|---|
+| [OpenCode](https://opencode.ai/docs/) | `AGENTS.md` from project upward; `CLAUDE.md` fallback; global config and `instructions` can add files/URLs | `.opencode/skills`, compatibility `.claude`/`.agents`; plugins include `tool.execute.before/after` | `opencode --auto` is the TUI mode; `opencode run --auto "<prompt>"` is non-interactive; `allow/ask/deny` is UX, not a sandbox |
+| Antigravity | global `GEMINI.md`; `.agents/rules/` workspace rules with activation modes; no documented automatic `AGENTS.md` import | `.agents/skills`; plugins/hooks have product-specific APIs; no workshop R skill assumed | `--dangerously-skip-permissions` approves calls; `--sandbox` is separate; Deny > Ask > Allow |
+| Codex | root→cwd `AGENTS.override.md`/`AGENTS.md`; nearer files later; global files also apply | `.agents/skills`; hooks can add context, deny, or rewrite supported inputs | `--ask-for-approval never` differs from `--sandbox danger-full-access`; combined bypass removes both |
+| Claude Code | `CLAUDE.md` imported here from `AGENTS.md`; files layer root→cwd; managed policy can dominate | nested `.claude/skills`; `PreToolUse` hooks can deny/modify | `--dangerously-skip-permissions` changes permission mode, not OS isolation; sandbox is separate |
+
+"Auto approval," "approval bypass," and "sandbox removal" mean different things. A permission hook can deny or transform a tool request. A container or VM provides the environment boundary. Ask each harness what it loaded, then verify the files, diffs, and command evidence.
+
+## Further reading
+
+- [Codex documentation](https://developers.openai.com/codex/) — Check the current OpenAI product rather than transferring settings from OpenCode.
+- [Claude Code security](https://code.claude.com/docs/en/security) — Read Claude's own trust and permission model, including its limits.
+- [Antigravity permissions](https://antigravity.google/docs/cli/permissions/) — Confirm current precedence and modes for the Google comparison.

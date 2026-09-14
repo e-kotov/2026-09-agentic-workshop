@@ -1,0 +1,30 @@
+---
+title: "Build systems and reproducibility"
+---
+
+A workflow system records how inputs become outputs and decides what needs running again. This helps when an agent creates several scripts that work once but leaves you unsure which to rerun after a correction. A finished-looking report can contain yesterday's table if nothing rebuilds it.
+
+A **dependency** is something a step needs: an input file, a function, or an earlier result. A **dependency graph** connects these steps with arrows. For a synthetic panel, the graph might be `raw person-wave table → repaired table → wave summary`. Changing the raw weights should trigger the repair step and then the summary. Editing unrelated presentation notes should not.
+
+An output is **stale** when the inputs or code it depends on have changed since it was built. **Invalidation** marks that output as needing a rebuild. The workflow can only respond to dependencies it knows about: a script that silently reads an undeclared file can leave an apparently up-to-date result wrong.
+
+- In R, `targets` defines **targets**, named results and the commands that produce them. It tracks code and data dependencies and skips results that remain up to date.
+- In Python or cross-language work, Snakemake defines **rules**, recipes connecting required input files to output files. The workflow uses those connections to decide execution order and necessary work.
+
+In [Lab 2](../labs/lab-02.qmd), choose one route and inspect three runs: a clean build, an unchanged repeat, and a repeat after an upstream weight change. Compare the log with the resulting table and wave totals. Identical output bytes alone do not prove a step was skipped; a script could have rerun and produced the same bytes.
+
+Reproducibility also depends on the **environment**, the software and package versions running the code. A **lockfile** records package versions; a **manifest** inventories release files and their properties. A **checksum** is a fingerprint of file bytes, useful for detecting change, not for judging analytical quality. Keep these records alongside the workflow. `renv` and `uv` help manage environments; they do not replace the dependency graph. Make is another workflow option.
+
+Keep fixed transformations and checks in deterministic code: with the same inputs and environment, they should give the same result. Record random seeds where relevant, but do not assume a seed controls an external model service or changing web input. Let the agent help construct the workflow, then rerun it independently. A successful rebuild still cannot decide whether the research choices were appropriate.
+
+::: {.callout-tip}
+### Try it now (8 minutes)
+
+Sketch three nodes: input, cleaned table, and report. Ask an agent which changes should invalidate each node. Compare its graph with the files and checks in Lab 2.
+:::
+
+## Further reading
+
+- [Ten Simple Rules for Reproducible Computational Research](https://doi.org/10.1371/journal.pcbi.1003285) — The broader reproducibility principles behind explicit dependencies, recorded versions, and inspectable intermediate results.
+- [The targets R package user manual](https://books.ropensci.org/targets/) — A complete R guide to dependency-aware pipelines and rebuilding only stale results.
+- [Snakemake documentation](https://snakemake.readthedocs.io/) — The corresponding rule-based workflow reference for Python and cross-language projects.

@@ -1,0 +1,39 @@
+check_id,table,severity,description
+required_files,release,error,All required release files are present
+unique_household_wave,household_wave,error,"(hid, wave) is unique"
+unique_person_wave,person_wave,error,"(pid, wave) is unique"
+unique_person_static,person_static,error,pid is unique
+unique_questionnaire,questionnaire,error,"(wave, item_id) is unique"
+unique_response,response,error,"(pid, wave, item_id) is unique"
+opaque_identifier_format,release,error,"HIDs and PIDs have exact opaque formats and remain referentially usable"
+wave_sets,release,error,All tables contain the declared four waves
+age_and_window,person_wave,error,Age and every row agree with exact observation windows
+observation_windows,person_static,error,Entry/final waves cohort and exit reason agree exactly
+foreign_keys,person_wave,error,Every person-wave references a person and household-wave
+household_size,household_wave,error,Reported household size equals linked distinct persons
+membership_origin,person_wave,error,Origin household and current membership agree
+origin_baseline,person_static,error,Baseline sample entry and household origin are 2019
+origin_refreshment,person_static,error,Refreshment sample entry and household origin are 2021
+origin_split,household_wave,error,Split-off households are created by a recorded move
+move_mechanics,person_wave,error,Person and household move flags agree with transitions
+movement_agreement,household_wave,error,Movement and origin fields agree across tables
+positive_weights,person_wave,error,Cross-sectional weights are finite and strictly positive
+weight_targets,person_wave,error,Cross-sectional weights sum to invented targets in every wave
+longitudinal_weight,person_wave,error,Longitudinal weights occur only for complete baseline cohort
+longitudinal_weight_constancy,person_wave,error,Longitudinal weights are constant within person
+longitudinal_weight_targets,person_wave,error,Longitudinal eligible cohort sums to invented target
+response_cardinality,response,error,Every person-wave has exactly every declared questionnaire item
+response_links,response,error,Every response references one person-wave and questionnaire item
+questionnaire_rules,response,error,Response types codes ranges eligibility and missing status agree
+mode_agreement,response,error,Response modes are allowed and agree with person-wave
+employment_agreement,response,error,EMP responses agree with person-wave employment
+income_consistency,person_wave,error,Raw/final income missingness and responses agree
+questionnaire_metadata,questionnaire,error,Questionnaire declarations match canonical metadata contract
+schema_semantics,schema,error,Schema types nullability allowed values and units are valid
+schema_coverage,schema,error,The dictionary covers every analytical-table column exactly
+no_prohibited_fields,release,error,No names addresses emails free text or source identifiers exist
+manifest_schema,release_manifest,error,Manifest has the complete declared schema and cardinality
+manifest_counts,release_manifest,error,Manifest row counts match release files
+manifest_checksums,release_manifest,error,Manifest SHA-256 checksums match release files
+manifest_provenance,release_manifest,error,Manifest provenance and expected status declarations agree
+canonical_seed_features,release,error,Canonical seed features are present

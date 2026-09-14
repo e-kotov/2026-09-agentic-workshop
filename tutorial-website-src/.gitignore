@@ -1,0 +1,6 @@
+/.quarto/
+/_site/
+/_book/
+**/*.quarto_ipynb
+/slides/
+*_files/

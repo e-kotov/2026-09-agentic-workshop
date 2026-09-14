@@ -1,0 +1,19 @@
+---
+title: "Glossary"
+---
+
+- **Agent:** A model connected to tools through a harness loop.
+- **Harness:** Software that provides tools, instructions, permissions, context handling, and an interface.
+- **Context:** Instructions, history, tool results, and selected content sent to a model.
+- **Skill:** Reusable guidance for a specific task.
+- **Hook:** Code run at a harness event. It may transform data but is not an OS boundary.
+- **Sandbox/container:** An environment boundary that limits filesystem and process impact.
+- **Prompt injection:** Untrusted content trying to act as an instruction.
+- **Data contract:** Executable checks for schema, values, keys, and invariants.
+- **Provenance:** Records of inputs, transformations, versions, and outputs.
+- **Memory:** Maintained project records that help a later session resume.
+
+## Further reading
+
+- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — A readable source for the workflow, agent, tool, and loop vocabulary used throughout the glossary.
+- [NIST's Adversarial Machine Learning taxonomy](https://csrc.nist.gov/pubs/ai/100/2/e2025/final) — The deeper standardized reference for security terms such as prompt injection, attacker capability, and mitigation.

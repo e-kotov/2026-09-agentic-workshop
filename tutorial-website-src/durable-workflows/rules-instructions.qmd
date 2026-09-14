@@ -1,0 +1,34 @@
+---
+title: "Rules and project instructions"
+---
+
+Put stable, human-reviewed project guidance in instruction files so you do not have to repeat it in every task prompt. Useful rules explain where to work, how to run checks, and which decisions require review. “Use only invented data; preserve the supplied inputs; report the checker result” gives an agent more actionable guidance than “be a careful researcher.”
+
+**Scope** determines where guidance applies. Project instructions belong with the repository; global instructions are personal defaults used across projects. A survey-specific rule about preserving questionnaire versions belongs in that project. A preference for concise explanations may fit globally. Do not make every project carry a previous project's assumptions.
+
+Here, `AGENTS.md` is the common source. `CLAUDE.md` and `GEMINI.md` adapters import it where supported. Antigravity also uses its project-rules mechanism. An **adapter** is a small file that connects the shared guidance to a particular harness. A file name alone does not guarantee discovery.
+
+**Precedence** means which instruction has priority when guidance conflicts. Each harness loads and prioritises instructions differently:
+
+- OpenCode traverses project `AGENTS.md` upward and falls back to `CLAUDE.md`.
+- Codex layers root-to-current-directory files, with nearer files later.
+- Claude uses `CLAUDE.md` files alongside organisation-managed instructions.
+- Antigravity rules have activation modes that determine when they apply.
+
+Check the installed product's rules page and the context it actually loaded; the [agent comparison](../reference/agent-comparison.qmd) links the product-specific references. If a global preference says “rewrite freely” but the lab says “edit only `work/`,” resolve the conflict before editing. Do not assume the model will choose your intended boundary.
+
+Keep guidance concise and testable. For a synthetic release repair, ask the agent to identify the allowed output folder and exact checker before making changes. Then inspect its edits and commands. After revising an instruction, repeat that harmless task in a fresh session; a claim that the file was loaded is weaker evidence than observable compliance.
+
+Rules are context and policy, not access control. A model may ignore them or misinterpret a conflict. Enforce critical file boundaries in the environment and keep acceptance checks separate from writable task outputs. Review changes to instruction files as carefully as changes to code: an agent permitted to rewrite its own guidance could weaken the constraint you meant to preserve.
+
+In [Lab 4](../labs/lab-04.qmd), classify repeated knowledge before saving it. Stable guidance belongs here; a session's current failure and next action belong in its handoff or work log.
+
+::: {.callout-tip}
+Before saving repeated knowledge, decide where it belongs: a one-off prompt, project instruction, global instruction, skill, memory or log, or deterministic script. Choose the smallest place that fits.
+:::
+
+## Further reading
+
+- [OpenCode rules](https://opencode.ai/docs/rules/) — The current discovery and precedence rules for the supported workshop harness.
+- [Codex project instructions](https://developers.openai.com/codex/guides/agents-md/) — A contrasting first-party account of root-to-working-directory instruction layering.
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — The case for small, clear, progressively disclosed context instead of one permanent instruction monolith.

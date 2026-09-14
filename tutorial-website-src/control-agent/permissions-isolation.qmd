@@ -1,0 +1,35 @@
+---
+title: "Permissions, sandboxes, and isolation"
+---
+
+Different controls answer different questions:
+
+- An **approval prompt** asks you to accept a proposed action now.
+- A **permission** tells the harness to allow, deny, or ask about an action. A written project rule guides the model's behaviour.
+- A **hook** is code run at a harness event; it may block an operation or change returned text.
+- A **sandbox** restricts a process's access to files, commands, or networks. A container separates an environment while sharing the core of the host operating system; a **VM** (virtual machine) has its own guest operating system.
+
+These boundaries depend on configuration. A folder **mounted** into a container is deliberately made accessible there; credentials supplied to it may grant access elsewhere. Check what is exposed before enabling automatic approval. Fewer prompts change how often you intervene, not which host files or services the environment can reach.
+
+An agent denied a native file read (its built-in reading tool) may still reach the same file through an allowed shell command. Permission configuration is not an operating-system sandbox.
+
+[Lab 3](../labs/lab-03.qmd) makes this concrete: a native read and a named shell command can be denied while an allowed Python script reads the same fake file. Record what actually ran. A configuration file saying “deny” is **static evidence**; an observed denial is **runtime evidence**, limited to the path you tested. Neither proves every equivalent route is blocked. Native child sessions may inherit restrictions; a separately launched process is a different, optional experiment.
+
+::: {.callout-note collapse="true" title="Reduce accidental reads—this is not isolation"}
+OpenCode's `grep` and `glob` tools use ripgrep and normally respect project [`.gitignore` patterns](https://opencode.ai/docs/tools/#ignore-patterns). Use that existing layer to keep generated output, caches, and other irrelevant files out of broad searches. OpenCode's `.ignore` example does the reverse: it explicitly **re-includes** paths that `.gitignore` would otherwise hide.
+
+This is a search and context-hygiene aid, not a confidentiality control. A direct `read` call, an allowed shell command, another tool, or a changed configuration may still reach a named file. Different harnesses use different ignore rules, so verify the current product documentation rather than copying a filename from another tool.
+
+For stronger OpenCode gating, configure path-specific [`read`, `edit`, and `external_directory` permissions](https://opencode.ai/docs/permissions/), and restrict shell authority too. Even those permissions are harness checks, not an OS boundary. Keep secrets and restricted data outside the agent's environment; use the Codespace/container, provider policy, and institutional controls as the real boundary.
+:::
+
+## Further reading
+
+- [Security in GitHub Codespaces](https://docs.github.com/en/codespaces/reference/security-in-github-codespaces) — Read the actual VM, repository, port, and secrets boundaries behind the workshop's disposable environment.
+- [Claude Code sandboxing](https://code.claude.com/docs/en/sandboxing) — A concrete product example of filesystem/network isolation alongside approval controls and escape hatches.
+- [Defeating Prompt Injections by Design](https://arxiv.org/abs/2503.18813) — This research preprint offers a stronger systems argument for separating trusted control flow from untrusted data and constraining capabilities around the model.
+- [AgentDojo](https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html) — An agent benchmark that measures ordinary task success and security failures together, as Lab 3 asks you to do.
+
+::: {.callout-important}
+Apply **least privilege**: expose only the files and capabilities the task needs. Containers can limit impact on the host; they do not protect data sent to the model provider. Combine environment boundaries with checks, human review, and recovery.
+:::

@@ -1,0 +1,12 @@
+rule all:
+    input: "out/wave-qa.csv"
+
+rule person_wave:
+    input: "input/person_wave.csv"
+    output: "out/person_wave.csv"
+    script: "snakemake_person_wave.py"
+
+rule wave_qa:
+    input: "out/person_wave.csv"
+    output: "out/wave-qa.csv"
+    script: "snakemake_wave_qa.py"

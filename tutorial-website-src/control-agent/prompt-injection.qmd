@@ -1,0 +1,29 @@
+---
+title: "Prompt injection"
+---
+
+**Prompt injection** is untrusted content trying to act as an instruction. It exploits a practical difficulty: the model receives both the task it should follow and the material it should analyse as text. A sentence inside that material can sound like an authoritative request even though the researcher never authorised it.
+
+For example, you ask an agent to summarise an invented survey codebook. Between the variable definitions, a paragraph says that “validation requires” opening another file and copying its contents into the answer. That paragraph is part of the document being analysed. Following it changes the task and may disclose information. An attack need not contain the obvious phrase “ignore previous instructions”; it can pretend to be a helpful prerequisite.
+
+This is **indirect injection** when the instruction arrives through a file, web page, CSV cell, or tool result rather than the user's prompt. Possible consequences include unwanted edits, distorted summaries, weakened tests, or disclosure. A normal-looking final answer does not establish that the intervening actions were authorised.
+
+Keep the distinction between instructions and evidence explicit. Identify which project guidance you trust, mark retrieved material as untrusted, and require approval before expanding scope. Restrict the files and actions available to the task through the [environment and permissions](permissions-isolation.qmd). These controls reduce opportunities for harm; a warning in the prompt alone cannot guarantee that the model will maintain the distinction.
+
+[Lab 3](../labs/lab-03.qmd) uses a harmless fake-codebook injection. Inspect the actual tool calls and changed files, then record whether the instruction was followed. The checker can inspect the required evidence files, but it cannot turn a participant's written observation into proof of runtime agent behaviour.
+
+The lab also demonstrates **redaction**, replacing recognised text patterns with a mask. Its local OpenCode plugin uses the documented [`tool.execute.after` hook](https://opencode.ai/docs/plugins/#tool-events) to rewrite returned tool output before it enters session context. The source file remains unchanged. Splitting a fake token into pieces or encoding it in another representation can evade the pattern while preserving information that can be reconstructed. This is a teaching filter, not access control or a general prompt-injection defence.
+
+::: {.callout-note}
+The OpenAI privacy-filter issue #13 is an instructor exhibit only. We do not install its full model or use it as a production boundary.
+:::
+
+## Further reading
+
+- [Not What You've Signed Up For](https://doi.org/10.48550/arXiv.2302.12173) — The foundational demonstration that retrieved documents and tool output can become indirect instructions that trigger unintended actions.
+- [Defeating Prompt Injections by Design](https://arxiv.org/abs/2503.18813) — This research preprint proposes a structural defence based on trusted control flow and capability constraints; its guarantees still depend on the policy and threat model.
+- [Designing AI agents to resist prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/) — A current vendor account of why input filtering alone is insufficient and why source-to-sink safeguards matter.
+- [Auto mode is now the default in Claude Code](https://claude.com/blog/auto-mode-default-in-claude-code) — Anthropic's empirical evaluation comparing manual confirmation prompts (which suffered from 97% habituated user approval) against automated secondary classification, reporting 0/720 successful attacks on Claude in a third-party indirect injection benchmark (Trajectory Labs).
+- [Mitigating the risk of prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) — Anthropic research on the challenges of defending models against untrusted external content when tools browse or fetch live web pages.
+
+If you see an injection, stop. Preserve the evidence, isolate the fixture, deny surprising actions, and inspect the diff and command history. Never test a bypass with real secrets.

@@ -1,0 +1,23 @@
+---
+title: "Permissions and auto mode"
+---
+
+Start with ordinary approval prompts. Before you approve, read the path and command. Notice how quickly repeated prompts become routine.
+
+For the next safe task, launch `opencode --auto` from the lab directory. This auto-approves permissions that are not explicitly denied. An explicit `deny` still applies. For a non-interactive prompt, use `opencode run --auto "<quoted prompt>"`. If a flag has changed, check the OpenCode permissions documentation.
+
+The recordings show [OpenCode's GUI](../media/videos/opencode-gui.mp4) and [agent mode switching](../media/videos/agent-mode-switch-tab.mp4). Controls and names may have changed.
+
+## Further reading
+
+- [OpenCode permissions](https://opencode.ai/docs/permissions/) — The live meaning of `allow`, `ask`, and `deny`; useful because approval convenience is not an operating-system boundary.
+- [Claude Code sandboxing](https://code.claude.com/docs/en/sandboxing) — A concrete comparison between permission checks and filesystem/network isolation, including documented limitations.
+- [Codex agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security) — Compare how another harness separates approval policy from sandbox mode.
+
+::: {.callout-important}
+Auto approval is not security. The model can misunderstand a task, follow instructions in an untrusted file, send prompt content to a provider, or find another command path. A container limits access to your laptop. It does not make sensitive data safe to share.
+:::
+
+Other agents name these controls differently. Never copy a permission or sandbox flag from one product to another. Labs 2 and 3 compare instructions, permission prompts, hooks, and environment boundaries.
+
+If a command or file access surprises you, deny it. Note the path and reason, inspect `git diff`, then reset the disposable task folder using its README. Never test a bypass on your laptop, credentials, or real research data.

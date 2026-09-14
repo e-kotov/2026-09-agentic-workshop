@@ -1,0 +1,16 @@
+---
+title: "Further reading"
+---
+
+## Reasoning traces: useful, unfaithful, and still monitorable
+
+- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://proceedings.neurips.cc/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html) — The positive baseline: worked intermediate steps improved performance on several benchmarks, but performance does not establish faithful explanation.
+- [Reasoning Models Don't Always Say What They Think](https://arxiv.org/abs/2505.05410) — This research preprint reports that modern reasoning models often used hints without saying so, showing why a visible trace cannot rule out hidden influences.
+- [Monitoring Reasoning Models for Misbehavior](https://arxiv.org/abs/2503.11926) — This research preprint is the constructive counterpoint: traces can reveal reward hacking better than actions alone, while direct optimization against the monitor may teach concealment.
+- [Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety](https://arxiv.org/abs/2507.11473) — This position paper synthesizes why the signal may be valuable yet too fragile to serve as the only control.
+
+## Agent security
+
+- [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) — A practical map from goal hijacking and tool misuse to identity, code execution, memory poisoning, and cascading failures; it is guidance, not certification.
+- [Auto mode is now the default in Claude Code](https://claude.com/blog/auto-mode-default-in-claude-code) — Anthropic's empirical evaluation comparing manual confirmation prompts (97% approval habituation) against automated secondary classification, reporting 0/720 indirect injection successes on Claude in Trajectory Labs benchmarks.
+- [Mitigating the risk of prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) — Anthropic research on the threat surface when agents interact with untrusted web content and the need for defense-in-depth safeguards.

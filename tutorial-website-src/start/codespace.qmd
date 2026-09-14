@@ -1,0 +1,74 @@
+---
+title: "Open the Codespace"
+---
+
+Start your GitHub Codespace before the first lab. The first setup can take several minutes—allow roughly 10 minutes and launch it early so it can finish while the workshop introduction is running.
+
+## Launch
+
+1. Open the [workshop repository](https://github.com/e-kotov/2026-09-agentic-workshop).
+2. Click the green **Code** button.
+3. Select the **Codespaces** tab.
+4. Create a Codespace on the `main` branch.
+5. Wait for VS Code and the automatic setup to finish. Then open a terminal.
+
+![The Code menu for starting a Codespace.](../media/github-start-codespace.png)
+
+{{< video ../media/videos/start-codespace.mp4 title="Codespace startup (donor recording)" >}}
+
+::: {.callout-note}
+## Check the setup
+
+In the terminal, run:
+
+```bash
+pwd
+R --version
+python --version
+find exercises -mindepth 2 -maxdepth 2 -name README.md -print | sort
+```
+
+Check that `pwd` ends in the workshop repository name, both version commands print a version, and the last command lists a `README.md` for each of Labs 1–4. If setup is still running or a check fails, wait for the notification and ask the tutor before starting an agent.
+:::
+
+## Pause and recover
+
+By default, a Codespace stops after 30 minutes without activity. Closing the browser tab does **not** stop it immediately. Stop it yourself when you finish a session.
+
+Saved files and terminal history remain available when you restart from [your Codespaces list](https://github.com/codespaces). Running terminal commands and applications stop with the Codespace and must be restarted; the visible terminal output is not preserved. Save your work before leaving. If the build fails, save the visible error and ask the tutor. Do not add credentials to make it work.
+
+![Stopping a Codespace from the GitHub list.](../media/github-stop-devcontainer-codespace.png)
+
+## Included usage and storage
+
+These allowances apply to **personal accounts** and reset at the start of each monthly billing cycle:
+
+| Personal plan | Compute allowance | Approximate time on a 2-core machine | Storage allowance |
+|---|---:|---:|---:|
+| GitHub Free | 120 core-hours | 60 hours | 15 GB-month |
+| GitHub Pro | 180 core-hours | 90 hours | 20 GB-month |
+
+A core-hour is one processor core used for one hour. The default 2-core machine therefore consumes two core-hours per wall-clock hour. GitHub organization and enterprise plans do not automatically include these personal-account allowances; who pays depends on who owns the Codespace and the organization's policy. Do not assume every account configuration is free.
+
+Compute is counted while the Codespace is active. Storage accrues for as long as the Codespace exists, including while it is stopped. In [your Codespaces list](https://github.com/codespaces), open the **...** menu beside the Codespace and select **Stop codespace** after the session. When you no longer need its files, use the same menu to delete it.
+
+::: {.callout-tip collapse="true"}
+
+## Check your current usage
+
+1. Open your [GitHub billing overview](https://github.com/settings/billing/summary) while signed in.
+2. Select **Codespaces** and, if offered, **View details**.
+3. Use the **Usage** or **Metered usage** view to inspect the current billing period.
+
+GitHub can change allowances and prices. Check the [current Codespaces billing documentation](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) and [GitHub's usage-view instructions](https://docs.github.com/en/billing/how-tos/products/view-productlicense-use) before relying on the table.
+
+:::
+
+## Further reading
+
+- [GitHub Codespaces quickstart](https://docs.github.com/en/codespaces/getting-started/quickstart) — Use this for current launch and recovery steps when the workshop screenshots no longer match the interface.
+- [Security in GitHub Codespaces](https://docs.github.com/en/codespaces/reference/security-in-github-codespaces) — Read what the Codespace isolates, and what it does not; provider-bound prompts remain outside that boundary.
+
+::: {.callout-warning}
+A Codespace separates workshop files and agents from your laptop. Your credentials (e.g. API keys, accoutn subscriptions) inside Codespace are relatively safe, but rotate any keys or passowrds after using them inside Codespace.
+:::

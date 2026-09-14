@@ -1,0 +1,23 @@
+---
+title: "Memory and agentic loops"
+---
+
+**Project memory** is maintained information that helps a later session resume. It can be ordinary Markdown files; it does not require a special service. Conversation history records what was said, but it also contains abandoned ideas and superseded results. Durable notes should identify what remains true and point to evidence.
+
+Separate the records by the question they answer. Goals say what you are trying to achieve. Current state says what works and what is blocked. A work log records actions and check results; a decision record explains why you chose an approach. A **handoff** tells the next person or agent where to resume, what to inspect, and when to stop. Keep code, inputs, tests, and outputs in the project itself rather than copying them into prose.
+
+For a synthetic income release, a useful decision note might explain why the summary includes imputed values, meaning values filled in when the original response was missing. It should point to the summary script and the agreed task definition. “The summary is correct” is not a useful substitute for that evidence. The current attempt result belongs in the work log and handoff; a durable definition should not be copied into several competing notes.
+
+A bounded loop makes the stopping rule explicit. **Build** produces the agreed change. **Review** checks the result against fixed criteria. **Revise** addresses a specific failure. **Ready** means the result awaits human acceptance. Decide the attempt budget before starting, and preserve a failed result rather than letting the agent quietly redefine success. In [Lab 4](../labs/lab-04.qmd), the repair/check loop allows at most two attempts and stops for human review.
+
+Memory can also become stale. A handoff may say that a check passed before the latest edit; a decision note may describe a variable that has been renamed. Give results a clear reference to the relevant file or run, supersede obsolete notes, and ask a fresh session to verify the current state before continuing. Test whether it can find the source, exact check, uncertainty, and next action without the old conversation.
+
+Continue a session while its task and context remain coherent; start fresh when a checked handoff can replace irrelevant history. Provider caching, which may reuse part of an earlier request, is a separate [cost consideration](../understand-agents/context-instructions-cost.qmd). Evaluate memory by useful resumption, maintenance effort, duplication, and human oversight rather than the number of files it creates.
+
+## Further reading
+
+- [Lost in the Middle](https://doi.org/10.1162/tacl_a_00638) — Evidence that simply retaining more context can make important information harder to use, which motivates selective handoffs and retrieval.
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Practical patterns for structured notes, compaction, and just-in-time memory, with no claim that one memory system fits every project.
+- [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) — The counterweight to memory enthusiasm: persistent context can also be poisoned, stale, or granted too much authority.
+
+Conductor-for-all is one comparison, not the prescribed system. For an optional advanced comparison, inspect the published [demo-control-project](https://github.com/e-kotov/2026-09-demo-control-repo), which splits records into a fuller `docs/` structure. Lab 4's small flat files remain sufficient for its task. Logs should clarify human responsibility; they do not authorise an agent to make research decisions without review.

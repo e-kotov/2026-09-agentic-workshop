@@ -1,0 +1,36 @@
+---
+title: "Writing tasks for agents"
+---
+
+Tell the agent what result you need, where it may work, and how you will check the result. “Clean this analysis” leaves decisions open: should it remove records, change variable definitions, or rewrite a report? An agent can make a plausible choice that is wrong for your research question.
+
+Describe the **outcome** in terms a colleague could review. Name the **scope**, meaning the files and actions allowed, and the constraints that must survive the repair. An **artefact** is the concrete output you expect, such as a corrected table. **Provenance** records its inputs, transformations, and relevant versions. A compact brief can use this pattern:
+
+```text
+Goal: produce a small, reviewable artefact for [staff-like purpose].
+Scope: inspect/change only [paths]; use fake/source-free data.
+Constraints: preserve inputs; do not add credentials or network uploads.
+Artefact: [file/report/check] with a short provenance note.
+Done when: [objective condition].
+Verify: run [focused command] and show the relevant diff/output.
+```
+
+For the synthetic questionnaire in [Lab 1](../labs/lab-01.qmd), “remove duplicate items” is still ambiguous. The same item can legitimately appear in several waves or questionnaire versions. A better brief asks the agent to compare all fields in the duplicated wave/item group, remove one row only if the rows are identical, and preserve every version and range. If the rows disagree, it should stop and report the difference.
+
+That stop condition matters as much as the requested edit. Decide which uncertainties the agent may resolve by inspecting files and which require your judgement. Reading a schema (the table's declared structure) can settle a column's expected type; choosing which conflicting questionnaire definition is authoritative may require a researcher. Ask the agent to state consequential assumptions before acting, rather than burying them in the completion message.
+
+Split a task when the next step depends on a decision you have not made. For example: inspect the defect, agree on the repair rule, then implement and verify it. Each part should leave evidence the next part can use. Splitting every tiny edit adds overhead; splitting at a research decision makes that decision visible.
+
+Specify verification independently of the agent's confidence. Ask for the relevant changed lines, the actual checker output, and any limitation the check cannot settle. A passing structural check does not tell you whether a questionnaire measures the intended concept. Once the agreed output and check are complete, stop for review rather than inviting unrelated improvements.
+
+::: {.callout-tip}
+### Try it now (5 minutes)
+
+Rewrite "clean this analysis" with one allowed folder, one output, and one check. Compare the plans. Which assumption changed the proposed tool call?
+:::
+
+## Further reading
+
+- [Harness engineering](https://openai.com/index/harness-engineering/) — A current case study of written intent, small tasks, repository structure, and mechanical feedback; its scale claims are not scientific evidence.
+- [Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Explains why clear, scoped instructions and selectively loaded context beat an ornate universal prompt.
+- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) — Use its workflow patterns to decide whether a task needs an agent at all or a simpler deterministic sequence.

@@ -1,0 +1,31 @@
+---
+title: "Git and recoverable change"
+---
+
+Git records selected versions of your project so you can inspect changes and recover earlier work. A **repository** holds that history. The **working tree** is the set of files you are editing now; a **commit** is a named checkpoint, or snapshot, of the tracked contents you chose to save. It does not prove those contents are correct.
+
+A **diff** shows what changed between versions. Read it before accepting agent work: did a repair touch only the intended transformation, or also alter tests, variable definitions, and documentation? A green test can hide a weakened assertion. Small, purposeful changes are easier to review than a single “improve everything” edit.
+
+```bash
+git status --short
+git diff -- path/to/file
+git diff --cached
+git log --oneline --max-count=5
+```
+
+The **staging area** holds changes selected for the next commit. `git diff` shows unstaged edits; `git diff --cached` shows staged ones. `git status --short` also lists new, untracked files that a normal diff does not display. Review those files too, then commit a useful checkpoint with a message explaining its purpose. Saving a file in the editor does not put it in Git history, and a local commit does not upload it to GitHub.
+
+For example, an agent repairing a synthetic panel table might accidentally increase a survey weight. A prior reviewed checkpoint lets you identify the changed value and recover it. Git cannot explain which weight is substantively right; the contract and researcher supply that judgement.
+
+In [Lab 2](../labs/lab-02.qmd), the helper creates a separate, nested repository inside `work/recovery-demo/`. It saves the repaired table, deliberately changes one weight, observes a failed test, and uses **revert**: a new commit that undoes the earlier committed change while preserving its history. The exercise leaves the outer workshop repository untouched. Inspect both the failure and recovery evidence; a clean working tree only means there are no pending changes.
+
+Outside the demonstration, stop the agent before recovery so it cannot keep editing. Identify the exact files and checkpoint, preserve unrelated work, and choose the smallest recovery operation. Do not ask an agent to “reset everything”: uncommitted and untracked work may have no recoverable Git copy. Git history also complements, rather than replaces, a backup kept elsewhere.
+
+## Further reading
+
+- [Pro Git: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) — The smallest useful reference for the working tree, staging, commits, and inspectable history used in the lab.
+- [Harness engineering](https://openai.com/index/harness-engineering/) — A modern example of agents working inside repository structure and mechanical checks; read it as a case study, not a universal recipe.
+
+::: {.callout-warning}
+Do not commit credentials, restricted data, or provider configuration. Review staged paths and `.gitignore`. An ignored file is not securely protected.
+:::

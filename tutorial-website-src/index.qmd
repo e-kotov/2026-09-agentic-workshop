@@ -1,0 +1,19 @@
+---
+number-sections: false
+---
+
+# Beyond the Chatbox {.unnumbered}
+
+Welcome to **Beyond the Chatbox: LLM Coding Agents for Research** (September 2026).
+
+You will use a coding agent on small research tasks, check its work, and stay responsible for the result.
+
+## What you need
+
+- A [GitHub account](https://github.com/signup)
+- Basic file and terminal skills
+- The supplied fake data. Do not bring real research data.
+
+We use OpenCode in a disposable GitHub Codespace. Antigravity, Codex, and Claude are optional comparisons.
+
+Start with [Open the Codespace](start/codespace.qmd), then [find your way around VS Code](start/vscode.qmd) and [choose an agent](start/choose-agent.qmd).

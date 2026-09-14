@@ -1,0 +1,53 @@
+---
+title: "Other agents"
+---
+
+The exercises use OpenCode. You may compare another agent if it is already available. This page was checked 2026-09-14, so verify commands in the current vendor documentation.
+
+## Optional comparisons
+
+<details>
+<summary><strong>Antigravity readiness</strong></summary>
+
+1. Open a terminal in the lab directory and run `agy`. The Codespace already includes the CLI.
+2. If prompted, open the printed authorization URL in your browser, sign in, and return the one-time code to the terminal. This is Antigravity's documented remote sign-in flow.
+3. Run `/model` and choose an available model. Ask `What directory are you working in? Do not change files.`
+4. Before edits, inspect `/permissions`, the loaded project rules, sandbox setting, and telemetry setting in the [official Antigravity documentation](https://antigravity.google/docs/cli/install/). Turning off telemetry does not make research data safe to share.
+
+The [Antigravity setup recording](../media/videos/agy-setup.mp4) may show older screens.
+
+</details>
+
+<details>
+<summary><strong>Codex readiness</strong></summary>
+
+1. In the lab directory, run `codex login --device-auth` and complete the one-time browser flow. This is the documented option for a remote or headless environment such as Codespaces.
+2. Run `codex login status`; it should report an active sign-in method without displaying a credential.
+3. Run `codex`, check the model, approval policy, and sandbox shown by the interface, then ask `What directory are you working in? Do not change files.`
+
+Use the [official Codex authentication guide](https://developers.openai.com/codex/auth/) and [agent approvals and security guide](https://learn.chatgpt.com/docs/agent-approvals-security). Check the account's current data controls before using anything beyond toy data.
+
+</details>
+
+<details>
+<summary><strong>Claude Code readiness</strong></summary>
+
+1. In the lab directory, run `claude auth login` and follow the documented browser flow. Claude Code requires an eligible Claude plan, Console account, or supported cloud provider.
+2. Run `claude auth status`. If startup or configuration fails, run `claude doctor` from the shell.
+3. Run `claude`, inspect `/status`, and ask `What directory are you working in? Do not change files.`
+
+Use [Claude Code's current quickstart](https://code.claude.com/docs/en/quickstart) and [authentication documentation](https://code.claude.com/docs/en/team). Claude reads `CLAUDE.md` according to its own precedence rules; that file does not create an operating-system security boundary.
+
+</details>
+
+## Further reading
+
+- [Codex agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security) — Distinguishes approval policy and sandboxing for Codex rather than borrowing another product's vocabulary.
+- [Claude Code security](https://code.claude.com/docs/en/security) — Explains Claude Code's trust model and the limits of permission prompts.
+- [Antigravity permissions](https://antigravity.google/docs/cli/permissions/) — Use the current rule precedence and wildcard semantics when comparing Antigravity with the supported path.
+
+::: {.callout-warning}
+Approval bypass and sandbox settings are separate controls. Antigravity's `--dangerously-skip-permissions` approves all tool calls and differs from `--sandbox`. Codex's `--ask-for-approval never` differs from `--sandbox danger-full-access`. Claude's `--dangerously-skip-permissions` is a permission mode, not a sandbox. Verify current help, and never use these bypass modes on your laptop or with real data.
+:::
+
+For every agent, check the working directory, loaded instructions, permissions, and changed files. If it does not run in the Codespace, inspect its documentation or interface and continue with OpenCode.
