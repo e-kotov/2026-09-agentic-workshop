@@ -167,7 +167,7 @@
     "href": "start/choose-agent.html#further-reading",
     "title": "3  Choose an agent",
     "section": "3.4 Further reading",
-    "text": "3.4 Further reading\n\nOpenCode documentation — The current reference for the supported workshop harness and its model, tool, and configuration surface.\nCodex documentation — Compare OpenAI’s first-party description instead of assuming that another terminal agent has OpenCode’s controls.\nClaude Code overview — A third first-party comparison that makes the model-versus-harness distinction concrete.\n\n\n\n\n\n\n\nAntigravity is not the retired Gemini CLI. Do not connect real research data just to compare agents.",
+    "text": "3.4 Further reading\n\nOpenCode documentation — The current reference for the supported workshop harness and its model, tool, and configuration surface.\nCodex documentation — Compare OpenAI’s first-party description instead of assuming that another terminal agent has OpenCode’s controls.\nClaude Code overview — A third first-party comparison that makes the model-versus-harness distinction concrete.",
     "crumbs": [
       "Setup",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Choose an agent</span>"
