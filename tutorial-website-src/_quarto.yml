@@ -3,10 +3,8 @@ project:
   brand: _brand.yml
   resources:
     - slides/
-  # TEMPORARILY DISABLED: restore this post-render hook with the typst format
-  # below when the single full-workshop PDF product is ready again.
-  # post-render:
-  #   - scripts/copy-pdf.sh
+  post-render:
+    - scripts/copy-pdf.sh
 
 number-sections: true
 number-depth: 3
@@ -135,11 +133,11 @@ format:
     include-in-header:
       - text: |
           <meta name="DC.Type" content="WebPage">
+          <script src="scripts/details-fold.js" defer></script>
       - file: scripts/analytics.html
-  # TEMPORARILY DISABLED: restore to produce the single full-workshop PDF.
-  # typst:
-  #   filters:
-  #     - scripts/trigger-fix.lua
+  typst:
+    filters:
+      - scripts/trigger-fix.lua
 
 execute:
   freeze: false

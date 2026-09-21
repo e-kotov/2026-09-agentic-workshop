@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   function initPdfLink() {
-    // TEMPORARILY DISABLED: remove this comment block to restore the PDF links.
-    /*
     const marginSidebar = document.querySelector('#quarto-margin-sidebar');
     if (marginSidebar && !marginSidebar.querySelector('.quarto-margin-pdf-link')) {
       const pdfLinkDiv = document.createElement('div');
@@ -50,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
       `;
       marginSidebar.insertBefore(pdfLinkDiv, marginSidebar.firstChild);
     }
-    */
   }
   
   initTeasers();
