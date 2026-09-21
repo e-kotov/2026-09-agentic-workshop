@@ -3,6 +3,7 @@ project:
   brand: _brand.yml
   resources:
     - slides/
+    - assets/
   post-render:
     - scripts/copy-pdf.sh
 
